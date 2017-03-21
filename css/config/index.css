@@ -462,6 +462,11 @@ li {
   zoom: 1;
 }
 
+/* line 516, ../../sass/module/common/_reset.scss */
+.flex-box {
+  box-sizing: border-box;
+}
+
 /* line 2, ../../sass/module/common/_base.scss */
 div,
 dl,
@@ -656,12 +661,22 @@ a:hover {
   height: 1.33333rem;
   font-size: 16px;
   border-bottom: 1px solid #ddd;
+  color: #444;
 }
-/* line 20, ../../sass/mixmins/help.scss */
+/* line 24, ../../sass/mixmins/help.scss */
 [data-dpr="2"] .wrap {
   font-size: 32px;
 }
-/* line 21, ../../sass/mixmins/help.scss */
+/* line 25, ../../sass/mixmins/help.scss */
 [data-dpr="3"] .wrap {
   font-size: 48px;
+}
+/* line 8, ../../sass/config/index.scss */
+.wrap .flex-box {
+  display: flex;
+}
+/* line 10, ../../sass/config/index.scss */
+.wrap .flex-box li {
+  flex: 1;
+  padding-left: 0.13333rem;
 }

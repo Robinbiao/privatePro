@@ -462,6 +462,11 @@ li {
   zoom: 1;
 }
 
+/* line 516, ../../../sass/module/common/_reset.scss */
+.flex-box {
+  box-sizing: border-box;
+}
+
 /* line 2, ../../../sass/module/common/_base.scss */
 div,
 dl,

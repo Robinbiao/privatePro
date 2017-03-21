@@ -4,4 +4,12 @@
   @include px2rem(750,100);
   @include font-dpr(16px);
   border-bottom: 1px solid #ddd;
+  color: #444;
+  .flex-box{
+    display: flex;
+    li{
+      flex:1;
+      @include px-rem(padding-left,10);
+    }
+  }
 }

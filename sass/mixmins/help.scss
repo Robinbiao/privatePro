@@ -15,6 +15,10 @@
   }
 }
 
+@mixin px-rem($name,$value){
+  #{$name}: ($value / 75) * 1rem;
+}
+
 @mixin font-dpr($font-size){
   font-size: $font-size;
   [data-dpr="2"] & { font-size: $font-size * 2; } ;
