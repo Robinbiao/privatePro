@@ -1,0 +1,156 @@
+@import "./reset";
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-style: normal;
+}
+
+$view-width: 1200px;
+body {
+  font: 13px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", tahoma, SimSun, sans-serif;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  min-width: $view-width;
+}
+
+a {
+  color: #333;
+  &:hover { color: #0097e0; text-decoration: none; }
+}
+
+
+/* common style */
+
+:focus {
+  outline: 0;
+}
+
+.f-link{ display: inline-block; text-decoration: none ;@include size(100%)}
+.f-show {
+  display: block;
+}
+.f-hide{
+  display: none;
+}
+
+.f-fl {
+  float: left;
+}
+
+.f-fr {
+  float: right;
+}
+
+.f-pr {
+  position: relative;
+}
+
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.f-no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.f-word-break {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.f-text-ellipis {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.f-wide {
+  width: $view-width;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.f-f12 {
+  font-size: 12px;
+}
+
+.f-f14 {
+  font-size: 14px;
+}
+
+.f-f16 {
+  font-size: 16px;
+}
+
+.f-f18 {
+  font-size: 18px;
+}
+
+.f-link {
+  display: inline-block;
+  text-decoration: none;
+  @include size(100%)
+}
+
+.f-text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.f-cursor-p {
+  cursor: pointer;
+}

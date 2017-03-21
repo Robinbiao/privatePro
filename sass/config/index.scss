@@ -1,0 +1,7 @@
+@import "../module/common/common";
+
+.wrap{
+  @include px2rem(750,100);
+  @include font-dpr(16px);
+  border-bottom: 1px solid #ddd;
+}
