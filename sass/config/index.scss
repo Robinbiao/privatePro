@@ -32,4 +32,8 @@
     @include px-rem('border-radius',10);;
     text-decoration: none;
   }
+  #qrcode{
+    width: 256px;
+    height: 256px;
+  }
 }
