@@ -18,9 +18,18 @@
 @mixin px-rem($name,$value){
   #{$name}: ($value / 75) * 1rem;
 }
-
+@mixin px-d-rem($name,$value1,$value2){
+  #{$name}-top: ($value1 / 75) * 1rem;
+  #{$name}-bottom: ($value1 / 75) * 1rem;
+  #{$name}-left: ($value2 / 75) * 1rem;
+  #{$name}-right: ($value2 / 75) * 1rem;
+}
 @mixin font-dpr($font-size){
-  font-size: $font-size;
-  [data-dpr="2"] & { font-size: $font-size * 2; } ;
-  [data-dpr="3"] & { font-size: $font-size * 3; }
+  font-size: ($font-size / 2);
+  [data-dpr="2"] & { font-size: $font-size  ; } ;
+  [data-dpr="3"] & { font-size: $font-size * 1.5; }
+}
+
+@mixin font-rem($font-size){
+  font-size:($font-size / 75) * 1rem;
 }

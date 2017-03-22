@@ -513,17 +513,17 @@ section {
 h1,
 h2,
 h3,
-p {
+p,
+em {
   font-style: normal;
 }
 
-/* line 51, ../../../sass/module/common/_base.scss */
+/* line 52, ../../../sass/module/common/_base.scss */
 body {
   font: 13px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", tahoma, SimSun, sans-serif;
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   color: #333;
-  min-width: 1200px;
 }
 
 /* line 59, ../../../sass/module/common/_base.scss */
@@ -610,32 +610,31 @@ a:hover {
 
 /* line 120, ../../../sass/module/common/_base.scss */
 .f-wide {
-  width: 1200px;
   margin: 0 auto;
   text-align: left;
 }
 
-/* line 126, ../../../sass/module/common/_base.scss */
+/* line 125, ../../../sass/module/common/_base.scss */
 .f-f12 {
   font-size: 12px;
 }
 
-/* line 130, ../../../sass/module/common/_base.scss */
+/* line 129, ../../../sass/module/common/_base.scss */
 .f-f14 {
   font-size: 14px;
 }
 
-/* line 134, ../../../sass/module/common/_base.scss */
+/* line 133, ../../../sass/module/common/_base.scss */
 .f-f16 {
   font-size: 16px;
 }
 
-/* line 138, ../../../sass/module/common/_base.scss */
+/* line 137, ../../../sass/module/common/_base.scss */
 .f-f18 {
   font-size: 18px;
 }
 
-/* line 142, ../../../sass/module/common/_base.scss */
+/* line 141, ../../../sass/module/common/_base.scss */
 .f-link {
   display: inline-block;
   text-decoration: none;
@@ -644,13 +643,6 @@ a:hover {
 }
 
 /* line 148, ../../../sass/module/common/_base.scss */
-.f-text-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* line 154, ../../../sass/module/common/_base.scss */
 .f-cursor-p {
   cursor: pointer;
 }

@@ -1,15 +1,35 @@
 @import "../module/common/common";
-
-.wrap{
-  @include px2rem(750,100);
-  @include font-dpr(16px);
-  border-bottom: 1px solid #ddd;
-  color: #444;
-  .flex-box{
-    display: flex;
-    li{
-      flex:1;
-      @include px-rem(padding-left,10);
+.banner{
+  display: flex;
+  @include px-d-rem('padding',30,24);
+  align-items: center;
+  flex-direction: row;
+  .icon{
+    @include px2rem(110,110);
+    img{
+      width: 100%;
+      display: block;
     }
+  }
+  .txt{
+    @include px-rem('margin-left',21);
+    margin-right: auto;
+    h2{
+      @include font-rem(42);
+    }
+    p{
+      @include font-rem(28);
+    }
+  }
+  .button{
+    display: block;
+    @include px-d-rem('padding',10,30);
+    @include font-rem(30);
+    text-align: center;
+    color: #fff;
+    line-height: 1.4;
+    background-color: #3cba1a;
+    @include px-rem('border-radius',10);;
+    text-decoration: none;
   }
 }

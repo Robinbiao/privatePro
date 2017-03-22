@@ -513,17 +513,17 @@ section {
 h1,
 h2,
 h3,
-p {
+p,
+em {
   font-style: normal;
 }
 
-/* line 51, ../../sass/module/common/_base.scss */
+/* line 52, ../../sass/module/common/_base.scss */
 body {
   font: 13px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", tahoma, SimSun, sans-serif;
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   color: #333;
-  min-width: 1200px;
 }
 
 /* line 59, ../../sass/module/common/_base.scss */
@@ -610,32 +610,31 @@ a:hover {
 
 /* line 120, ../../sass/module/common/_base.scss */
 .f-wide {
-  width: 1200px;
   margin: 0 auto;
   text-align: left;
 }
 
-/* line 126, ../../sass/module/common/_base.scss */
+/* line 125, ../../sass/module/common/_base.scss */
 .f-f12 {
   font-size: 12px;
 }
 
-/* line 130, ../../sass/module/common/_base.scss */
+/* line 129, ../../sass/module/common/_base.scss */
 .f-f14 {
   font-size: 14px;
 }
 
-/* line 134, ../../sass/module/common/_base.scss */
+/* line 133, ../../sass/module/common/_base.scss */
 .f-f16 {
   font-size: 16px;
 }
 
-/* line 138, ../../sass/module/common/_base.scss */
+/* line 137, ../../sass/module/common/_base.scss */
 .f-f18 {
   font-size: 18px;
 }
 
-/* line 142, ../../sass/module/common/_base.scss */
+/* line 141, ../../sass/module/common/_base.scss */
 .f-link {
   display: inline-block;
   text-decoration: none;
@@ -644,39 +643,55 @@ a:hover {
 }
 
 /* line 148, ../../sass/module/common/_base.scss */
-.f-text-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* line 154, ../../sass/module/common/_base.scss */
 .f-cursor-p {
   cursor: pointer;
 }
 
-/* line 3, ../../sass/config/index.scss */
-.wrap {
-  width: 10rem;
-  height: 1.33333rem;
-  font-size: 16px;
-  border-bottom: 1px solid #ddd;
-  color: #444;
-}
-/* line 24, ../../sass/mixmins/help.scss */
-[data-dpr="2"] .wrap {
-  font-size: 32px;
-}
-/* line 25, ../../sass/mixmins/help.scss */
-[data-dpr="3"] .wrap {
-  font-size: 48px;
-}
-/* line 8, ../../sass/config/index.scss */
-.wrap .flex-box {
+/* line 2, ../../sass/config/index.scss */
+.banner {
   display: flex;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.32rem;
+  padding-right: 0.32rem;
+  align-items: center;
+  flex-direction: row;
 }
-/* line 10, ../../sass/config/index.scss */
-.wrap .flex-box li {
-  flex: 1;
-  padding-left: 0.13333rem;
+/* line 7, ../../sass/config/index.scss */
+.banner .icon {
+  width: 1.46667rem;
+  height: 1.46667rem;
+}
+/* line 9, ../../sass/config/index.scss */
+.banner .icon img {
+  width: 100%;
+  display: block;
+}
+/* line 14, ../../sass/config/index.scss */
+.banner .txt {
+  margin-left: 0.28rem;
+  margin-right: auto;
+}
+/* line 17, ../../sass/config/index.scss */
+.banner .txt h2 {
+  font-size: 0.56rem;
+}
+/* line 20, ../../sass/config/index.scss */
+.banner .txt p {
+  font-size: 0.37333rem;
+}
+/* line 24, ../../sass/config/index.scss */
+.banner .button {
+  display: block;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.4rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.4;
+  background-color: #3cba1a;
+  border-radius: 0.13333rem;
+  text-decoration: none;
 }
