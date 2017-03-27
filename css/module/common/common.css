@@ -647,6 +647,11 @@ a:hover {
   cursor: pointer;
 }
 
+/* line 152, ../../../sass/module/common/_base.scss */
+.flex {
+  display: flex;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189199");

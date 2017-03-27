@@ -1,39 +1,83 @@
 @import "../module/common/common";
-.banner{
-  display: flex;
-  @include px-d-rem('padding',30,24);
-  align-items: center;
-  flex-direction: row;
-  .icon{
-    @include px2rem(110,110);
-    img{
-      width: 100%;
-      display: block;
-    }
+header{
+  @include px-rem('height',295);
+  width:100%;
+  img{
+    height:100%;
+    width:100%;
   }
-  .txt{
-    @include px-rem('margin-left',21);
-    margin-right: auto;
-    h2{
-      @include font-rem(42);
-    }
+}
+section.content{
+  @include px-rem('padding-bottom',100); 
+  .title{
+    @include px-rem('padding-top',40);
+    border-bottom: 1px solid #ccc;
     p{
+      @include px-rem('margin-bottom',10);
+      text-indent:1em;
       @include font-rem(28);
+      span{
+        @include font-rem(18);
+      }
     }
   }
-  .button{
-    display: block;
-    @include px-d-rem('padding',10,30);
-    @include font-rem(30);
-    text-align: center;
-    color: #fff;
-    line-height: 1.4;
-    background-color: #3cba1a;
-    @include px-rem('border-radius',10);;
-    text-decoration: none;
+  .flex{
+    flex-direction:column;
+    text-align:center;
+    @include px-rem('margin-top',50);
+    .item{
+      @include px2rem(400,80);
+      background:$main-bk-color;
+      color:#666;
+      @include px-rem('line-height',80);
+      @include font-rem(30);
+      margin:0 auto;
+      @include px-rem('margin-bottom',50);
+      @include px-rem('border-radius',10);
+      &.active{
+        background:$main-color;
+        color:#fff;
+      }
+      &.next{
+        @include px2rem(550,60);
+        background:$main-color;
+        color:#fff;
+        @include font-rem(24);
+        @include px-rem('line-height',60);
+      }
+    }
   }
-  #qrcode{
-    width: 256px;
-    height: 256px;
+}
+footer{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  .flex{
+    @include px-rem('height',100);
+    flex-direction:row;
+    background: $main-bk-color;
+    .item{
+      flex:1;
+      @include font-rem(20);
+      a{
+        display:flex;
+        width:100%;
+        height: 100%;
+        flex-direction:column;
+        text-align: center;
+        color:#999;
+        .iconfont{
+          @include font-rem(46);
+        }
+        span{
+          @include px-rem('margin-top',-5); 
+        }
+      }
+      &.active{
+        a{
+          color:$main-color;
+        }   
+      }
+    }
   }
 }

@@ -647,6 +647,12 @@ a:hover {
   cursor: pointer;
 }
 
+/* line 152, ../../sass/module/common/_base.scss */
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189199");
@@ -714,55 +720,103 @@ a:hover {
 }
 
 /* line 2, ../../sass/config/index.scss */
-.banner {
-  display: flex;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 0.32rem;
-  padding-right: 0.32rem;
-  align-items: center;
-  flex-direction: row;
-}
-/* line 7, ../../sass/config/index.scss */
-.banner .icon {
-  width: 1.46667rem;
-  height: 1.46667rem;
-}
-/* line 9, ../../sass/config/index.scss */
-.banner .icon img {
+header {
+  height: 3.93333rem;
   width: 100%;
-  display: block;
 }
-/* line 14, ../../sass/config/index.scss */
-.banner .txt {
-  margin-left: 0.28rem;
-  margin-right: auto;
+/* line 5, ../../sass/config/index.scss */
+header img {
+  height: 100%;
+  width: 100%;
 }
-/* line 17, ../../sass/config/index.scss */
-.banner .txt h2 {
-  font-size: 0.56rem;
+
+/* line 10, ../../sass/config/index.scss */
+section.content {
+  padding-bottom: 1.33333rem;
 }
-/* line 20, ../../sass/config/index.scss */
-.banner .txt p {
+/* line 12, ../../sass/config/index.scss */
+section.content .title {
+  padding-top: 0.53333rem;
+  border-bottom: 1px solid #ccc;
+}
+/* line 15, ../../sass/config/index.scss */
+section.content .title p {
+  margin-bottom: 0.13333rem;
+  text-indent: 1em;
   font-size: 0.37333rem;
 }
-/* line 24, ../../sass/config/index.scss */
-.banner .button {
-  display: block;
-  padding-top: 0.13333rem;
-  padding-bottom: 0.13333rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-  font-size: 0.4rem;
-  text-align: center;
-  color: #fff;
-  line-height: 1.4;
-  background-color: #3cba1a;
-  border-radius: 0.13333rem;
-  text-decoration: none;
+/* line 19, ../../sass/config/index.scss */
+section.content .title p span {
+  font-size: 0.24rem;
 }
-/* line 35, ../../sass/config/index.scss */
-.banner #qrcode {
-  width: 256px;
-  height: 256px;
+/* line 24, ../../sass/config/index.scss */
+section.content .flex {
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0.66667rem;
+}
+/* line 28, ../../sass/config/index.scss */
+section.content .flex .item {
+  width: 5.33333rem;
+  height: 1.06667rem;
+  background: #ebebeb;
+  color: #666;
+  line-height: 1.06667rem;
+  font-size: 0.4rem;
+  margin: 0 auto;
+  margin-bottom: 0.66667rem;
+  border-radius: 0.13333rem;
+}
+/* line 37, ../../sass/config/index.scss */
+section.content .flex .item.active {
+  background: #fb6000;
+  color: #fff;
+}
+/* line 41, ../../sass/config/index.scss */
+section.content .flex .item.next {
+  width: 7.33333rem;
+  height: 0.8rem;
+  background: #fb6000;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+}
+
+/* line 51, ../../sass/config/index.scss */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* line 55, ../../sass/config/index.scss */
+footer .flex {
+  height: 1.33333rem;
+  flex-direction: row;
+  background: #ebebeb;
+}
+/* line 59, ../../sass/config/index.scss */
+footer .flex .item {
+  flex: 1;
+  font-size: 0.26667rem;
+}
+/* line 62, ../../sass/config/index.scss */
+footer .flex .item a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: #999;
+}
+/* line 69, ../../sass/config/index.scss */
+footer .flex .item a .iconfont {
+  font-size: 0.61333rem;
+}
+/* line 72, ../../sass/config/index.scss */
+footer .flex .item a span {
+  margin-top: -0.06667rem;
+}
+/* line 77, ../../sass/config/index.scss */
+footer .flex .item.active a {
+  color: #fb6000;
 }
