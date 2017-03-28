@@ -16,8 +16,9 @@
         <div class="title">
             <p>会员权限选择<span>（如有任何问题，请联系微信客服：Qiankuncaifu）</span></p>
         </div>
-        <div class="flex">
-            <p class='item active'>VIP会员</p>
+        <div class="flex" id = "memberGrade">
+
+            <p class='item active' v-for ="obj in gradeList">VIP会员</p>
             <p class='item'>黄金会员</p>
             <p class='item'>钻石会员</p>
             <p class="item next">下一步</p>
@@ -32,6 +33,7 @@
         </ul>
     </footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/vue2.js"></script>
     <script src="./js/config/index.js"></script>
 </body>
 </html>
