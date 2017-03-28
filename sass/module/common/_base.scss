@@ -58,7 +58,7 @@ body {
 
 a {
   color: #333;
-  &:hover { color: #0097e0; text-decoration: none; }
+  //&:hover { color: #0097e0; text-decoration: none; }
 }
 
 
@@ -151,4 +151,8 @@ a {
 
 .flex{
   display:flex;
+}
+
+section.content{
+  @include px-rem('padding-bottom',100);
 }

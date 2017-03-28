@@ -530,11 +530,6 @@ body {
 a {
   color: #333;
 }
-/* line 61, ../../../sass/module/common/_base.scss */
-a:hover {
-  color: #0097e0;
-  text-decoration: none;
-}
 
 /* common style */
 /* line 67, ../../../sass/module/common/_base.scss */
@@ -652,6 +647,11 @@ a:hover {
   display: flex;
 }
 
+/* line 156, ../../../sass/module/common/_base.scss */
+section.content {
+  padding-bottom: 1.33333rem;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189199");
@@ -716,4 +716,43 @@ a:hover {
 /* line 37, ../../../sass/module/common/_font.scss */
 .icon-data:before {
   content: "\e600";
+}
+
+/* line 1, ../../../sass/module/common/_footer.scss */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* line 5, ../../../sass/module/common/_footer.scss */
+footer .flex {
+  height: 1.33333rem;
+  flex-direction: row;
+  background: #ebebeb;
+}
+/* line 9, ../../../sass/module/common/_footer.scss */
+footer .flex .item {
+  flex: 1;
+  font-size: 0.26667rem;
+}
+/* line 12, ../../../sass/module/common/_footer.scss */
+footer .flex .item a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: #999;
+}
+/* line 19, ../../../sass/module/common/_footer.scss */
+footer .flex .item a .iconfont {
+  font-size: 0.61333rem;
+}
+/* line 22, ../../../sass/module/common/_footer.scss */
+footer .flex .item a span {
+  margin-top: -0.06667rem;
+}
+/* line 27, ../../../sass/module/common/_footer.scss */
+footer .flex .item.active a {
+  color: #fb6000;
 }

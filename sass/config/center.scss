@@ -1,0 +1,55 @@
+@import "../module/common/common";
+
+header{
+    @include px-rem('height',400);
+    background:url('../../images/centerbk.jpg') center center /100% 100%;
+    .hd{
+        @include px-rem('padding-top',74);
+        .box{
+            width:80%;
+            margin:0 auto;
+            .left{
+                width:30%;
+                margin-right:5%;
+                img{
+                    @include px2rem(148,148);
+                    border-radius: 50%;
+                    border:8px solid #fff;
+                }
+            }
+            .right{
+                width:65%;
+                color:#fff;
+                font-size: 0;
+                .name{
+                    @include font-rem(24);
+                }
+                span{
+                    display:inline-block;
+                    width:50%;
+                    @include font-rem(18);
+                    @include px-d-rem('margin',8,0)
+                }
+            }
+        }
+    }
+    .bd{
+        @include px-rem('padding-top',64);
+        .flex{
+            li{
+                flex:1;
+                color:#fff;
+                @include font-rem(24);
+                text-align: center;
+                &:nth-child(2){
+                    border-left:1px solid #fff;
+                    border-right:1px solid #fff;
+                }
+                p{
+                    width:80%;
+                    margin:4px auto;
+                }
+            }
+        }
+    }
+}
