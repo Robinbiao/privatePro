@@ -18,6 +18,9 @@ gulp.task('assets',() =>{
 })
 gulp.task('css',() =>{
   gulp.src(['css/*/*.css','css/*/*/*.css'],{base:'./'})
+  .pipe(autoprefixer({
+        browsers: ['last 10 versions']
+      }))
   .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest(dist))
 })

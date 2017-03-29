@@ -28,7 +28,11 @@ header{
                     display:inline-block;
                     width:50%;
                     @include font-rem(18);
-                    @include px-d-rem('margin',8,0)
+                    @include px-d-rem('margin',8,0);
+                    overflow: hidden;
+                    word-wrap: normal;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
             }
         }

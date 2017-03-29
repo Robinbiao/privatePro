@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/config/buydetail.css">
+    <script src="../js/lib/avalon.mobile.js"></script>
+    <script src="../js/share/m-base.js"></script>
+</head>
+<body ms-controller = "pBuydetail">
+    <header>{{name}}</header>
+    <section class="content">
+        <p class="title">{{name}}介绍</p>
+        <div class="spec f-word-break">
+            {{spec|html}}
+
+            1、只要您向公司推荐会员，您将获得20%佣金\r\n 2、优先享有200家线上、线下贷款渠道\r\n 3、一年365天，即时快速、全面掌握金融相关资讯，最新、最全的贷款信息\r\n 4、VIP会员每周享有行内资深讲师语音教学
+        </div>
+        <div class="info">
+            <form action="">
+                <table>
+                    <tr>
+                        <td class="na">姓名:</td>
+                        <td><input type="text" name="name" /></td>
+                    </tr>
+                    <tr>
+                        <td class="na">微信号码:</td>
+                        <td><input type="text" name="weixin" /></td>
+                    </tr>
+                    <tr>
+                        <td class="na">电话:</td>
+                        <td><input type="text" name="tel" /></td>
+                    </tr>
+                    <tr>
+                        <td class="na">收货地址:</td>
+                        <td><input type="text" name="address" /></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="agree">
+                <label for="agree">
+                    <div class="clearfix">
+                        <input type="checkbox" name="agree"  class="f-fl" />
+                        <p class="f-fl">我已经阅读并同意我司相关协议</p>
+                    </div>
+                    <p class="intro">《在线使用服务协议》</p>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class='buy clearfix'>
+        <p class="price f-fl">{{name}}(￥{{price}})</p><p class="order f-fl">购买</p></p>
+    </section>
+    <script src="../js/lib/jquery-3.1.1.min.js"></script>
+    <script src="../js/share/ajax.js"></script>
+    <script src="../js/config/buydetail.js"></script>
+</body>
+</html>

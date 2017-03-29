@@ -18,13 +18,20 @@
             <p>会员权限选择<span>（如有任何问题，请联系微信客服：Qiankuncaifu）</span></p>
         </div>
         <div class="flex" >
-            <p class='item active' ms-click = 'choiceGrad()'>VIP会员</p>
-            <p class='item' ms-click = 'choiceGrad()'>黄金会员</p>
-            <p class='item' ms-click = 'choiceGrad()'>钻石会员</p>
+            <p class='item active' ms-click = 'choiceGrad(1)'>VIP会员</p>
+            <p class='item' ms-click = 'choiceGrad(2)'>黄金会员</p>
+            <p class='item' ms-click = 'choiceGrad(3)'>钻石会员</p>
             <p class="item next" ms-click = 'next()'>下一步</p>
         </div>
     </section>
-    <footer ms-include-src="'./views/tpl/footer.html'"></footer>
+    <footer>
+        <ul class="flex">
+            <li class="item active"><a href="#"><i class="iconfont icon-member"></i><span>升级会员</span></a></li>
+            <li class="item"><a href="./views/loan.html"><i class="iconfont icon-moneyout"></i><span>贷款中心</span></a></li>
+            <li class="item"><a href="./views/news.html"><i class="iconfont icon-news"></i><span>金融资讯</span></a></li>
+            <li class="item"><a href="./views/center.html"><i class="iconfont icon-center"></i><span>用户中心</span></a></li>
+        </ul>
+    </footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/index.js"></script>

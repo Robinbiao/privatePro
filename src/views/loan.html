@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/config/loan.css">
+    <script src="../js/lib/avalon.mobile.js"></script>
+    <script src="../js/share/m-base.js"></script>
+</head>
+<body ms-controller = "pLoan">
+    <header>
+        <div class="banner">
+            <img src="../images/loanbk.jpg" alt="" />
+        </div>
+        <div class="channel">
+            <ul class="flex">
+                <li class="active" ms-click="channeltog('Pipe')">贷款通道</li>
+                <li ms-click="channeltog('Card')">办卡提额</li>
+                <li ms-click="channeltog('Rec')">贷款推荐</li>
+                <li ms-click="channeltog('Tec')">技术指导</li>
+            </ul>
+        </div>
+    </header>
+    <section class="content">
+        <div class="line"></div>
+        <div ms-include-src="'./module/'+htmlsrc+'.html'"></div>
+    </section>
+    <footer ms-include-src="'./module/footer.html'"></footer>
+    <script src="../js/lib/jquery-3.1.1.min.js"></script>
+    <script src="../js/share/ajax.js"></script>
+    <script src="../js/config/loan.js"></script>
+</body>
+</html>

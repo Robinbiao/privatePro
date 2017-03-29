@@ -1,31 +1,20 @@
 var pHome = avalon.define({
   $id:'pHome',
+  buyGrade:1,
   init:function () {
-    var calbk1 = function (data) {
-      console.log(data);
-    }
-    GetData.getAjax('/home/wealth/member',{},calbk1)
-  },
-  click:function () {
     
   },
-  choiceGrad:function () {
+  next:function () {
+    window.location.href = './views/buydetail.html?grade='+pHome.buyGrade;
+  },
+  choiceGrad:function (grade) {
+    pHome.buyGrade = grade;
+    $(this).siblings('p').removeClass('active');
     $(this).addClass('active');
   }
 });
 pHome.init();
 
-var obj =
-{    code:1000,
-    message:'success',
-    data:{
-      grade:1,
-      price:99,
-      memberlist:[
-        {},{},{}
-      ]
-    }
-}
 
 
 

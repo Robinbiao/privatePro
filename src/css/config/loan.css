@@ -756,74 +756,45 @@ footer .flex .item.active a {
   color: #fb6000;
 }
 
-/* line 3, ../../sass/config/center.scss */
-header {
-  height: 5.33333rem;
-  background: url("../../images/centerbk.jpg") center center/100% 100%;
+/* line 4, ../../sass/config/loan.scss */
+header .banner {
+  height: 2.30667rem;
 }
-/* line 6, ../../sass/config/center.scss */
-header .hd {
-  padding-top: 0.98667rem;
+/* line 6, ../../sass/config/loan.scss */
+header .banner img {
+  width: 100%;
+  height: 100%;
 }
-/* line 8, ../../sass/config/center.scss */
-header .hd .box {
-  width: 80%;
+/* line 12, ../../sass/config/loan.scss */
+header .channel .flex {
+  width: 90%;
   margin: 0 auto;
-}
-/* line 11, ../../sass/config/center.scss */
-header .hd .box .left {
-  width: 30%;
-  margin-right: 5%;
-}
-/* line 14, ../../sass/config/center.scss */
-header .hd .box .left img {
-  width: 1.97333rem;
-  height: 1.97333rem;
-  border-radius: 50%;
-  border: 8px solid #fff;
-}
-/* line 20, ../../sass/config/center.scss */
-header .hd .box .right {
-  width: 65%;
-  color: #fff;
-  font-size: 0;
-}
-/* line 24, ../../sass/config/center.scss */
-header .hd .box .right .name {
+  border-radius: 0.13333rem;
+  line-height: 0.8rem;
   font-size: 0.32rem;
-}
-/* line 27, ../../sass/config/center.scss */
-header .hd .box .right span {
-  display: inline-block;
-  width: 50%;
-  font-size: 0.24rem;
-  margin-top: 0.10667rem;
-  margin-bottom: 0.10667rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
+  border: 1px solid #ccc;
   overflow: hidden;
-  word-wrap: normal;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
-/* line 40, ../../sass/config/center.scss */
-header .bd {
-  padding-top: 0.85333rem;
-}
-/* line 43, ../../sass/config/center.scss */
-header .bd .flex li {
+/* line 22, ../../sass/config/loan.scss */
+header .channel .flex li {
   flex: 1;
-  color: #fff;
-  font-size: 0.32rem;
   text-align: center;
+  border-right: 1px solid #ccc;
 }
-/* line 48, ../../sass/config/center.scss */
-header .bd .flex li:nth-child(2) {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+/* line 26, ../../sass/config/loan.scss */
+header .channel .flex li:last-child {
+  border-right: none;
 }
-/* line 52, ../../sass/config/center.scss */
-header .bd .flex li p {
-  width: 80%;
-  margin: 4px auto;
+/* line 29, ../../sass/config/loan.scss */
+header .channel .flex li.active {
+  background: #fb6000;
+  color: #fff;
+}
+
+/* line 38, ../../sass/config/loan.scss */
+.content .line {
+  height: 0.26667rem;
+  background: #ebebeb;
 }

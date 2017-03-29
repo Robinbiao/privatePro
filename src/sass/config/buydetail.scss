@@ -1,0 +1,77 @@
+@import "../module/common/common";
+
+header{
+    @include px-rem('line-height',88);
+    background: $main-color;
+    color:#fff;
+    @include font-rem(30);
+    text-align: center;
+    letter-spacing: 5px;
+}
+section.content{
+    @include px-d-rem('padding',50,30);
+    @include px-rem('padding-bottom',100);
+    .title{
+        color: $main-color;
+        @include font-rem(24);
+    }
+    .spec{
+       @include px-d-rem('margin',10,0); 
+       @include px-rem('min-height',300);
+    }
+    .info{
+        table{
+            @include font-rem(24);
+            width:100%;
+            tr{
+                @include px-rem('line-height',70);
+                border-top:1px solid #ccc;
+                td.na{
+                    color:$main-color;
+                    width:5em;
+                }
+                td{
+                    input{
+                        @include px-rem('height',70);
+                        border:none;
+                        width:100%;
+                    }
+                }
+                &:last-child{
+                    border-bottom:1px solid #ccc;
+                }
+            }
+        }
+        .agree{
+            @include px-rem('line-height',30);
+            @include font-rem(24);
+            @include px-rem('margin-top',20);
+            input{
+                @include px2rem(30,30);
+                @include px-rem('margin-right',10);
+            }
+            .intro{
+                @include px-d-rem('margin',10,30);
+                color:$main-color;
+            }
+        }
+    }
+}
+.buy{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    @include px-rem('line-height',100);
+    text-align:center;
+    @include font-rem(30);
+    .price{
+        background: $main-bk-color;   
+        width:70%;  
+    }
+    .order{
+        background: $main-color;
+        width:30%;
+        color:#fff;
+    }
+}

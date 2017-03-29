@@ -1,0 +1,42 @@
+@import "../module/common/common";
+
+header{
+    .banner{
+        @include px-rem('height',173);
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .channel{
+        .flex{
+            width:90%;
+            margin:0 auto;
+            @include px-rem('border-radius',10);
+            @include px-rem('line-height',60);
+            @include font-rem(24);
+            border:1px solid $border-color;
+            overflow: hidden;
+            @include px-rem('margin-top',30);
+            @include px-rem('margin-bottom',30);
+            li{
+                flex:1;
+                text-align:center;
+                border-right:1px solid $border-color;
+                &:last-child{
+                    border-right:none;
+                }
+                &.active{
+                    background: $main-color;
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
+.content{
+    .line{
+        @include px-rem('height',20);
+        background:$main-bk-color;
+    }
+}

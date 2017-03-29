@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script  src="../js/share/m-base.js"></script>
+    
     <link rel="stylesheet" href="../css/config/center.css">
+    <script src="../js/lib/avalon.mobile.js"></script>
+    <script  src="../js/share/m-base.js"></script>
 </head>
-<body>
+<body ms-controller = "pCenter">
     <header>
         <div class="hd">
             <ul class="box clearfix">
                 <li class="left f-fl">
-                    <img src="../images/userdefault.jpg" alt="" />
+                    <img ms-src="imgurl" alt="头像" />
                 </li>
                 <li class="right f-fl">
-                    <p class="name">周果果</p>
+                    <p class="name">{{name}}</p>
                     <span>会员 I D  ：119748</span>
-                    <span>注册时间：2017-3-17</span>
+                    <span>注册时间：{{regtime}}</span>
+                    <span>会员等级：{{gradename}}</span>
                     <span>会员 I D  ：119748</span>
-                    <span>会员 I D  ：119748</span>
-                    <span>会员 I D  ：119748</span>
+                    <span>我的上级 ：{{myleader}}</span>
                 </li>
             </ul>
         </div>
@@ -34,18 +36,18 @@
         </div>
     </header>
     <section class="content">
-        
-    </section>
-    <footer>
         <ul class="flex">
-            <li class="item active"><a href="#"><i class="iconfont icon-member"></i><span>升级会员</span></a></li>
-            <li class="item"><a href="#"><i class="iconfont icon-moneyout"></i><span>贷款中心</span></a></li>
-            <li class="item"><a href="#"><i class="iconfont icon-news"></i><span>金融资讯</span></a></li>
-            <li class="item"><a href="#"><i class="iconfont icon-center"></i><span>用户中心</span></a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
-    </footer>
+    </section>
+    <footer ms-include-src="'./module/footer.html'"></footer>
     <script src="../js/lib/jquery-3.1.1.min.js"></script>
-    <script src="../js/lib/vue2.js"></script>
-    <script src="../js/config/index.js"></script>
+    <script src="../js/share/ajax.js"></script>
+    <script src="../js/config/center.js"></script>
 </body>
 </html>
