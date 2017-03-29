@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>乾坤财富</title>
     <script  src="./js/share/m-base.js"></script>
     <link rel="stylesheet" href="./css/config/index.css">
+    <script src="./js/lib/avalon.mobile.js"></script>
 </head>
-<body>
+<body ms-controller="pHome">
     <header>
         <img src="images/banner-member.jpg"  alt="" />
     </header>
@@ -16,23 +17,16 @@
         <div class="title">
             <p>会员权限选择<span>（如有任何问题，请联系微信客服：Qiankuncaifu）</span></p>
         </div>
-        <div class="flex" id = "memberGrade">
-            <p class='item active' v-for ="obj in gradeList">VIP会员</p>
-            <p class='item'>黄金会员</p>
-            <p class='item'>钻石会员</p>
-            <p class="item next">下一步</p>
+        <div class="flex" >
+            <p class='item active' ms-click = 'choiceGrad()'>VIP会员</p>
+            <p class='item' ms-click = 'choiceGrad()'>黄金会员</p>
+            <p class='item' ms-click = 'choiceGrad()'>钻石会员</p>
+            <p class="item next" ms-click = 'next()'>下一步</p>
         </div>
     </section>
-    <footer>
-        <ul class="flex">
-            <li class="item active"><a href="#"><i class="iconfont icon-member"></i><span>升级会员</span></a></li>
-            <li class="item"><a href="#"><i class="iconfont icon-moneyout"></i><span>贷款中心</span></a></li>
-            <li class="item"><a href="#"><i class="iconfont icon-news"></i><span>金融资讯</span></a></li>
-            <li class="item"><a href="#"><i class="iconfont icon-center"></i><span>用户中心</span></a></li>
-        </ul>
-    </footer>
+    <footer ms-include-src="'./views/tpl/footer.html'"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
-    <script src="./js/lib/vue2.js"></script>
+    <script src="./js/share/ajax.js"></script>
     <script src="./js/config/index.js"></script>
 </body>
 </html>

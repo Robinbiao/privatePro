@@ -1,24 +1,18 @@
-
-var vueMember = new Vue({
-  el:'#memberGrade',
-  data:{
-    gradeList:[]
-  }
-})
-console.log(vueMember);
-
-$.ajax({
-  url:'http://www.examples.xin/home/wealth/member',
-  type:'POST',
-  //contentType:'application/json',
-  data:{},
-  dataType:'json',
-  success:function (data) {
-    console.log(data);
-    vueMember.gradeList=data.data;
+var pHome = avalon.define({
+  $id:'pHome',
+  init:function () {
+    var calbk1 = function (data) {
+      console.log(data);
+    }
+    GetData.getAjax('/home/wealth/member',{},calbk1)
   },
-  error:function(data) {
-    console.log(data);
+  click:function () {
+    
+  },
+  choiceGrad:function () {
+    $(this).addClass('active');
   }
-})
+});
+pHome.init();
+
 
