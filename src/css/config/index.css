@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 10, ../../../sass/module/common/_reset.scss */
+/* line 10, ../../sass/module/common/_reset.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -17,7 +17,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 24, ../../../sass/module/common/_reset.scss */
+/* line 24, ../../sass/module/common/_reset.scss */
 body {
   margin: 0;
 }
@@ -32,7 +32,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 42, ../../../sass/module/common/_reset.scss */
+/* line 42, ../../sass/module/common/_reset.scss */
 article,
 aside,
 details,
@@ -53,7 +53,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 64, ../../../sass/module/common/_reset.scss */
+/* line 64, ../../sass/module/common/_reset.scss */
 audio,
 canvas,
 progress,
@@ -68,7 +68,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 80, ../../../sass/module/common/_reset.scss */
+/* line 80, ../../sass/module/common/_reset.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -78,7 +78,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 91, ../../../sass/module/common/_reset.scss */
+/* line 91, ../../sass/module/common/_reset.scss */
 [hidden],
 template {
   display: none;
@@ -89,17 +89,16 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 105, ../../../sass/module/common/_reset.scss */
+/* line 105, ../../sass/module/common/_reset.scss */
 a {
   background-color: transparent;
   text-decoration: none;
-  color: #333;
 }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 116, ../../../sass/module/common/_reset.scss */
+/* line 116, ../../sass/module/common/_reset.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -110,7 +109,7 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 130, ../../../sass/module/common/_reset.scss */
+/* line 130, ../../sass/module/common/_reset.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -118,7 +117,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 139, ../../../sass/module/common/_reset.scss */
+/* line 139, ../../sass/module/common/_reset.scss */
 b,
 strong {
   font-weight: bold;
@@ -127,7 +126,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 149, ../../../sass/module/common/_reset.scss */
+/* line 149, ../../sass/module/common/_reset.scss */
 dfn {
   font-style: italic;
 }
@@ -136,7 +135,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 159, ../../../sass/module/common/_reset.scss */
+/* line 159, ../../sass/module/common/_reset.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -145,7 +144,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 169, ../../../sass/module/common/_reset.scss */
+/* line 169, ../../sass/module/common/_reset.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -154,7 +153,7 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 179, ../../../sass/module/common/_reset.scss */
+/* line 179, ../../sass/module/common/_reset.scss */
 small {
   font-size: 80%;
 }
@@ -162,7 +161,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 188, ../../../sass/module/common/_reset.scss */
+/* line 188, ../../sass/module/common/_reset.scss */
 sub,
 sup {
   font-size: 75%;
@@ -171,12 +170,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 196, ../../../sass/module/common/_reset.scss */
+/* line 196, ../../sass/module/common/_reset.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 200, ../../../sass/module/common/_reset.scss */
+/* line 200, ../../sass/module/common/_reset.scss */
 sub {
   bottom: -0.25em;
 }
@@ -186,7 +185,7 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 213, ../../../sass/module/common/_reset.scss */
+/* line 213, ../../sass/module/common/_reset.scss */
 img {
   border: 0;
 }
@@ -194,7 +193,7 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 222, ../../../sass/module/common/_reset.scss */
+/* line 222, ../../sass/module/common/_reset.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -204,7 +203,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 235, ../../../sass/module/common/_reset.scss */
+/* line 235, ../../sass/module/common/_reset.scss */
 figure {
   margin: 1em 40px;
 }
@@ -212,7 +211,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 244, ../../../sass/module/common/_reset.scss */
+/* line 244, ../../sass/module/common/_reset.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -222,7 +221,7 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 255, ../../../sass/module/common/_reset.scss */
+/* line 255, ../../sass/module/common/_reset.scss */
 pre {
   overflow: auto;
 }
@@ -230,7 +229,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 264, ../../../sass/module/common/_reset.scss */
+/* line 264, ../../sass/module/common/_reset.scss */
 code,
 kbd,
 pre,
@@ -251,7 +250,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 290, ../../../sass/module/common/_reset.scss */
+/* line 290, ../../sass/module/common/_reset.scss */
 button,
 input,
 optgroup,
@@ -268,7 +267,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 308, ../../../sass/module/common/_reset.scss */
+/* line 308, ../../sass/module/common/_reset.scss */
 button {
   overflow: visible;
 }
@@ -279,7 +278,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 320, ../../../sass/module/common/_reset.scss */
+/* line 320, ../../sass/module/common/_reset.scss */
 button,
 select {
   text-transform: none;
@@ -292,7 +291,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 334, ../../../sass/module/common/_reset.scss */
+/* line 334, ../../sass/module/common/_reset.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -306,7 +305,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 352, ../../../sass/module/common/_reset.scss */
+/* line 352, ../../sass/module/common/_reset.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -315,7 +314,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 362, ../../../sass/module/common/_reset.scss */
+/* line 362, ../../sass/module/common/_reset.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -326,7 +325,7 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 374, ../../../sass/module/common/_reset.scss */
+/* line 374, ../../sass/module/common/_reset.scss */
 input {
   line-height: normal;
 }
@@ -338,7 +337,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 387, ../../../sass/module/common/_reset.scss */
+/* line 387, ../../sass/module/common/_reset.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -352,7 +351,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 402, ../../../sass/module/common/_reset.scss */
+/* line 402, ../../sass/module/common/_reset.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -363,7 +362,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 414, ../../../sass/module/common/_reset.scss */
+/* line 414, ../../sass/module/common/_reset.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -378,7 +377,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 430, ../../../sass/module/common/_reset.scss */
+/* line 430, ../../sass/module/common/_reset.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -387,7 +386,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 440, ../../../sass/module/common/_reset.scss */
+/* line 440, ../../sass/module/common/_reset.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -398,7 +397,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 452, ../../../sass/module/common/_reset.scss */
+/* line 452, ../../sass/module/common/_reset.scss */
 legend {
   border: 0;
   /* 1 */
@@ -409,7 +408,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 464, ../../../sass/module/common/_reset.scss */
+/* line 464, ../../sass/module/common/_reset.scss */
 textarea {
   overflow: auto;
 }
@@ -418,7 +417,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 474, ../../../sass/module/common/_reset.scss */
+/* line 474, ../../sass/module/common/_reset.scss */
 optgroup {
   font-weight: bold;
 }
@@ -428,19 +427,19 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 487, ../../../sass/module/common/_reset.scss */
+/* line 487, ../../sass/module/common/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 492, ../../../sass/module/common/_reset.scss */
+/* line 492, ../../sass/module/common/_reset.scss */
 td,
 th {
   padding: 0;
 }
 
-/* line 497, ../../../sass/module/common/_reset.scss */
+/* line 497, ../../sass/module/common/_reset.scss */
 ul,
 li {
   margin: 0;
@@ -448,7 +447,7 @@ li {
   list-style: none;
 }
 
-/* line 504, ../../../sass/module/common/_reset.scss */
+/* line 504, ../../sass/module/common/_reset.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -457,17 +456,17 @@ li {
   visibility: hidden;
 }
 
-/* line 512, ../../../sass/module/common/_reset.scss */
+/* line 512, ../../sass/module/common/_reset.scss */
 .clearfix {
   zoom: 1;
 }
 
-/* line 516, ../../../sass/module/common/_reset.scss */
+/* line 516, ../../sass/module/common/_reset.scss */
 .flex-box {
   box-sizing: border-box;
 }
 
-/* line 2, ../../../sass/module/common/_base.scss */
+/* line 2, ../../sass/module/common/_base.scss */
 div,
 dl,
 dt,
@@ -509,7 +508,7 @@ section {
   padding: 0;
 }
 
-/* line 43, ../../../sass/module/common/_base.scss */
+/* line 43, ../../sass/module/common/_base.scss */
 h1,
 h2,
 h3,
@@ -518,7 +517,7 @@ em {
   font-style: normal;
 }
 
-/* line 52, ../../../sass/module/common/_base.scss */
+/* line 52, ../../sass/module/common/_base.scss */
 body {
   font: 13px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", tahoma, SimSun, sans-serif;
   -webkit-backface-visibility: hidden;
@@ -526,18 +525,18 @@ body {
   color: #333;
 }
 
-/* line 59, ../../../sass/module/common/_base.scss */
+/* line 59, ../../sass/module/common/_base.scss */
 a {
   color: #333;
 }
 
 /* common style */
-/* line 67, ../../../sass/module/common/_base.scss */
+/* line 67, ../../sass/module/common/_base.scss */
 :focus {
   outline: 0;
 }
 
-/* line 71, ../../../sass/module/common/_base.scss */
+/* line 71, ../../sass/module/common/_base.scss */
 .f-link {
   display: inline-block;
   text-decoration: none;
@@ -545,32 +544,32 @@ a {
   width: 100%;
 }
 
-/* line 72, ../../../sass/module/common/_base.scss */
+/* line 72, ../../sass/module/common/_base.scss */
 .f-show {
   display: block;
 }
 
-/* line 75, ../../../sass/module/common/_base.scss */
+/* line 75, ../../sass/module/common/_base.scss */
 .f-hide {
   display: none;
 }
 
-/* line 79, ../../../sass/module/common/_base.scss */
+/* line 79, ../../sass/module/common/_base.scss */
 .f-fl {
   float: left;
 }
 
-/* line 83, ../../../sass/module/common/_base.scss */
+/* line 83, ../../sass/module/common/_base.scss */
 .f-fr {
   float: right;
 }
 
-/* line 87, ../../../sass/module/common/_base.scss */
+/* line 87, ../../sass/module/common/_base.scss */
 .f-pr {
   position: relative;
 }
 
-/* line 91, ../../../sass/module/common/_base.scss */
+/* line 91, ../../sass/module/common/_base.scss */
 .f-pre {
   overflow: hidden;
   text-align: left;
@@ -579,7 +578,7 @@ a {
   word-break: break-all;
 }
 
-/* line 99, ../../../sass/module/common/_base.scss */
+/* line 99, ../../sass/module/common/_base.scss */
 .f-no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -588,14 +587,14 @@ a {
   user-select: none;
 }
 
-/* line 107, ../../../sass/module/common/_base.scss */
+/* line 107, ../../sass/module/common/_base.scss */
 .f-word-break {
   white-space: normal;
   word-wrap: break-word;
   word-break: break-all;
 }
 
-/* line 113, ../../../sass/module/common/_base.scss */
+/* line 113, ../../sass/module/common/_base.scss */
 .f-text-ellipis {
   overflow: hidden;
   word-wrap: normal;
@@ -603,33 +602,33 @@ a {
   text-overflow: ellipsis;
 }
 
-/* line 120, ../../../sass/module/common/_base.scss */
+/* line 120, ../../sass/module/common/_base.scss */
 .f-wide {
   margin: 0 auto;
   text-align: left;
 }
 
-/* line 125, ../../../sass/module/common/_base.scss */
+/* line 125, ../../sass/module/common/_base.scss */
 .f-f12 {
   font-size: 12px;
 }
 
-/* line 129, ../../../sass/module/common/_base.scss */
+/* line 129, ../../sass/module/common/_base.scss */
 .f-f14 {
   font-size: 14px;
 }
 
-/* line 133, ../../../sass/module/common/_base.scss */
+/* line 133, ../../sass/module/common/_base.scss */
 .f-f16 {
   font-size: 16px;
 }
 
-/* line 137, ../../../sass/module/common/_base.scss */
+/* line 137, ../../sass/module/common/_base.scss */
 .f-f18 {
   font-size: 18px;
 }
 
-/* line 141, ../../../sass/module/common/_base.scss */
+/* line 141, ../../sass/module/common/_base.scss */
 .f-link {
   display: inline-block;
   text-decoration: none;
@@ -637,17 +636,17 @@ a {
   width: 100%;
 }
 
-/* line 148, ../../../sass/module/common/_base.scss */
+/* line 148, ../../sass/module/common/_base.scss */
 .f-cursor-p {
   cursor: pointer;
 }
 
-/* line 152, ../../../sass/module/common/_base.scss */
+/* line 152, ../../sass/module/common/_base.scss */
 .flex {
   display: flex;
 }
 
-/* line 156, ../../../sass/module/common/_base.scss */
+/* line 156, ../../sass/module/common/_base.scss */
 section.content {
   padding-bottom: 1.33333rem;
 }
@@ -659,7 +658,7 @@ section.content {
   src: url("../module/font/iconfont.eot?t=1490604189199#iefix") format("embedded-opentype"), url("../module/font/iconfont.woff?t=1490604189199") format("woff"), url("../module/font/iconfont.ttf?t=1490604189199") format("truetype"), url("../module/font/iconfont.svg?t=1490604189199#iconfont") format("svg");
   /* iOS 4.1- */
 }
-/* line 11, ../../../sass/module/common/_font.scss */
+/* line 11, ../../sass/module/common/_font.scss */
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -668,74 +667,74 @@ section.content {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 19, ../../../sass/module/common/_font.scss */
+/* line 19, ../../sass/module/common/_font.scss */
 .icon-service:before {
   content: "\e646";
 }
 
-/* line 21, ../../../sass/module/common/_font.scss */
+/* line 21, ../../sass/module/common/_font.scss */
 .icon-inmoney:before {
   content: "\e649";
 }
 
-/* line 23, ../../../sass/module/common/_font.scss */
+/* line 23, ../../sass/module/common/_font.scss */
 .icon-details:before {
   content: "\e608";
 }
 
-/* line 25, ../../../sass/module/common/_font.scss */
+/* line 25, ../../sass/module/common/_font.scss */
 .icon-member:before {
   content: "\e628";
 }
 
-/* line 27, ../../../sass/module/common/_font.scss */
+/* line 27, ../../sass/module/common/_font.scss */
 .icon-partner:before {
   content: "\e6b7";
 }
 
-/* line 29, ../../../sass/module/common/_font.scss */
+/* line 29, ../../sass/module/common/_font.scss */
 .icon-news:before {
   content: "\e622";
 }
 
-/* line 31, ../../../sass/module/common/_font.scss */
+/* line 31, ../../sass/module/common/_font.scss */
 .icon-center:before {
   content: "\e61e";
 }
 
-/* line 33, ../../../sass/module/common/_font.scss */
+/* line 33, ../../sass/module/common/_font.scss */
 .icon-vedio:before {
   content: "\e637";
 }
 
-/* line 35, ../../../sass/module/common/_font.scss */
+/* line 35, ../../sass/module/common/_font.scss */
 .icon-moneyout:before {
   content: "\e650";
 }
 
-/* line 37, ../../../sass/module/common/_font.scss */
+/* line 37, ../../sass/module/common/_font.scss */
 .icon-data:before {
   content: "\e600";
 }
 
-/* line 1, ../../../sass/module/common/_footer.scss */
+/* line 1, ../../sass/module/common/_footer.scss */
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-/* line 5, ../../../sass/module/common/_footer.scss */
+/* line 5, ../../sass/module/common/_footer.scss */
 footer .flex {
   height: 1.33333rem;
   flex-direction: row;
   background: #ebebeb;
 }
-/* line 9, ../../../sass/module/common/_footer.scss */
+/* line 9, ../../sass/module/common/_footer.scss */
 footer .flex .item {
   flex: 1;
   font-size: 0.26667rem;
 }
-/* line 12, ../../../sass/module/common/_footer.scss */
+/* line 12, ../../sass/module/common/_footer.scss */
 footer .flex .item a {
   display: flex;
   width: 100%;
@@ -744,15 +743,117 @@ footer .flex .item a {
   text-align: center;
   color: #999;
 }
-/* line 19, ../../../sass/module/common/_footer.scss */
+/* line 19, ../../sass/module/common/_footer.scss */
 footer .flex .item a .iconfont {
   font-size: 0.61333rem;
 }
-/* line 22, ../../../sass/module/common/_footer.scss */
+/* line 22, ../../sass/module/common/_footer.scss */
 footer .flex .item a span {
   margin-top: -0.06667rem;
 }
-/* line 27, ../../../sass/module/common/_footer.scss */
+/* line 27, ../../sass/module/common/_footer.scss */
+footer .flex .item.active a {
+  color: #fb6000;
+}
+
+/* line 2, ../../sass/config/index.scss */
+header {
+  height: 3.93333rem;
+  width: 100%;
+}
+/* line 5, ../../sass/config/index.scss */
+header img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 10, ../../sass/config/index.scss */
+section.content {
+  padding-bottom: 1.33333rem;
+}
+/* line 12, ../../sass/config/index.scss */
+section.content .title {
+  padding-top: 0.53333rem;
+  border-bottom: 1px solid #ccc;
+}
+/* line 15, ../../sass/config/index.scss */
+section.content .title p {
+  margin-bottom: 0.13333rem;
+  text-indent: 1em;
+  font-size: 0.37333rem;
+}
+/* line 19, ../../sass/config/index.scss */
+section.content .title p span {
+  font-size: 0.24rem;
+}
+/* line 24, ../../sass/config/index.scss */
+section.content .flex {
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0.66667rem;
+}
+/* line 28, ../../sass/config/index.scss */
+section.content .flex .item {
+  width: 5.33333rem;
+  height: 1.06667rem;
+  background: #ebebeb;
+  color: #666;
+  line-height: 1.06667rem;
+  font-size: 0.4rem;
+  margin: 0 auto;
+  margin-bottom: 0.66667rem;
+  border-radius: 0.13333rem;
+}
+/* line 37, ../../sass/config/index.scss */
+section.content .flex .item.active {
+  background: #fb6000;
+  color: #fff;
+}
+/* line 41, ../../sass/config/index.scss */
+section.content .flex .item.next {
+  width: 7.33333rem;
+  height: 0.8rem;
+  background: #fb6000;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+}
+
+/* line 51, ../../sass/config/index.scss */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* line 55, ../../sass/config/index.scss */
+footer .flex {
+  height: 1.33333rem;
+  flex-direction: row;
+  background: #ebebeb;
+}
+/* line 59, ../../sass/config/index.scss */
+footer .flex .item {
+  flex: 1;
+  font-size: 0.26667rem;
+}
+/* line 62, ../../sass/config/index.scss */
+footer .flex .item a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: #999;
+}
+/* line 69, ../../sass/config/index.scss */
+footer .flex .item a .iconfont {
+  font-size: 0.61333rem;
+}
+/* line 72, ../../sass/config/index.scss */
+footer .flex .item a span {
+  margin-top: -0.06667rem;
+}
+/* line 77, ../../sass/config/index.scss */
 footer .flex .item.active a {
   color: #fb6000;
 }
