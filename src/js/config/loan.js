@@ -1,6 +1,6 @@
 var pLoan = avalon.define({
     $id:'pLoan',
-    htmlsrc:'loanRec',
+    htmlsrc:'loanPipe',
     init:function(){
         var callback = function (data) {
             if(data.code === 1000){

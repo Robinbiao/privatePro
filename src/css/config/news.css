@@ -756,218 +756,66 @@ footer .flex .item.active a {
   color: #fb6000;
 }
 
-/* line 4, ../../sass/config/loan.scss */
+/* line 4, ../../sass/config/news.scss */
 header .banner {
-  height: 2.30667rem;
+  height: 2.72rem;
 }
-/* line 6, ../../sass/config/loan.scss */
+/* line 6, ../../sass/config/news.scss */
 header .banner img {
   width: 100%;
   height: 100%;
 }
-/* line 12, ../../sass/config/loan.scss */
-header .channel .flex {
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 0.13333rem;
-  line-height: 0.8rem;
-  font-size: 0.32rem;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-}
-/* line 22, ../../sass/config/loan.scss */
-header .channel .flex li {
-  flex: 1;
-  text-align: center;
-  border-right: 1px solid #ccc;
-}
-/* line 26, ../../sass/config/loan.scss */
-header .channel .flex li:last-child {
-  border-right: none;
-}
-/* line 29, ../../sass/config/loan.scss */
-header .channel .flex li.active {
-  background: #fb6000;
-  color: #fff;
-}
 
-/* line 38, ../../sass/config/loan.scss */
-.content .line {
-  height: 0.26667rem;
-  background: #ebebeb;
-}
-/* line 42, ../../sass/config/loan.scss */
-.content .title {
-  font-size: 0.32rem;
-  line-height: 0.66667rem;
-  margin-top: 0.4rem;
+/* line 15, ../../sass/config/news.scss */
+.content .m-newslist .flex {
+  padding: 0.4rem;
   border-bottom: 1px solid #ccc;
 }
-/* line 47, ../../sass/config/loan.scss */
-.content .title .iconfont {
-  color: #477c2b;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
+/* line 18, ../../sass/config/news.scss */
+.content .m-newslist .flex .left {
+  width: 2.93333rem;
+  height: 2rem;
 }
-/* line 51, ../../sass/config/loan.scss */
-.content .title .num {
-  display: inline-block;
-  width: 0.48rem;
-  height: 0.48rem;
-  border-radius: 0.13333rem;
-  line-height: 0.48rem;
-  background: #fb6000;
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
+/* line 20, ../../sass/config/news.scss */
+.content .m-newslist .flex .left img {
+  width: 100%;
+  height: 100%;
 }
-/* line 64, ../../sass/config/loan.scss */
-.content .m-tec {
+/* line 25, ../../sass/config/news.scss */
+.content .m-newslist .flex .right {
+  font-size: 0.26667rem;
+  flex: 1;
+  margin-left: 0.53333rem;
   color: #666;
 }
-/* line 66, ../../sass/config/loan.scss */
-.content .m-tec .iconfont {
-  font-size: 0.53333rem;
-}
-/* line 69, ../../sass/config/loan.scss */
-.content .m-tec .flex {
-  text-align: center;
-}
-/* line 71, ../../sass/config/loan.scss */
-.content .m-tec .flex li {
-  flex: 1;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
-}
-/* line 74, ../../sass/config/loan.scss */
-.content .m-tec .flex li span {
-  display: block;
-  font-size: 0.26667rem;
-}
-/* line 82, ../../sass/config/loan.scss */
-.content .m-loanlist .flex {
-  text-align: center;
-  width: 96%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-/* line 87, ../../sass/config/loan.scss */
-.content .m-loanlist .flex li {
-  width: 25%;
-  margin-top: 0.13333rem;
+/* line 30, ../../sass/config/news.scss */
+.content .m-newslist .flex .right h3 {
+  font-size: 0.32rem;
+  line-height: 0.4rem;
   margin-bottom: 0.13333rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
 }
-/* line 90, ../../sass/config/loan.scss */
-.content .m-loanlist .flex li img {
-  width: 1.09333rem;
-  height: 1.09333rem;
-}
-/* line 93, ../../sass/config/loan.scss */
-.content .m-loanlist .flex li span {
-  display: block;
-  font-size: 0.26667rem;
-}
-/* line 100, ../../sass/config/loan.scss */
-.content .m-tips {
-  position: fixed;
-  right: -0.13333rem;
-  z-index: 10;
-  color: #fff;
-  top: 8rem;
-  text-align: center;
-  font-size: 0.24rem;
-}
-/* line 108, ../../sass/config/loan.scss */
-.content .m-tips .service, .content .m-tips .search {
-  border-radius: 0.13333rem;
-  background: rgba(71, 124, 43, 0.8);
-  overflow: hidden;
-  width: 0.66667rem;
-  padding: 0.13333rem;
-  margin-top: 0.26667rem;
-}
-/* line 116, ../../sass/config/loan.scss */
-.content .m-tips .iconfont {
-  display: block;
-  font-size: 0.66667rem;
-}
-/* line 122, ../../sass/config/loan.scss */
-.content .new .title {
-  color: #fb6000;
-  font-weight: 600;
-  border-bottom: 2px solid #fb6000;
-}
-/* line 126, ../../sass/config/loan.scss */
-.content .new .title .iconfont {
-  font-size: 0.4rem;
-  color: red;
-}
-/* line 132, ../../sass/config/loan.scss */
-.content .new .m-banklist .item {
-  padding: 0.48rem;
-  border-bottom: 1px solid #ccc;
-}
-/* line 135, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex {
-  font-size: 0.4rem;
-}
-/* line 138, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .left {
-  text-align: center;
-  width: 25%;
-  vertical-align: center;
+/* line 35, ../../sass/config/news.scss */
+.content .m-newslist .flex .right .intro {
   display: flex;
+  line-height: 0.46667rem;
 }
-/* line 143, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .left .cen {
-  margin: auto;
+/* line 38, ../../sass/config/news.scss */
+.content .m-newslist .flex .right .intro p:first-child {
+  min-width: 3em;
 }
-/* line 146, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .left img {
-  width: 1.06667rem;
-  height: 1.06667rem;
-  display: block;
-  margin: 0 auto;
-}
-/* line 152, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .right {
-  width: 75%;
-}
-/* line 154, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .right .hot {
-  width: 15%;
-}
-/* line 158, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .right .intro {
-  width: 85%;
+/* line 41, ../../sass/config/news.scss */
+.content .m-newslist .flex .right .intro .detail {
   overflow: hidden;
-  color: #999;
-  font-size: 0.26667rem;
-  max-height: 1.44rem;
+  max-height: 0.93333rem;
 }
-/* line 165, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .right .hot, .content .new .m-banklist .item .flex .right .intro {
-  float: left;
-  line-height: 0.48rem;
+/* line 47, ../../sass/config/news.scss */
+.content .m-newslist .flex .right span {
+  line-height: 0.32rem;
+  margin-top: 0.21333rem;
+  display: inline-block;
 }
-/* line 169, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .right small {
-  color: #999;
-  font-size: 0.26667rem;
-}
-/* line 172, ../../sass/config/loan.scss */
-.content .new .m-banklist .item .flex .right small.link {
+/* line 51, ../../sass/config/news.scss */
+.content .m-newslist .flex .right span.source {
+  float: right;
   color: #fb6000;
 }

@@ -1,0 +1,62 @@
+@import "../module/common/common";
+$color-green:#477c2b;
+header{
+    .banner{
+        @include px-rem('height',204);
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+
+}
+.content{
+    .m-newslist{
+        .flex{
+            @include px-rem('padding',30);
+            border-bottom:1px solid $border-color;
+            .left{
+                @include px2rem(220,150);
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            .right{
+                @include font-rem(20);
+                flex:1;
+                @include px-rem('margin-left',40);
+                color:#666;
+                h3{
+                    @include font-rem(24);
+                    @include px-rem('line-height',30);
+                    @include px-rem('margin-bottom',10);
+                }
+                .intro{
+                    display:flex;
+                    @include px-rem('line-height',35);
+                    p:first-child{
+                        min-width:3em;
+                    }
+                    .detail{
+                        overflow:hidden;
+                        @include px-rem('max-height',70);
+                    }
+
+                }
+                span{
+                    @include px-rem('line-height',24);
+                    @include px-rem('margin-top',16);
+                    display:inline-block;
+                    &.source{
+                        float:right;
+                        color:$main-color;
+                        
+                    }
+                }
+                
+                
+            }
+        }
+    }
+}

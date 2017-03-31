@@ -1,5 +1,5 @@
 @import "../module/common/common";
-
+$color-green:#477c2b;
 header{
     .banner{
         @include px-rem('height',173);
@@ -38,5 +38,147 @@ header{
     .line{
         @include px-rem('height',20);
         background:$main-bk-color;
+    }
+    .title{
+        @include font-rem(24);
+        @include px-rem('line-height',50); 
+        @include px-rem('margin-top',30);
+        border-bottom:1px solid $border-color;
+        .iconfont{
+            color:$color-green;
+            @include px-d-rem('margin',0,15);
+        }
+        .num{
+            display:inline-block;
+            @include px2rem(36,36);
+            @include px-rem('border-radius',10);
+            @include px-rem('line-height',36);
+            background:$main-color;
+            text-align: center;
+            color:#fff;
+            font-weight: 600;
+            @include px-d-rem('margin',0,15);
+        }
+         
+    }
+    .m-tec{
+        color:#666;
+        .iconfont{
+            @include font-rem(40);
+        }
+        .flex{
+            text-align: center;
+            li{
+                flex:1;
+                @include px-d-rem('margin',30,0);
+                span{
+                    display: block;
+                    @include font-rem(20);
+                }
+            }
+        }
+    }
+    .m-loanlist{
+        .flex{
+            text-align: center;
+            width:96%;
+            margin:0 auto;
+            flex-wrap: wrap;
+            li{
+                width:25%;
+                @include px-d-rem('margin',10,0);
+                img{
+                   @include px2rem(82,82); 
+                }
+                span{
+                    display: block;
+                    @include font-rem(20);
+                }
+            }
+        }
+    }
+    .m-tips{
+        position: fixed;
+        @include px-rem('right',-10);
+        z-index: 10;
+        color:#fff;
+        @include px-rem('top',600);
+        text-align: center;
+        @include font-rem(18);
+        .service,.search{
+            @include px-rem('border-radius',10);
+            background:rgba(71,124,43,0.8);
+            overflow:hidden;
+            @include px-rem('width',50);
+            @include px-rem('padding',10);
+            @include px-rem('margin-top',20);
+        }
+        .iconfont{
+            display:block;
+            @include font-rem(50);
+        }
+    }
+    .new{
+        .title{
+            color:$main-color;
+            font-weight: 600;
+            border-bottom:2px solid $main-color;
+            .iconfont{
+                @include font-rem(30);
+                color:red;
+            }
+        }
+        .m-banklist{
+            .item{
+                @include px-rem('padding',36);
+                border-bottom:1px solid $border-color;
+               .flex{
+                    @include font-rem(30);
+                    
+                    .left{
+                        text-align: center;
+                        width:25%;
+                        vertical-align: center;
+                        display:flex;
+                        .cen{
+                            margin:auto;
+                        }
+                        img{
+                            @include px2rem(80,80);
+                            display:block;
+                            margin:0 auto;
+                        }
+                    }
+                    .right{
+                        width:75%;
+                        .hot{
+                            width:15%;
+                            
+                        }
+                        .intro{
+                            width:85%;
+                            overflow:hidden;
+                            color:#999;
+                            @include font-rem(20);
+                            @include px-rem('max-height',108);
+                        }
+                        .hot,.intro{
+                            float: left;
+                            @include px-rem('line-height',36);
+                        }
+                        small{
+                            color:#999;
+                            @include font-rem(20);
+                            &.link{
+                                color:$main-color;
+                            }
+                        }
+                        
+                    }
+                } 
+            }
+            
+            
+        }
     }
 }
