@@ -156,3 +156,10 @@ a {
 section.content{
   @include px-rem('padding-bottom',100);
 }
+.m-line{
+  @include px-rem('height',22); 
+  background:#ededed;
+}
+.f-border-b{
+  border-bottom:1px solid #ccc;
+}

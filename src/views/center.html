@@ -13,31 +13,54 @@
 <body ms-controller = "pCenter">
     <header>
         <div class="hd">
+            <div class="set">
+                <a href="./setting.html"><i class="iconfont icon-center"></i></a>
+            </div>
             <ul class="box clearfix">
                 <li class="left f-fl">
                     <img ms-src="imgurl" alt="头像" />
                 </li>
                 <li class="right f-fl">
                     <p class="name">{{name}}</p>
-                    <span>会员 I D  ：119748</span>
+                    <span>推荐码  ：{{reccode}}</span>
                     <span>注册时间：{{regtime}}</span>
                     <span>会员等级：{{gradename}}</span>
-                    <span>会员 I D  ：119748</span>
+                    <span></span>
                     <span>我的上级 ：{{myleader}}</span>
                 </li>
             </ul>
         </div>
         <div class="bd">
             <ul class="flex clearfix">
-                <li><p class="f-text-ellipis">220,224,222.56</p><p>佣金余额</p></li>
-                <li><p class="f-text-ellipis">220.56</p><p>佣金余额</p></li>
-                <li><p class="f-text-ellipis">220.56</p><p>佣金余额</p></li>
+                <li><p class="f-text-ellipis">{{money}}</p><p>佣金余额</p></li>
+                <!-- <li><p class="f-text-ellipis">220.56</p><p>佣金余额</p></li> -->
+                <li><p class="f-text-ellipis">{{money}}</p><p>我要提现</p></li>
             </ul>
         </div>
     </header>
     <section class="content">
+        <div class="m-line"></div>
         <ul class="flex">
-            <li></li>
+            <li>
+                <div class="bk"><i class="iconfont icon-center"></i></div>
+                <span>会员升级</span>
+            </li>
+            <li>
+                <div class="bk"><i class="iconfont icon-center"></i></div>
+                <span>会员升级</span>
+            </li>
+            <li>
+                <div class="bk"><i class="iconfont icon-center"></i></div>
+                <span>会员升级</span>
+            </li>
+            <li>
+                <div class="bk"><i class="iconfont icon-center"></i></div>
+                <span>会员升级</span>
+            </li>
+            <li>
+                <div class="bk"><i class="iconfont icon-center"></i></div>
+                <span>会员升级</span>
+            </li>
             <li></li>
             <li></li>
             <li></li>

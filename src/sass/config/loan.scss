@@ -35,10 +35,6 @@ header{
     }
 }
 .content{
-    .line{
-        @include px-rem('height',20);
-        background:$main-bk-color;
-    }
     .title{
         @include font-rem(24);
         @include px-rem('line-height',50); 
@@ -139,9 +135,9 @@ header{
                         text-align: center;
                         width:25%;
                         vertical-align: center;
-                        display:flex;
+                         display:flex;
                         .cen{
-                            margin:auto;
+                           margin:auto;
                         }
                         img{
                             @include px2rem(80,80);

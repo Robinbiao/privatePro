@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/config/setting.css">
+    <script src="../js/lib/avalon.mobile.js"></script>
+    <script src="../js/share/m-base.js"></script>
+</head>
+<body ms-controller = "pSetting">
+    <header>
+        <p>设置</p>
+        <span class="save" ms-click='save'>保存</span>
+    </header>
+    <section class="content">
+        <div class="m-line"></div>
+        <div>
+            <ul class="flex">
+                <li class="list f-border-b">
+                    <span>头像</span>
+                    <img ms-attr-src="{{imgurl}}" alt="" class='f-fr'/>
+                </li>
+                <li class="list f-border-b">
+                    <span>电话</span>
+                    <input type="text" class='f-fr' name = "tel"/>
+                </li>
+                <li class="list f-border-b">
+                    <span>地址</span>
+                    <input type="text" class='f-fr' name = "addr"/>
+                </li>
+                <li class="list f-border-b">
+                    <span>职业</span>
+                    <input type="text" class='f-fr' name = "job"/>
+                </li>
+                <li class="list f-border-b">
+                    <span>资料是否对其他会员可见</span>
+                    <div class="bl">
+                        <img ms-attr-src="../images/btn-{{blSrc}}.png"  alt="" ms-click='toggleBl'/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer ms-include-src="'./module/footer.html'"></footer>
+    <script src="../js/lib/jquery-3.1.1.min.js"></script>
+    <script src="../js/share/ajax.js"></script>
+    <script src="../js/config/setting.js"></script>
+</body>
+</html>

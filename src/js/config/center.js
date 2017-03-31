@@ -7,6 +7,7 @@ var pCenter = avalon.define({
     regtime:'2017-01-01',
     myleader:'乾坤财富',
     gradename:'VIP会员',
+    currentPage:'center',
     init:function(){
         var callback = function (data) {
             if(data.code === 1000){

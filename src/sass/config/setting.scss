@@ -1,0 +1,69 @@
+@import "../module/common/common";
+$color-green:#477c2b;
+header{
+    text-align: center;
+    p{
+        background: $main-color;
+        @include px-rem('line-height',88);
+        color:#fff;
+        text-align: center;
+        @include font-rem(30);
+        font-weight: 600;
+        letter-spacing: 1em;
+
+    }
+    .save{
+        @include px-rem('line-height',40);
+        @include px-rem('width',80);
+        @include px-rem('top',24);
+        @include px-rem('right',30);
+        @include font-rem(20);
+        @include px-rem('border-radius',10);
+        letter-spacing: 5px;
+        background:#fff;
+        position: absolute;
+    }
+}
+.content{
+    .flex{
+        flex-direction:column;
+        .list{
+            @include px-d-rem('padding',30,42);
+            @include font-rem(24);
+            color:#666;
+            letter-spacing: 2px;
+            &:first-child{
+                @include px-rem('line-height',150);
+                display:block;
+                img{
+                    @include px2rem(150,150);
+                    border-radius:50%;
+                }
+            }
+            &:last-child{
+                span{
+
+                    width:12em;
+                }
+            }
+            display:flex;
+            span{
+                width:3em;
+                
+            }
+            
+            input{
+                flex:1;
+                text-align: right;
+                border:none;
+            }
+            .bl{
+                flex:1;
+                img{
+                   @include px2rem(58,36); 
+                   float:right;
+                }
+            }
+        }
+    }
+}
