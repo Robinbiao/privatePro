@@ -17,7 +17,9 @@ section.content{
     }
     .spec{
        @include px-d-rem('margin',10,0); 
+       @include font-rem(20);
        @include px-rem('min-height',300);
+       @include px-rem('line-height',24);
     }
     .info{
         table{

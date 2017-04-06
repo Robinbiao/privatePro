@@ -80,16 +80,36 @@ header{
             .bk{
                 @include px2rem(90,90);
                 border-radius:50%;
-                background:$main-color;
                 margin:0 auto;
-                
                 .iconfont{
                     color:#fff;
-                    @include font-rem(40);
+                    @include font-rem(50);
                     @include px-rem('line-height',90);
-
-
                 }
+            }
+            &:nth-child(1){
+                .bk{background:#fa4f47;}
+            }
+            &:nth-child(2){
+                .bk{background:#66c75c;}
+            }
+            &:nth-child(3){
+                .bk{background:#ff5b98;}
+            }
+            &:nth-child(4){
+                .bk{background:#1171bb;}
+            }
+            &:nth-child(5){
+                .bk{background:#fa4f47;}
+            }
+            &:nth-child(6){
+                .bk{background:#b50e99;}
+            }
+            &:nth-child(7){
+                .bk{background:#565db7;}
+            }
+            &:nth-child(8){
+                .bk{background:#66c75c;}
             }
             span{
                 @include px-d-rem('margin',15,0);
