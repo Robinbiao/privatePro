@@ -10,44 +10,10 @@
         </ul>
     </div>
     <div class="m-line"></div>
-    <div class="m-loanlist">
-        <p class="title"><span class="num">1</span>技术指导</p>
+    <div class="m-loanlist" ms-repeat = "pipeDataList">
+        <p class="title"><span class="num">{{el.id}}</span>{{el.name}}</p>
         <ul class="flex">
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-        </ul>
-    </div>
-    <div class="m-loanlist">
-        <p class="title"><span class="num">1</span>技术指导</p>
-        <ul class="flex">
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
+            <li ms-repeat ="el.loan"><a ms-attr-href="{{el.url}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" /><span>{{el.name}}</span></a></li>  
         </ul>
     </div>
 </section>

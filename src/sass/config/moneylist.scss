@@ -1,0 +1,55 @@
+@import "../module/common/common";
+header{
+    background: $main-color;
+    @include px-rem('line-height',88);
+    color:#fff;
+    text-align: center;
+    @include font-rem(30);
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.content{
+    .m-orderlist{
+        @include px-d-rem('padding',12,10);
+        .item{
+            text-align: center;
+            overflow:hidden;
+            flex:1;
+            color:#999;
+            position:relative;
+            $height:88;
+            @include font-rem(20);
+            @include px-rem('height',$height);
+            &.pic{
+                //@include px-rem('width',120);
+                img{
+                    @include px2rem($height,$height);
+                    border-radius:50%;
+                }
+            }
+            .na{
+                @include font-rem(24);
+                color:#666;
+                @include px-rem('margin-top',10);
+            }
+            .time,.meb{
+                position:absolute;
+                bottom:0;
+                left:0;
+                right:0;
+                margin:auto;
+            }
+            .money,.member{
+                @include font-rem(30);
+                vertical-align: middle;
+                @include px-rem('line-height',$height);
+            }
+            &:last-child{
+                .member{
+                    color:#77c20c;
+                }
+            }
+        }
+        
+    }
+}
