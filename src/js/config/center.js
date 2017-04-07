@@ -22,6 +22,14 @@ var pCenter = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/personalinfo',{},callback);
+    },
+    take:function(){
+        Modal.init({
+            title:'提取现金',
+            callback:function(){
+                console.log(1);
+            }
+        });
     }
 });
 pCenter.init();

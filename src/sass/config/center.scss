@@ -1,4 +1,5 @@
 @import "../module/common/common";
+@import "../module/common/modal";
 
 header{
     @include px-rem('height',400);

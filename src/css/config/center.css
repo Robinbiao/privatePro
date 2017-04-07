@@ -792,54 +792,128 @@ footer .flex .item.active a {
   color: #fb6000;
 }
 
-/* line 3, ../../sass/config/center.scss */
+/* line 1, ../../sass/module/common/_modal.scss */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+/* line 16, ../../sass/module/common/_modal.scss */
+.modal .modal-box {
+  position: relative;
+  top: 0.4rem;
+  width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  outline: 0;
+}
+/* line 27, ../../sass/module/common/_modal.scss */
+.modal .modal-box .hd {
+  padding: 0.13333rem;
+  font-size: 0.4rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 31, ../../sass/module/common/_modal.scss */
+.modal .modal-box .hd .title {
+  width: 90%;
+  padding-left: 0.13333rem;
+}
+/* line 36, ../../sass/module/common/_modal.scss */
+.modal .modal-box .hd .close {
+  font-weight: 600;
+  font-size: 0.4rem;
+}
+/* line 41, ../../sass/module/common/_modal.scss */
+.modal .modal-box .bd {
+  padding: 0.13333rem;
+  font-size: 0.32rem;
+}
+/* line 45, ../../sass/module/common/_modal.scss */
+.modal .modal-box .ft {
+  padding: 0.13333rem;
+  font-size: 0.4rem;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+/* line 50, ../../sass/module/common/_modal.scss */
+.modal .modal-box .ft p {
+  display: inline-block;
+}
+/* line 53, ../../sass/module/common/_modal.scss */
+.modal .modal-box .ft .btn {
+  padding-top: 0.10667rem;
+  padding-bottom: 0.10667rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  background: #fff;
+  border: none;
+  border: 1px solid #adadad;
+  border-radius: 4px;
+  margin-right: 0.53333rem;
+}
+
+/* line 4, ../../sass/config/center.scss */
 header {
   height: 5.33333rem;
   background: url("../../images/centerbk.jpg") center center/100% 100%;
 }
-/* line 6, ../../sass/config/center.scss */
+/* line 7, ../../sass/config/center.scss */
 header .hd {
   padding-top: 0.98667rem;
 }
-/* line 7, ../../sass/config/center.scss */
+/* line 8, ../../sass/config/center.scss */
 header .hd .set {
   position: absolute;
   top: 0.53333rem;
   right: 0.66667rem;
 }
-/* line 11, ../../sass/config/center.scss */
+/* line 12, ../../sass/config/center.scss */
 header .hd .set .iconfont {
   color: #fff;
   font-size: 0.53333rem;
 }
-/* line 17, ../../sass/config/center.scss */
+/* line 18, ../../sass/config/center.scss */
 header .hd .box {
   width: 80%;
   margin: 0 auto;
 }
-/* line 20, ../../sass/config/center.scss */
+/* line 21, ../../sass/config/center.scss */
 header .hd .box .left {
   width: 30%;
   margin-right: 5%;
 }
-/* line 23, ../../sass/config/center.scss */
+/* line 24, ../../sass/config/center.scss */
 header .hd .box .left img {
   width: 1.97333rem;
   height: 1.97333rem;
   border-radius: 50%;
   border: 8px solid #fff;
 }
-/* line 29, ../../sass/config/center.scss */
+/* line 30, ../../sass/config/center.scss */
 header .hd .box .right {
   width: 65%;
   color: #fff;
   font-size: 0;
 }
-/* line 33, ../../sass/config/center.scss */
+/* line 34, ../../sass/config/center.scss */
 header .hd .box .right .name {
   font-size: 0.32rem;
 }
-/* line 36, ../../sass/config/center.scss */
+/* line 37, ../../sass/config/center.scss */
 header .hd .box .right span {
   display: inline-block;
   width: 50%;
@@ -853,33 +927,33 @@ header .hd .box .right span {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/* line 49, ../../sass/config/center.scss */
+/* line 50, ../../sass/config/center.scss */
 header .bd {
   padding-top: 0.85333rem;
 }
-/* line 52, ../../sass/config/center.scss */
+/* line 53, ../../sass/config/center.scss */
 header .bd .flex li {
   flex: 1;
   color: #fff;
   font-size: 0.32rem;
   text-align: center;
 }
-/* line 57, ../../sass/config/center.scss */
+/* line 58, ../../sass/config/center.scss */
 header .bd .flex li:nth-child(2) {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
 }
-/* line 61, ../../sass/config/center.scss */
+/* line 62, ../../sass/config/center.scss */
 header .bd .flex li p {
   width: 80%;
   margin: 4px auto;
 }
 
-/* line 70, ../../sass/config/center.scss */
+/* line 71, ../../sass/config/center.scss */
 .content .m-line {
   background: #f8f8f8;
 }
-/* line 73, ../../sass/config/center.scss */
+/* line 74, ../../sass/config/center.scss */
 .content .flex {
   flex-wrap: wrap;
   padding-top: 0.2rem;
@@ -887,7 +961,7 @@ header .bd .flex li p {
   padding-left: 0.33333rem;
   padding-right: 0.33333rem;
 }
-/* line 76, ../../sass/config/center.scss */
+/* line 77, ../../sass/config/center.scss */
 .content .flex li {
   width: 25%;
   text-align: center;
@@ -896,52 +970,52 @@ header .bd .flex li p {
   padding-left: 0rem;
   padding-right: 0rem;
 }
-/* line 80, ../../sass/config/center.scss */
+/* line 81, ../../sass/config/center.scss */
 .content .flex li .bk {
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
   margin: 0 auto;
 }
-/* line 84, ../../sass/config/center.scss */
+/* line 85, ../../sass/config/center.scss */
 .content .flex li .bk .iconfont {
   color: #fff;
   font-size: 0.66667rem;
   line-height: 1.2rem;
 }
-/* line 91, ../../sass/config/center.scss */
+/* line 92, ../../sass/config/center.scss */
 .content .flex li:nth-child(1) .bk {
   background: #fa4f47;
 }
-/* line 94, ../../sass/config/center.scss */
+/* line 95, ../../sass/config/center.scss */
 .content .flex li:nth-child(2) .bk {
   background: #66c75c;
 }
-/* line 97, ../../sass/config/center.scss */
+/* line 98, ../../sass/config/center.scss */
 .content .flex li:nth-child(3) .bk {
   background: #ff5b98;
 }
-/* line 100, ../../sass/config/center.scss */
+/* line 101, ../../sass/config/center.scss */
 .content .flex li:nth-child(4) .bk {
   background: #1171bb;
 }
-/* line 103, ../../sass/config/center.scss */
+/* line 104, ../../sass/config/center.scss */
 .content .flex li:nth-child(5) .bk {
   background: #fa4f47;
 }
-/* line 106, ../../sass/config/center.scss */
+/* line 107, ../../sass/config/center.scss */
 .content .flex li:nth-child(6) .bk {
   background: #b50e99;
 }
-/* line 109, ../../sass/config/center.scss */
+/* line 110, ../../sass/config/center.scss */
 .content .flex li:nth-child(7) .bk {
   background: #565db7;
 }
-/* line 112, ../../sass/config/center.scss */
+/* line 113, ../../sass/config/center.scss */
 .content .flex li:nth-child(8) .bk {
   background: #66c75c;
 }
-/* line 114, ../../sass/config/center.scss */
+/* line 115, ../../sass/config/center.scss */
 .content .flex li span {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;

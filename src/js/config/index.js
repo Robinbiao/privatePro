@@ -12,7 +12,7 @@ var pHome = avalon.define({
     GetData.getAjax('/home/wealth/member',{},callback);
   },
   next:function () {
-    window.location.href = './views/buydetail.html?grade='+pHome.buyGrade;
+    window.location.href = './buydetail.html?grade='+pHome.buyGrade;
   },
   choiceGrad:function (grade) {
     pHome.buyGrade = grade;
