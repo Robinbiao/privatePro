@@ -2,32 +2,24 @@
     <div class="m-tec">
         <p class="title"><i class="iconfont icon-moneyout"></i>技术指导</p>
         <ul class="flex">
-            <li><i class="iconfont icon-moneyout"></i><span>贷款须知</span></li>
-            <li><i class="iconfont icon-moneyout"></i><span>适合贷款</span></li>
-            <li><i class="iconfont icon-moneyout"></i><span>贷款技巧</span></li>
-            <li><i class="iconfont icon-moneyout"></i><span>贷款秘诀</span></li>
-            <li><i class="iconfont icon-moneyout"></i><span>包装技巧</span></li>
+            <li><a href="./loantecdetial.html?type=7"><i class="iconfont icon-loantips"></i><span>办卡技巧</span></a></li>
+            <li><a href="./loantecdetial.html?type=8"><i class="iconfont icon-sure"></i><span>办卡技术</span></a></li>
+            <li><a href="./loantecdetial.html?type=9"><i class="iconfont icon-read"></i><span>白户办卡</span></a></li>
+            <li><a href="./loantecdetial.html?type=10"><i class="iconfont icon-yunkey"></i><span>三无办卡</span></a></li>
+            <li><a href="./loantecdetial.html?type=11"><i class="iconfont icon-save"></i><span>包装技巧</span></a></li>
         </ul>
     </div>
     <div class="m-line"></div>
     <div class="m-loanlist">
-        <p class="title"><span class="num">1</span>技术指导</p>
+        <p class="title"><span class="num">1</span>信用卡快卡办理</p>
         <ul class="flex">
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款须知</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>适合贷款</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款技巧</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
-            <li><img src="../images/loanlogo.jpg" alt="" /><span>贷款秘诀</span></li>
+            <li ms-repeat ="cardDataList.apply_card"><a ms-attr-href="{{el.url}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" /><span>{{el.name}}</span></a></li>
+        </ul>
+    </div>
+    <div class="m-loanlist">
+        <p class="title"><span class="num">2</span>信用卡提额</p>
+        <ul class="flex">
+            <li ms-repeat ="cardDataList.up_card"><a ms-attr-href="{{el.url}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" /><span>{{el.name}}</span></a></li>
         </ul>
     </div>
 </section>

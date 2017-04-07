@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/config/articledetial.css">
+    <script src="../js/lib/avalon.mobile.js"></script>
+    <script src="../js/share/m-base.js"></script>
+</head>
+<body ms-controller = "pArticledetial" class="pLoan">
+    <header>
+        <div class="banner">
+            <img src="../images/loanbk.jpg" alt="" />
+        </div>
+    </header>
+    <section class="content">
+       <h3 class="f-text-ellipis">{{newsData.title}}</h3>
+       <!-- <p class="time"><span>浏览次数：{{newsData.focus}}</span>发布时间：{{newsData.updatetime}}</p> -->
+       <article>
+           {{newsData.content|html}}
+       </article>
+       <p class="source">来源：{{newsData.name}}</p>
+    </section>
+    <footer ms-include-src="'./module/footer.html'"></footer>
+    <script src="../js/lib/jquery-3.1.1.min.js"></script>
+    <script src="../js/share/ajax.js"></script>
+    <script src="../js/config/loannewdetial.js"></script>
+</body>
+</html>

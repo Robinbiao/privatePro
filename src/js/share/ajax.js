@@ -11,7 +11,7 @@
         var opt = jQuery.extend({},df,options);
         $.ajax({
           url:GetData.server + url,
-          params:params,
+          data:params,
           type:opt.type,
           dataType:'json',
           timeout:opt.timeout,

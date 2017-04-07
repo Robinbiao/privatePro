@@ -30,6 +30,8 @@ header{
                 h3{
                     @include font-rem(24);
                     @include px-rem('line-height',30);
+                    @include px-rem('max-height',60);
+                    overflow:hidden;
                     @include px-rem('margin-bottom',10);
                 }
                 .intro{

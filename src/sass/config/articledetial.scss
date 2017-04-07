@@ -1,0 +1,39 @@
+@import "../module/common/common";
+$color-green:#477c2b;
+header{
+    .banner{
+        @include px-rem('height',204);
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+.pLoan .banner{
+    @include px-rem('height',173);
+}
+.content{
+    @include px-d-rem('padding',10,30);
+    @include font-rem(16);
+    text-align: center;
+    h3{
+      @include font-rem(30); 
+    }
+    .time{
+      display:inline-block;
+      @include px-rem('padding-top',10);
+      span{
+        @include px-rem('margin-right',100);
+      }
+    }
+    .source{
+        text-align: right;
+        @include px-d-rem('padding',30,10);
+    }
+    article{
+        @include font-rem(16);
+        text-align: left;
+        @include px-rem('padding-top',30);
+        line-height:1.428;
+    }
+}

@@ -45,7 +45,8 @@ gulp.task('html',() =>{
     minifyCSS: true//压缩页面CSS
   };
   gulp.src(['views/*/*.html','views/*.html','./index.html'],{base:'./'})
-  .pipe(htmlmin(options))
+  //.pipe(htmlmin(options))
+  .pipe(htmlmin())
   .pipe(gulp.dest(dist))
 })
 

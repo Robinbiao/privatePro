@@ -19,15 +19,16 @@
         <div class="m-newslist" ms-repeat = 'newsData'>
             <ul class="flex">
                 <li class="left">
-                    <img ms-attr-src="{{el.icon_url}}"  alt="" />
+                    <a ms-attr-href="{{'./newsdetial.html?pageId='+ el.id}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_url}}"  alt="" /></a>
                 </li>
                 <li class="right">
-                    <h3 class="f-text-ellipis">{{el.title}}</h3>
+                    <a ms-attr-href="{{'./newsdetial.html?pageId='+ el.id}}">
+                    <h3>{{el.title}}</h3>
                     <div class="intro">
-                        <p>简介 :</p>
+                        <p>作者 :</p>
                         <p class="detail f-word-break">{{el.name}}</p>
-
                     </div>
+                    </a>
                     <span>{{el.updatetime}}</span><span class='source'>金融时报</span>
                 </li>
             </ul>

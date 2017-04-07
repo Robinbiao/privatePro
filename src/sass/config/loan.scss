@@ -80,6 +80,7 @@ header{
             width:96%;
             margin:0 auto;
             flex-wrap: wrap;
+            @include px-rem('padding-top',20);
             li{
                 width:25%;
                 @include px-d-rem('margin',10,0);

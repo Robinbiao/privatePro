@@ -14,14 +14,16 @@ var pSetting = avalon.define({
     save:function(){
         var saveParm = {};
         var callback = function(data){
+            console.log(data);
             if(data.code === 1000){
-                window.location.href = './center.html'
+                //window.location.href = './center.html'
             }
         }
         saveParm.phone = $('[name=tel]').val();
         saveParm.address = $('[name=addr]').val();
         saveParm.job = $('[name=job]').val();
-        pSetting.blSrc ? saveParm.isShow = 1 : saveParm.isShow = 0 ;
+        pSetting.blSrc ? saveParm.isshow = 1 : saveParm.isshow = 0 ;
+        console.log(saveParm);
         GetData.getAjax('/home/wealth/changeinfo',saveParm,callback,{type:'POST'});
     },
     toggleBl:function(){
