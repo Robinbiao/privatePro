@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   window.GetData = function () {};
   GetData.extend = jQuery.extend;
   GetData.extend({
@@ -20,5 +20,48 @@
           }
         })
     }
+  });
+//模态框开始 
+  window.Modal = function () {};
+  Modal.extend = jQuery.extend;
+  Modal.extend({
+      init:function(opts){
+          var df = {
+            'title':'提醒',
+            callback:function(){
+              $('.modal').fadeOut('slow', function() {    
+              });
+            }
+          }
+          var options = $.extend({},df,opts); 
+          var $parent = $('.modal');
+          $parent.fadeIn();
+          $parent.css('display','flex');
+          var $modalBox = $('.modal .modal-box');
+          // $parent.click(function(e){
+          //     e.preventDefault;
+          //     $(this).fadeOut();
+          // })
+          $parent.on('click','.close,.chancel',function(e){
+              e.preventDefault;
+              $parent.fadeOut('slow', function() {    
+              });
+          });
+          $parent.on('click','.sure',function(e){
+              e.preventDefault;
+              options.callback();
+              
+          });
+          $modalBox.find('.title').text(options.title);
+          $modalBox.find('.bd').html(options.domstr);
+      }
   })
-})();
+})(jQuery);
+
+
+//获取url中的参数
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return unescape(r[2]); return null; //返回参数值
+}

@@ -16,11 +16,11 @@ header{
         }
         @include px-rem('padding-top',74);
         .box{
-            width:80%;
+            width:90%;
             margin:0 auto;
             .left{
-                width:30%;
-                margin-right:5%;
+                width:27%;
+                margin-right:3%;
                 img{
                     @include px2rem(148,148);
                     border-radius: 50%;
@@ -28,7 +28,7 @@ header{
                 }
             }
             .right{
-                width:65%;
+                width:70%;
                 color:#fff;
                 font-size: 0;
                 .name{
@@ -55,13 +55,22 @@ header{
                 color:#fff;
                 @include font-rem(24);
                 text-align: center;
-                &:nth-child(2){
+                &:nth-child(1){
                     border-left:1px solid #fff;
                     border-right:1px solid #fff;
                 }
                 p{
                     width:80%;
                     margin:4px auto;
+                }
+                &:nth-child(2){
+                    display:flex;
+                    align-items:center;
+                    .btn{
+                        @include font-rem(30);
+                        display: inline-block;
+                        //padding: 6px 12px;
+                    }
                 }
             }
         }
@@ -112,11 +121,57 @@ header{
             &:nth-child(8){
                 .bk{background:#66c75c;}
             }
+            &:nth-child(9){
+                .bk{background:#07b777;}
+            }
+            &:nth-child(10){
+                .bk{background:#1fa2d8;}
+            }
+            &:nth-child(11){
+                .bk{background:#ff5b99;}
+            }
+            &:nth-child(12){
+                .bk{background:#fa4f47;}
+            }
+            &:nth-child(13){
+                .bk{background:#ff5b99;}
+            }
+            &:nth-child(14){
+                .bk{background:#fa4f47;}
+            }
             span{
                 @include px-d-rem('margin',15,0);
                 @include font-rem(20);
                 color:#666;
                 display:block;
+            }
+        }
+    }
+}
+.modal{
+    .content{
+        .bd{
+            .tips{
+                @include px-rem('padding-bottom',15);
+                color:$main-color;
+            }
+            .form-group{
+                @include px-rem('padding-bottom',15);
+            }
+            .pholder{
+                float: left;
+            }
+            .colsm{
+                float: left;
+                width:50%;
+                @include px-rem('margin-left',15);
+                input{
+                    border:none;
+                    width:100%;
+                }
+            }
+            .warning{
+                color:#d9534f;
             }
         }
     }

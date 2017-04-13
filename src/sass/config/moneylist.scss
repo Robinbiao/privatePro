@@ -9,6 +9,9 @@ header{
     letter-spacing: 5px;
 }
 .content{
+    .qrimg{
+        width:100%;
+    }
     .m-orderlist{
         @include px-d-rem('padding',12,10);
         .item{

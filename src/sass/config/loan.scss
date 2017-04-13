@@ -109,6 +109,9 @@ header{
             @include px-rem('width',50);
             @include px-rem('padding',10);
             @include px-rem('margin-top',20);
+            a{
+                color:#fff;
+            }
         }
         .iconfont{
             display:block;

@@ -30,7 +30,7 @@ gulp.task('minjs',() =>{
 })
 gulp.task('js',['minjs'],() =>{
   gulp.src(['js/*/*.js','!js/*/*.min.js'],{base:'./'})
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(gulp.dest(dist))
 })
 gulp.task('html',() =>{

@@ -1,12 +1,12 @@
 var pArticledetial = avalon.define({
     $id:'pArticledetial',
-    currentPage:'news',
+    currentPage:'loan',
     pageId:'',
     apiMap:{
-        'news':'articleinfo',
-        'loannew':'passagewayinfo',
-        'loancredit':'up_card_info',
-        'loantec':'guidance'
+        'news':'articleinfo',//金融资讯接口
+        'loannew':'passagewayinfo',//最新通道接口
+        'loancredit':'up_card_info',//信用卡提额接口
+        'loantec':'guidance'//贷款中心技术专区
     },
     newsData:'',
     init:function(){
@@ -15,6 +15,10 @@ var pArticledetial = avalon.define({
         var callback = function (data) {
             if(data.code === 1000){
                 pArticledetial.newsData = data.data;
+            }else if(data.code === 2000){
+                if(type =='loannew'){  //查看文章须要权限
+                    window.location.href = "./index.html";
+                }
             }
         }
         var params ={
@@ -22,14 +26,13 @@ var pArticledetial = avalon.define({
         }
         if(type=='loantec'){
             params.type = id;
+            if(id == 12 || id ==13){//判断详情属于哪个大栏目
+                pArticledetial.currentPage ='center';
+            }
+        }else if(type =='news'){//判断详情属于哪个大栏目
+            pArticledetial.currentPage ='news';
         }
         GetData.getAjax('/home/wealth/'+pArticledetial.apiMap[type],params,callback);
     }
 });
 pArticledetial.init();
-//获取url中的参数
-function getUrlParam(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-    if (r != null) return unescape(r[2]); return null; //返回参数值
-}

@@ -7,6 +7,14 @@ var pSetting = avalon.define({
         var callback = function (data) {
             if(data.code === 1000){
                 pSetting.imgurl = data.data.img_url;
+                if(data.data.isshow){
+                    pSetting.blSrc = true;
+                }else{
+                    pSetting.blSrc = false;
+                }
+                $('[name=tel]').val(data.data.phone);
+                $('[name=addr]').val(data.data.address);
+                $('[name=job]').val(data.data.job);
             }
         }
         GetData.getAjax('/home/wealth/personalinfo',{},callback);
@@ -14,16 +22,20 @@ var pSetting = avalon.define({
     save:function(){
         var saveParm = {};
         var callback = function(data){
-            console.log(data);
             if(data.code === 1000){
-                //window.location.href = './center.html'
+                Modal.init({
+                    callback:function(){
+                        window.location.href = './center.html';
+                    },
+                    domstr:'恭喜您，修改成功！'
+                })
+                
             }
         }
         saveParm.phone = $('[name=tel]').val();
         saveParm.address = $('[name=addr]').val();
         saveParm.job = $('[name=job]').val();
         pSetting.blSrc ? saveParm.isshow = 1 : saveParm.isshow = 0 ;
-        console.log(saveParm);
         GetData.getAjax('/home/wealth/changeinfo',saveParm,callback,{type:'POST'});
     },
     toggleBl:function(){

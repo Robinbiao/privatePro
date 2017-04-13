@@ -15,8 +15,15 @@ $font-path:'../module';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-shezhi:before { content: "\e602"; }
+
+.icon-search:before { content: "\e677"; }
 
 .icon-loantips:before { content: "\e601"; }
+
+.icon-company:before { content: "\e634"; }
+
+.icon-huilv:before { content: "\e61f"; }
 
 .icon-service:before { content: "\e646"; }
 
@@ -24,7 +31,11 @@ $font-path:'../module';
 
 .icon-details:before { content: "\e608"; }
 
+.icon-jiaoyi:before { content: "\e62e"; }
+
 .icon-member:before { content: "\e628"; }
+
+.icon-xinshoujiaocheng:before { content: "\e6bb"; }
 
 .icon-partner:before { content: "\e6b7"; }
 
@@ -40,10 +51,14 @@ $font-path:'../module';
 
 .icon-vedio:before { content: "\e637"; }
 
+.icon-grzx:before { content: "\e60b"; }
+
 .icon-moneyout:before { content: "\e650"; }
+
+.icon-credit:before { content: "\e6ca"; }
 
 .icon-data:before { content: "\e600"; }
 
+.icon-ketixianjine:before { content: "\e615"; }
+
 .icon-save:before { content: "\e691"; }
-
-

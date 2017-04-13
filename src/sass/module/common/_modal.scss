@@ -11,7 +11,7 @@
   outline: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background:rgba(0,0,0,0.3);
+  background:rgba(0,0,0,0.7);
   align-items:center;
   .modal-box{
     position: relative;
@@ -39,7 +39,7 @@
       }
     }
     .bd{
-      @include px-rem('padding',10);
+      @include px-d-rem('padding',50,20);
       @include font-rem(24);
     }
     .ft{

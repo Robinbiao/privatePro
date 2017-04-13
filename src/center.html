@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>用户中心</title>
     
     <link rel="stylesheet" href="./css/config/center.css">
     <script src="./js/lib/avalon.mobile.js"></script>
@@ -14,15 +14,15 @@
     <header>
         <div class="hd">
             <div class="set">
-                <a href="./setting.html"><i class="iconfont icon-center"></i></a>
+                <a href="./setting.html"><i class="iconfont icon-shezhi"></i></a>
             </div>
             <ul class="box clearfix">
                 <li class="left f-fl">
-                    <img ms-src="imgurl" alt="头像" />
+                    <img ms-attr-src="imgurl" alt="头像" />
                 </li>
                 <li class="right f-fl">
                     <p class="name">{{name}}</p>
-                    <span>推荐码  ：{{reccode}}</span>
+                    <span>推荐码  ：{{recommend}}</span>
                     <span>注册时间：{{regtime}}</span>
                     <span>会员等级：{{gradename}}</span>
                     <span></span>
@@ -33,8 +33,7 @@
         <div class="bd">
             <ul class="flex clearfix">
                 <li><p class="f-text-ellipis">{{money}}</p><p>佣金余额</p></li>
-                <!-- <li><p class="f-text-ellipis">220.56</p><p>佣金余额</p></li> -->
-                <li ms-click="take"><p class="f-text-ellipis">{{money}}</p><p>我要提现</p></li>
+                <li ms-click="take"><p class="btn">我要提现</p></li>
             </ul>
         </div>
     </header>
@@ -50,7 +49,7 @@
                 <span>我的会员</span>
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#member"><i class="iconfont icon-inmoney"></i></a></div>
+                <div class="bk"><a href="./moneylist.html#myqrcode"><i class="iconfont icon-inmoney"></i></a></div>
                 <span>我要赚钱</span>
             </li>
             <li>
@@ -62,25 +61,47 @@
                 <span>提现记录</span>
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#moneyin"><i class="iconfont icon-vedio"></i></a></div>
+                <div class="bk"><a href="www.baidu.com"><i class="iconfont icon-vedio"></i></a></div>
                 <span>在线学习</span>
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#moneyout"><i class="iconfont icon-service"></i></a></div>
-                <span>客户中心</span>
+                <div class="bk"><a href="./moneylist.html#service"><i class="iconfont icon-service"></i></a></div>
+                <span>客服中心</span>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                <div class="bk"><a href="./newsdetial.html?id=13&type=loantec"><i class="iconfont icon-xinshoujiaocheng"></i></a></div>
+                <span>新手帮助</span>
+            </li>
+            <li>
+                <div class="bk"><a href="./newsdetial.html?id=12&type=loantec"><i class="iconfont icon-ketixianjine"></i></a></div>
+                <span>提额神器</span>
+            </li>
+            <li>
+                <div class="bk"><a href="https://ipcrs.pbccrc.org.cn/"><i class="iconfont icon-grzx"></i></a></div>
+                <span>征信查询</span>
+            </li>
+            <li>
+                <div class="bk"><a href="http://www.qichacha.com/"><i class="iconfont icon-company"></i></a></div>
+                <span>企业查询</span>
+            </li>
+            <li>
+                <div class="bk"><a href="https://ctq.unionpay.com/Wxindex.aspx?qd=02"><i class="iconfont icon-jiaoyi"></i></a></div>
+                <span>交易查询</span>
+            </li>
+            <li>
+                <div class="bk"><a href="www.baidu.com"><i class="iconfont icon-huilv"></i></a></div>
+                <span>汇率查询</span>
+            </li>
+            <li>
+                <div class="bk"><a href="www.baidu.com"><i class="iconfont icon-credit"></i></a></div>
+                <span>平台授信贷</span>
+            </li>
         </ul>
     </section>
     <div ms-include-src="'./views/module/modal.html'" class="modal"></div>
     <footer ms-include-src="'./views/module/footer.html'"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
     <script src="./js/share/ajax.js"></script>
-    <script src="./js/share/modal.js"></script>
     <script src="./js/config/center.js"></script>
 </body>
 </html>
