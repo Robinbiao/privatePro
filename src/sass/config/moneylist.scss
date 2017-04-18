@@ -46,12 +46,19 @@ header{
                 @include font-rem(30);
                 vertical-align: middle;
                 @include px-rem('line-height',$height);
-            }
-            &:last-child{
-                .member{
-                    color:#77c20c;
+                &.add{
+                    display:inline-block;
+                    @include px-d-rem('padding',6,10);
+                    @include px-rem('margin-top',15);
+                    @include px-rem('border-radius',5);
+                    background:$main-color;
+                    color:#fff;
+                    line-height:inherit;
+                    vertical-align: middle;
                 }
+
             }
+
         }
         
     }

@@ -60,8 +60,11 @@ header{
                     border-right:1px solid #fff;
                 }
                 p{
-                    width:80%;
+                    //width:80%;
                     margin:4px auto;
+                    &.btn{
+                        background:#07b777;
+                    }
                 }
                 &:nth-child(2){
                     display:flex;
@@ -84,17 +87,21 @@ header{
         flex-wrap: wrap;
         @include px-d-rem('padding',15,25);
         li{
-            width:25%;
+            width:33%;
             text-align:center;
             @include px-d-rem('padding',15,0);
             .bk{
-                @include px2rem(90,90);
+                @include px2rem(120,120);
                 border-radius:50%;
                 margin:0 auto;
+                a{
+                    margin:0 auto;
+                }
                 .iconfont{
                     color:#fff;
-                    @include font-rem(50);
-                    @include px-rem('line-height',90);
+                    @include px-rem('line-height',120);
+                    @include font-rem(70);
+                    
                 }
             }
             &:nth-child(1){
@@ -149,29 +156,13 @@ header{
     }
 }
 .modal{
-    .content{
+    .monqrcode{
         .bd{
-            .tips{
-                @include px-rem('padding-bottom',15);
-                color:$main-color;
-            }
-            .form-group{
-                @include px-rem('padding-bottom',15);
-            }
-            .pholder{
-                float: left;
-            }
-            .colsm{
-                float: left;
-                width:50%;
-                @include px-rem('margin-left',15);
-                input{
-                    border:none;
-                    width:100%;
-                }
-            }
-            .warning{
-                color:#d9534f;
+            @include px-d-rem('padding',10,20);
+            img{
+                width:80%;
+                margin:0 auto;
+                display:block;
             }
         }
     }

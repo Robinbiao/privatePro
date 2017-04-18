@@ -30,4 +30,62 @@ footer{
       }
     }
   }
+  .m-tips{
+    position: fixed;
+    @include px-rem('right',-10);
+    z-index: 10;
+    color:#fff;
+    @include px-rem('top',600);
+    text-align: center;
+    @include font-rem(18);
+    .service,.search{
+        @include px-rem('border-radius',10);
+        background:rgba(81, 176, 234, 0.9);
+        overflow:hidden;
+        @include px-rem('width',50);
+        @include px-rem('padding',10);
+        @include px-rem('margin-top',20);
+        a{
+            color:#fff;
+        }
+    }
+    .iconfont{
+        display:block;
+        @include font-rem(50);
+    }
+  }
+  .m-message{
+      display:none;
+      .box{
+        @include font-rem(20);
+        .hd{
+          @include font-rem(30);
+        }
+        .bd{
+          p{
+            @include font-rem(24);
+          }
+          .last{
+            display:none;
+          }
+          .new{
+            display:none;
+          }
+          .list-box{
+            @include px-rem('padding',20);
+            article{
+              display:block;
+            }
+            span{
+              display:block;
+              float:right; 
+            }
+          }
+        }
+        .ft{
+          @include px-rem('margin-top',40);
+          text-align:center;
+        }
+      }
+  }
 }

@@ -8,6 +8,8 @@ var pCenter = avalon.define({
     myleader:'乾坤财富',
     gradename:'VIP会员',
     currentPage:'center',
+    newMsg:{},
+    lastMsgList:[],
     init:function(){
         var callback = function (data) {
             if(data.code === 1000){
@@ -23,33 +25,47 @@ var pCenter = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/personalinfo',{},callback);
+        pCenter.getMessage();
     },
     take:function(){
-        var domstr = '<div class="form-group clearfix">'
-                     +'<p class="tips">可用余额：'+pCenter.money+'</p>'
-                     +'<label for="takemoney" class="pholder">请输入提款金额:</label>'
-                     +'<div class="colsm"><input  class="form-control" id="takemoney">'
-                     +'</div></div><p class="warning"></p>'
+        var domstr = '<img src="./images/moneyservice.jpg"/>';
         Modal.init({
-            title:'提取现金',
+            title:'联系客服',
             callback:function(){
-                var takemoney = $('#takemoney').val() - 0;
-                $warning = $('.modal-box .bd .warning')
-                if(takemoney>pCenter.money){
-                    $warning.text('您输入的金额大于提额金额,请重新输入');
-                    return;
-                }
-                var cashback = function(data){
-                    $warning.text(data.msg);
-                    //if(data.code==1000){
-                      $('.modal').on('click','.sure',function(e){
-                        $('.modal').fadeOut();
-                      })
-                    //}
-                }
-                GetData.getAjax('/home/wealth/drawcash',{'money':takemoney},cashback);
+                $('.modal').on('click','.sure',function(e){
+                    $('.modal').fadeOut();
+                })
             },
-            domstr:domstr
+            domstr:domstr,
+            boxClass:'monqrcode',
+            chancel:false
+        });
+    },
+    getMessage:function(num){
+        var newback = function (data) {
+            if(data.code === 1000){
+                pCenter.newMsg = data.data; 
+                $('.m-message').css('display','flex');  
+                $('.m-message .new').css('display','block');
+                $('.m-message .last').css('display','none');
+            }
+        };
+        
+        var lastback = function (data) {
+          if(data.code === 1000){
+              pCenter.lastMsgList = data.data;
+              $('.m-message').css('display','flex');
+              $('.m-message .last').css('display','block');
+              $('.m-message .new').css('display','none');
+          }
+        };
+        if(num==1){ //右侧小tips进来
+          GetData.getAjax('/home/wealth/noticelist',{},lastback);
+        }else{
+          GetData.getAjax('/home/wealth/getnotice',{},newback);
+        };
+        $('.m-message').on('click','.ft .sure',function(){
+            $('.m-message').fadeOut();
         });
     }
 });

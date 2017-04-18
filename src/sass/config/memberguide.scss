@@ -1,0 +1,48 @@
+@import "../module/common/common";
+.content{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: flex;
+    overflow: hidden;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    .info-box{
+        background:#fff;
+        width:80%;
+        margin:0 auto;
+        @include px-d-rem('padding',20,30);
+        .title{
+            @include font-rem(30);
+            @include px-rem('padding',10);
+        }
+        article{
+            @include font-rem(20);
+            line-height:1.5;
+            img{
+                width:100%;
+            }
+        }
+        .ft{
+            @include px-d-rem('padding',20,30);
+            @include px-rem('margin-top',40);
+            text-align:center;
+            .btn{
+                background:$main-color;
+                color: #fff;
+                font-weight:500;
+                @include font-rem(20);
+                letter-spacing: 10px;
+                @include px-rem('margin-right',20);
+                @include px-rem('border-radius',10);
+                @include px-d-rem('padding',10,20);
+            }
+        }
+    }
+}

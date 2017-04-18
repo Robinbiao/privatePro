@@ -3,19 +3,21 @@ var pHome = avalon.define({
   buyGrade:1,
   currentGrade:1,
   currentPage:'index',
-  gradename:'钻石会员',
+  gradename:'VIP会员',
+  newMsg:{},
+  lastMsgList:[],
   init:function () {
     var callback = function (data) {
         if(data.code === 1000){
             pHome.currentGrade = data.data.grade;
             pHome.gradename = data.data.member[pHome.currentGrade-1].name;
-            addActive('.flex .item',pHome.currentGrade);
+            $('.flex .item').eq(pHome.currentGrade-1).addClass('active');
         }
     }
     GetData.getAjax('/home/wealth/member',{},callback);
+    pHome.getMessage();
   },
   next:function () {
-
     if(pHome.buyGrade<=pHome.currentGrade){
       var domstr = '您已是 '+pHome.gradename+'，请购买更高等级会员喔！！！'
       Modal.init({
@@ -39,25 +41,38 @@ var pHome = avalon.define({
     if(grade<pHome.currentGrade) return;
     pHome.buyGrade = grade;
     $(this).siblings('p').removeClass('active');
-    addActive('.flex .item',grade);
+    $(this).addClass('active');
+    //addActive('.flex .item',grade);
+  },
+  getMessage:function(num){
+    
+    var newback = function (data) {
+        if(data.code === 1000){
+            pHome.newMsg = data.data; 
+            $('.m-message').css('display','flex');  
+            $('.m-message .new').css('display','block');
+            $('.m-message .last').css('display','none');
+        }
+    };
+    
+    var lastback = function (data) {
+      if(data.code === 1000){
+          pHome.lastMsgList = data.data;
+          $('.m-message').css('display','flex');
+          $('.m-message .last').css('display','block');
+          $('.m-message .new').css('display','none');
+      }
+    };
+    if(num==1){ //右侧小tips进来
+      GetData.getAjax('/home/wealth/noticelist',{},lastback);
+    }else{
+      GetData.getAjax('/home/wealth/getnotice',{},newback);
+    };
+    $('.m-message').on('click','.ft .sure',function(){
+        $('.m-message').fadeOut();
+    });
   }
 });
-pHome.init();
 
-function addActive(dom,grade){
-  $dom = $(dom);
-  if(grade === 1){
-    $dom.eq(0).addClass('active');
-  }else if(grade === 2){
-    $dom.eq(0).addClass('active');
-    $dom.eq(1).addClass('active');
-  }else if(grade === 3){
-    $dom.eq(0).addClass('active');
-    $dom.eq(1).addClass('active');
-    $dom.eq(2).addClass('active');
-  }else{
-    console.log('best')
-  }
-}
 
 

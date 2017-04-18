@@ -22,28 +22,6 @@ section.content{
        @include px-rem('line-height',24);
     }
     .info{
-        table{
-            @include font-rem(24);
-            width:100%;
-            tr{
-                @include px-rem('line-height',70);
-                border-top:1px solid #ccc;
-                td.na{
-                    color:$main-color;
-                    width:5em;
-                }
-                td{
-                    input{
-                        @include px-rem('height',70);
-                        border:none;
-                        width:100%;
-                    }
-                }
-                &:last-child{
-                    border-bottom:1px solid #ccc;
-                }
-            }
-        }
         .agree{
             @include px-rem('line-height',30);
             @include font-rem(24);
@@ -56,6 +34,92 @@ section.content{
                 @include px-d-rem('margin',10,30);
                 color:$main-color;
             }
+        }
+    }
+}
+.userinfo{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    .info-box{
+        background:#fff;
+        width:90%;
+        margin:0 auto;
+        .title{
+            background: #fb6000;
+            line-height: 1.17333rem;
+            color: #fff;
+            text-align: center;
+            font-size: 0.4rem;
+            font-weight: 600;
+            letter-spacing: 5px;
+        }
+    }
+    table{
+        @include font-rem(24);
+        width:100%;
+        tr{
+            @include px-rem('line-height',70);
+            border-top:1px solid #ccc;
+            td.na{
+                color:$main-color;
+                width:5em;
+                text-align:center;
+            }
+            td{
+                input{
+                    @include px-rem('height',70);
+                    border:none;
+                    width:100%;
+                }
+            }
+            &:last-child{
+                border-bottom:1px solid #ccc;
+            }
+        }
+    }
+    select{
+        width:30%;
+        text-indent:5px;
+    }
+    .title{
+        @include px-rem('margin-bottom',20);
+    }
+    .sure{
+        @include px-rem('line-height',40);
+        @include px-rem('padding',30);
+        @include font-rem(16);
+        .tips{
+            color:#e82121;
+            display:none;
+        }
+        .btn{
+            background:$main-color;
+            color: #fff;
+            font-weight:500;
+            @include font-rem(20);
+            letter-spacing: 10px;
+            @include px-rem('margin-right',20);
+            @include px-rem('border-radius',10);
+            @include px-d-rem('padding',10,20);
+        }
+    }
+    #city{
+        
+    }
+    #jobclass{
+        .show{
+            display:block;
         }
     }
 }

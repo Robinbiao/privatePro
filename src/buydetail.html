@@ -17,26 +17,6 @@
             {{spec|html}}
         </div>
         <div class="info">
-            <form action="">
-                <table>
-                    <tr>
-                        <td class="na">姓名:</td>
-                        <td><input type="text" name="name" /></td>
-                    </tr>
-                    <tr>
-                        <td class="na">微信号码:</td>
-                        <td><input type="text" name="weixin" /></td>
-                    </tr>
-                    <tr>
-                        <td class="na">电话:</td>
-                        <td><input type="text" name="tel" /></td>
-                    </tr>
-                    <tr>
-                        <td class="na">收货地址:</td>
-                        <td><input type="text" name="address" /></td>
-                    </tr>
-                </table>
-            </form>
             <div class="agree">
                 <label for="agree">
                     <div class="clearfix">
@@ -52,7 +32,10 @@
         <p class="price f-fl">{{name}}(￥{{price}})</p><p class="order f-fl" ms-click ="buy">购买</p></p>
     </section>
     <div class="modal"  ms-include-src="'./views/module/modal.html'"></div>
+    <div class="userinfo" ms-include-src ="'./views/module/collectinfo.html'" data-include-rendered="init"></div>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/jquery.cityselect.js"></script>
+    <script src="./js/lib/mustpay.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/buydetail.js"></script>
 </body>

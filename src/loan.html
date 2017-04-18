@@ -19,20 +19,16 @@
                 <li ms-class="{{ htmlsrc =='loanPipe'?'active':''}}" ms-click="channeltog('Pipe')">贷款通道</li>
                 <li ms-class="{{ htmlsrc =='loanCard'?'active':''}}" ms-click="channeltog('Card')">办卡提额</li>
                 <li ms-class="{{ htmlsrc =='loanNew'?'active':''}}" ms-click="channeltog('New')">最新通道</li>
-                <!-- <li ms-click="channeltog('Tec')">技术指导</li> -->
+                <li ms-class="{{ htmlsrc =='loanStudy'?'active':''}}" ms-click="channeltog('Study')">在线学习</li>
             </ul>
         </div>
     </header>
     <section class="content">
         <div class="m-line"></div>
         <div class="box"　ms-include-src="'./views/module/'+htmlsrc+'.html'"></div>
-        <div class="m-tips" ms-if="htmlsrc!='loanNew'">
-            <div class="service"><a href="./moneylist.html#service"><i class="iconfont icon-service"></i>联系客服</a></div>
-            <div class="search" ms-if="htmlsrc=='loanPipe'"><a href="https://ipcrs.pbccrc.org.cn/"><i class="iconfont icon-search"></i>征信查询</a></div>
-        </div>
     </section>
     <div class="modal" ms-include-src="'./views/module/modal.html'"></div>
-    <footer ms-include-src="'./views/module/footer.html'"></footer>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/loan.js"></script>

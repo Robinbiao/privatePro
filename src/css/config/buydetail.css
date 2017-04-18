@@ -662,6 +662,29 @@ section.content {
   border-bottom: 1px solid #ccc;
 }
 
+/* line 166, ../../sass/module/common/_base.scss */
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189199");
@@ -836,6 +859,34 @@ footer .flex .item a span {
 footer .flex .item.active a {
   color: #fb6000;
 }
+/* line 33, ../../sass/module/common/_footer.scss */
+footer .m-tips {
+  position: fixed;
+  right: -0.13333rem;
+  z-index: 10;
+  color: #fff;
+  top: 8rem;
+  text-align: center;
+  font-size: 0.24rem;
+}
+/* line 41, ../../sass/module/common/_footer.scss */
+footer .m-tips .service, footer .m-tips .search {
+  border-radius: 0.13333rem;
+  background: rgba(81, 176, 234, 0.9);
+  overflow: hidden;
+  width: 0.66667rem;
+  padding: 0.13333rem;
+  margin-top: 0.26667rem;
+}
+/* line 48, ../../sass/module/common/_footer.scss */
+footer .m-tips .service a, footer .m-tips .search a {
+  color: #fff;
+}
+/* line 52, ../../sass/module/common/_footer.scss */
+footer .m-tips .iconfont {
+  display: block;
+  font-size: 0.66667rem;
+}
 
 /* line 1, ../../sass/module/common/_modal.scss */
 .modal {
@@ -858,6 +909,7 @@ footer .flex .item.active a {
   position: relative;
   top: 0.4rem;
   width: 90%;
+  padding-left: 0.13333rem;
   margin: 0 auto;
   background: #fff;
   background-clip: padding-box;
@@ -866,16 +918,15 @@ footer .flex .item.active a {
   border-radius: 6px;
   outline: 0;
 }
-/* line 27, ../../sass/module/common/_modal.scss */
+/* line 28, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd {
   padding: 0.13333rem;
   font-size: 0.4rem;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 31, ../../sass/module/common/_modal.scss */
-.modal .modal-box .hd .title {
+/* line 32, ../../sass/module/common/_modal.scss */
+.modal .modal-box .hd .title1 {
   width: 90%;
-  padding-left: 0.13333rem;
 }
 /* line 36, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
@@ -892,7 +943,7 @@ footer .flex .item.active a {
 }
 /* line 45, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
-  padding: 0.13333rem;
+  padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
@@ -948,43 +999,18 @@ section.content .spec {
   line-height: 0.32rem;
 }
 /* line 25, ../../sass/config/buydetail.scss */
-section.content .info table {
-  font-size: 0.32rem;
-  width: 100%;
-}
-/* line 28, ../../sass/config/buydetail.scss */
-section.content .info table tr {
-  line-height: 0.93333rem;
-  border-top: 1px solid #ccc;
-}
-/* line 31, ../../sass/config/buydetail.scss */
-section.content .info table tr td.na {
-  color: #fb6000;
-  width: 5em;
-}
-/* line 36, ../../sass/config/buydetail.scss */
-section.content .info table tr td input {
-  height: 0.93333rem;
-  border: none;
-  width: 100%;
-}
-/* line 42, ../../sass/config/buydetail.scss */
-section.content .info table tr:last-child {
-  border-bottom: 1px solid #ccc;
-}
-/* line 47, ../../sass/config/buydetail.scss */
 section.content .info .agree {
   line-height: 0.4rem;
   font-size: 0.32rem;
   margin-top: 0.26667rem;
 }
-/* line 51, ../../sass/config/buydetail.scss */
+/* line 29, ../../sass/config/buydetail.scss */
 section.content .info .agree input {
   width: 0.4rem;
   height: 0.4rem;
   margin-right: 0.13333rem;
 }
-/* line 55, ../../sass/config/buydetail.scss */
+/* line 33, ../../sass/config/buydetail.scss */
 section.content .info .agree .intro {
   margin-top: 0.13333rem;
   margin-bottom: 0.13333rem;
@@ -993,7 +1019,104 @@ section.content .info .agree .intro {
   color: #fb6000;
 }
 
-/* line 62, ../../sass/config/buydetail.scss */
+/* line 40, ../../sass/config/buydetail.scss */
+.userinfo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+}
+/* line 54, ../../sass/config/buydetail.scss */
+.userinfo .info-box {
+  background: #fff;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 58, ../../sass/config/buydetail.scss */
+.userinfo .info-box .title {
+  background: #fb6000;
+  line-height: 1.17333rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.4rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+/* line 68, ../../sass/config/buydetail.scss */
+.userinfo table {
+  font-size: 0.32rem;
+  width: 100%;
+}
+/* line 71, ../../sass/config/buydetail.scss */
+.userinfo table tr {
+  line-height: 0.93333rem;
+  border-top: 1px solid #ccc;
+}
+/* line 74, ../../sass/config/buydetail.scss */
+.userinfo table tr td.na {
+  color: #fb6000;
+  width: 5em;
+  text-align: center;
+}
+/* line 80, ../../sass/config/buydetail.scss */
+.userinfo table tr td input {
+  height: 0.93333rem;
+  border: none;
+  width: 100%;
+}
+/* line 86, ../../sass/config/buydetail.scss */
+.userinfo table tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
+/* line 91, ../../sass/config/buydetail.scss */
+.userinfo select {
+  width: 30%;
+  text-indent: 5px;
+}
+/* line 95, ../../sass/config/buydetail.scss */
+.userinfo .title {
+  margin-bottom: 0.26667rem;
+}
+/* line 98, ../../sass/config/buydetail.scss */
+.userinfo .sure {
+  line-height: 0.53333rem;
+  padding: 0.4rem;
+  font-size: 0.21333rem;
+}
+/* line 102, ../../sass/config/buydetail.scss */
+.userinfo .sure .tips {
+  color: #e82121;
+  display: none;
+}
+/* line 106, ../../sass/config/buydetail.scss */
+.userinfo .sure .btn {
+  background: #fb6000;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.26667rem;
+  letter-spacing: 10px;
+  margin-right: 0.26667rem;
+  border-radius: 0.13333rem;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+}
+/* line 121, ../../sass/config/buydetail.scss */
+.userinfo #jobclass .show {
+  display: block;
+}
+
+/* line 126, ../../sass/config/buydetail.scss */
 .buy {
   position: fixed;
   bottom: 0;
@@ -1003,12 +1126,12 @@ section.content .info .agree .intro {
   text-align: center;
   font-size: 0.4rem;
 }
-/* line 70, ../../sass/config/buydetail.scss */
+/* line 134, ../../sass/config/buydetail.scss */
 .buy .price {
   background: #ebebeb;
   width: 70%;
 }
-/* line 74, ../../sass/config/buydetail.scss */
+/* line 138, ../../sass/config/buydetail.scss */
 .buy .order {
   background: #fb6000;
   width: 30%;

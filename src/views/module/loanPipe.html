@@ -12,8 +12,18 @@
     <div class="m-line"></div>
     <div class="m-loanlist" ms-repeat = "pipeDataList">
         <p class="title"><span class="num">{{el.id}}</span>{{el.name}}</p>
-        <ul class="flex">
-            <li ms-repeat ="el.loan"><a ms-attr-href="{{el.url}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" /><span>{{el.name}}</span></a></li>  
+        <ul class="flex" ms-repeat ="el.loan">
+            <li class="left">
+                <a ms-attr-href="{{el.url}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" /></a>
+            </li>
+            <li class="right clearfix">
+                <h3>{{el.name}}<a ms-attr-href="{{el.url}}"><span class='source btn'>立即申请</span></a></h3>
+                <div class="intro">
+                    <p>简介 :</p>
+                    <p class="detail f-word-break">{{el.title}}</p>
+                </div>
+                <a ms-attr-href={{"./newsdetial.html?id="+el.id+"&type=loanstrategy"}}><p class="btn">查看攻略</p></a>
+            </li>
         </ul>
     </div>
 </section>

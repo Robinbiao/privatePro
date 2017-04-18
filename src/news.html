@@ -17,24 +17,22 @@
     </header>
     <section class="content">
         <div class="m-newslist" ms-repeat = 'newsData'>
-            <ul class="flex">
-                <li class="left">
-                    <a ms-attr-href="{{'./newsdetial.html?id='+ el.id +'&type=news'}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_url}}"  alt="" /></a>
-                </li>
-                <li class="right">
-                    <a ms-attr-href="{{'./newsdetial.html?id='+ el.id +'&type=news'}}">
-                    <h3>{{el.title}}</h3>
-                    <div class="intro">
-                        <p>作者 :</p>
-                        <p class="detail f-word-break">{{el.name}}</p>
-                    </div>
-                    </a>
-                    <span>{{el.updatetime}}</span><span class='source'>金融时报</span>
-                </li>
-            </ul>
+            <div class="item">
+                <ul class="flex">
+                    <li class="left">
+                        <div class="cen"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_url}}"  alt="" /></div>
+                    </li>
+                    <li class="right">
+                        <p class="hot">简介:</p><p class="intro f-word-break">{{el.title}}</p>
+                        <p class="mark">更新时间：<small>{{el.updatetime}}</small></p>
+                        <p class="mark">所需等级：<small>{{el.gradename}}</small></p>
+                        <p class="mark">通道详情：<small class="link" ms-click ='toDetail(el.id,el.rules,el.gradename)'>请点击</small></p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
-    <footer ms-include-src="'./views/module/footer.html'"></footer>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/news.js"></script>

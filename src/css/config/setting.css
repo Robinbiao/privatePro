@@ -836,6 +836,34 @@ footer .flex .item a span {
 footer .flex .item.active a {
   color: #fb6000;
 }
+/* line 33, ../../sass/module/common/_footer.scss */
+footer .m-tips {
+  position: fixed;
+  right: -0.13333rem;
+  z-index: 10;
+  color: #fff;
+  top: 8rem;
+  text-align: center;
+  font-size: 0.24rem;
+}
+/* line 41, ../../sass/module/common/_footer.scss */
+footer .m-tips .service, footer .m-tips .search {
+  border-radius: 0.13333rem;
+  background: rgba(81, 176, 234, 0.9);
+  overflow: hidden;
+  width: 0.66667rem;
+  padding: 0.13333rem;
+  margin-top: 0.26667rem;
+}
+/* line 48, ../../sass/module/common/_footer.scss */
+footer .m-tips .service a, footer .m-tips .search a {
+  color: #fff;
+}
+/* line 52, ../../sass/module/common/_footer.scss */
+footer .m-tips .iconfont {
+  display: block;
+  font-size: 0.66667rem;
+}
 
 /* line 1, ../../sass/module/common/_modal.scss */
 .modal {
@@ -892,7 +920,7 @@ footer .flex .item.active a {
 }
 /* line 45, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
-  padding: 0.13333rem;
+  padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;

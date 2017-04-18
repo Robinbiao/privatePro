@@ -14,23 +14,31 @@
     <section class="content">
         <div class="m-line"></div>
         <div class="m-orderlist f-border-b" ms-repeat = "listData">
-           <!--  <ul class="flex">
-                <li class="item pic"><img ms-attr-src="{{el.img_url}}" alt="" /> </li>
-
-                <li class="item"><p class="na order">{{el.username}}</p><p class="meb order">
-
-                购买{{el.gradename}}</p><p class="member" >{{el.name}}</p></li>
-
-
-                <li class="item"><p class="time order">{{el.date}}</p><p class="member">{{el.job || '职位：空'}}</p></li>
-
-                <li class="item"><p class="money order">{{'+ '+el.money || 0.00}}</p><p class="member">({{el.gradename ||'VIP会员'}})</p></li>
-            </ul> -->
             <ul class="flex" ms-if ="hash == 'member'">
                 <li class="item pic"><img ms-attr-src="{{el.img_url}}" alt="" /></li>
                 <li class="item"><p class="member" >{{el.name}}</p></li>
                 <li class="item"><p class="member">{{el.job || '职位：空'}}</p></li>
-                <li class="item"><p class="member">({{el.gradename ||'VIP会员'}})</p></li>
+                <li class="item">
+                    <p ms-if ="!el.is_friend" class="member add" ms-click ='addFriend(el.id)'>{{el.friend}}</p>
+                    <p ms-if ="el.is_friend" class="member">{{el.friend}}</p>
+                </li>
+            </ul>
+            <ul class="flex" ms-if ="hash == 'friend'">
+                <li class="item pic"><img ms-attr-src="{{el.info.img_url}}" alt="" /></li>
+                <!-- //侍审核好友 -->
+                <li class="item" ms-if ="el.friend_status==1"><p class="member" >{{el.info.name ||'暂无'}}</p></li>
+                <li class="item" ms-if ="el.friend_status==1"><p class="member">{{el.info.job || '机械设计制造及其自动化'}}</p></li>
+                <li class="item" ms-if ="el.friend_status==1">
+                    <p class="member add" ms-click ='agreeFriend(el.vip_id,1)'>同意</p>
+                    <p class="member add" ms-click ='agreeFriend(el.vip_id,0)'>拒绝</p>
+                </li>
+                <!-- //侍审核好友结束 -->
+                <li class="item" ms-if ="el.friend_status==3"><p class="na order">{{el.info.name ||'暂无'}}</p><p class="meb order">
+                {{el.info.tel||'138878787787'}}</p></li>
+                <li class="item" ms-if ="el.friend_status==3"><p class="na order">{{el.info.prov||'湖南'}}</p><p class="meb order">
+                {{el.info.city||'长沙'}}</p></li>
+                <li class="item" ms-if ="el.friend_status==3"><p class="member">{{el.info.job||'机械设计制造及其自动化'}}</p></li>
+                
             </ul>
             <ul class="flex" ms-if ="hash == 'moneyin'">
                 <li class="item pic"><img ms-attr-src="{{el.img_url}}" alt="" /></li>
@@ -49,7 +57,8 @@
             </ul>
         </div>     
     </section>
-    <footer ms-include-src="'./views/module/footer.html'"></footer>
+    <div ms-include-src="'./views/module/modal.html'" class="modal"></div>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-redenred ='init'></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/moneylist.js"></script>

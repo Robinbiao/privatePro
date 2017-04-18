@@ -163,3 +163,55 @@ section.content{
 .f-border-b{
   border-bottom:1px solid #ccc;
 }
+.f-border-t{
+  border-top:1px solid #ccc;
+}
+.btn{
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  background:#fb6000;
+  color: #fff;
+  font-weight:500;
+  @include font-rem(20);
+  letter-spacing: 10px;
+  @include px-rem('margin-right',20);
+  @include px-rem('border-radius',10);
+  @include px-d-rem('padding',10,20);
+}
+.f-modal-bk{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: flex;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  .box{
+    background:#fff;
+    @include px-rem('border-radius',10);
+    width:80%;
+    margin:0 auto;
+    @include px-d-rem('padding',20,10);
+  }
+}

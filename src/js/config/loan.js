@@ -6,6 +6,8 @@ var pLoan = avalon.define({
     pipeDataList:[],
     cardDataList:[],
     newDataList:[],
+    newMsg:{},
+    lastMsgList:[],
     init:function(){
         if(getCookie('currentroter')){
             pLoan.htmlsrc = getCookie('currentroter');
@@ -34,7 +36,7 @@ var pLoan = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/member',{},callbackGrade);
-
+        pLoan.getMessage();
     },
     channeltog:function(src){
         pLoan.htmlsrc = 'loan' + src;
@@ -55,14 +57,40 @@ var pLoan = avalon.define({
             window.location.href = './newsdetial.html?id='+ id+'&type=loannew';
         }
         
+    },
+    getMessage:function(num){
+        var newback = function (data) {
+            if(data.code === 1000){
+                pLoan.newMsg = data.data; 
+                $('.m-message').css('display','flex');  
+                $('.m-message .new').css('display','block');
+                $('.m-message .last').css('display','none');
+            }
+        };
+        
+        var lastback = function (data) {
+          if(data.code === 1000){
+              pLoan.lastMsgList = data.data;
+              $('.m-message').css('display','flex');
+              $('.m-message .last').css('display','block');
+              $('.m-message .new').css('display','none');
+          }
+        };
+        if(num==1){ //右侧小tips进来
+          GetData.getAjax('/home/wealth/noticelist',{},lastback);
+        }else{
+          GetData.getAjax('/home/wealth/getnotice',{},newback);
+        };
+        $('.m-message').on('click','.ft .sure',function(){
+            $('.m-message').fadeOut();
+        });
     }
 });
 pLoan.$watch('htmlsrc',function(aft,bef){
   console.log(bef);
   console.log(aft);
   document.cookie = 'currentroter='+ aft;
-})
-pLoan.init();
+});
 function getCookie(name){
     var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
     if(arr=document.cookie.match(reg))

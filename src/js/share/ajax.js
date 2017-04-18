@@ -38,10 +38,12 @@
           $parent.fadeIn();
           $parent.css('display','flex');
           var $modalBox = $('.modal .modal-box');
-          // $parent.click(function(e){
-          //     e.preventDefault;
-          //     $(this).fadeOut();
-          // })
+          if(options.boxClass){
+                $modalBox.addClass(options.boxClass);
+          };
+          if(!options.chancel){
+              $modalBox.find('.chancel').css('display','none');
+          };
           $parent.on('click','.close,.chancel',function(e){
               e.preventDefault;
               $parent.fadeOut('slow', function() {    
@@ -52,7 +54,7 @@
               options.callback();
               
           });
-          $modalBox.find('.title').text(options.title);
+          $modalBox.find('.title1').text(options.title);
           $modalBox.find('.bd').html(options.domstr);
       }
   })

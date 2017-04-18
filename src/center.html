@@ -13,9 +13,9 @@
 <body ms-controller = "pCenter">
     <header>
         <div class="hd">
-            <div class="set">
+            <!-- <div class="set">
                 <a href="./setting.html"><i class="iconfont icon-shezhi"></i></a>
-            </div>
+            </div> -->
             <ul class="box clearfix">
                 <li class="left f-fl">
                     <img ms-attr-src="imgurl" alt="头像" />
@@ -41,15 +41,15 @@
         <div class="m-line"></div>
         <ul class="flex">
             <li>
-                <div class="bk"><a href="./index.html"><i class="iconfont icon-member"></i></a></div>
-                <span>会员升级</span>
+                <div class="bk"><a href="./moneylist.html#friend"><i class="iconfont icon-wodehaoyou"></i></a></div>
+                <span>我的好友</span>
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#member"><i class="iconfont icon-partner"></i></a></div>
-                <span>我的会员</span>
+                <div class="bk"><a href="./moneylist.html#member"><i class="iconfont icon-renmai"></i></a></div>
+                <span>人脉圈</span>
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#myqrcode"><i class="iconfont icon-inmoney"></i></a></div>
+                <div class="bk"><a ms-attr-href="{{'./moneylist.html#myqrcode?recommend='+recommend}}"><i class="iconfont icon-inmoney"></i></a></div>
                 <span>我要赚钱</span>
             </li>
             <li>
@@ -61,14 +61,6 @@
                 <span>提现记录</span>
             </li>
             <li>
-                <div class="bk"><a href="www.baidu.com"><i class="iconfont icon-vedio"></i></a></div>
-                <span>在线学习</span>
-            </li>
-            <li>
-                <div class="bk"><a href="./moneylist.html#service"><i class="iconfont icon-service"></i></a></div>
-                <span>客服中心</span>
-            </li>
-            <li>
                 <div class="bk"><a href="./newsdetial.html?id=13&type=loantec"><i class="iconfont icon-xinshoujiaocheng"></i></a></div>
                 <span>新手帮助</span>
             </li>
@@ -77,29 +69,17 @@
                 <span>提额神器</span>
             </li>
             <li>
-                <div class="bk"><a href="https://ipcrs.pbccrc.org.cn/"><i class="iconfont icon-grzx"></i></a></div>
-                <span>征信查询</span>
-            </li>
-            <li>
-                <div class="bk"><a href="http://www.qichacha.com/"><i class="iconfont icon-company"></i></a></div>
-                <span>企业查询</span>
-            </li>
-            <li>
-                <div class="bk"><a href="https://ctq.unionpay.com/Wxindex.aspx?qd=02"><i class="iconfont icon-jiaoyi"></i></a></div>
+                <div class="bk"><a href="https://ctq.unionpay.com/Wxindex.aspx?qd=02"><i class="iconfont icon-search"></i></a></div>
                 <span>交易查询</span>
             </li>
             <li>
-                <div class="bk"><a href="www.baidu.com"><i class="iconfont icon-huilv"></i></a></div>
-                <span>汇率查询</span>
-            </li>
-            <li>
-                <div class="bk"><a href="www.baidu.com"><i class="iconfont icon-credit"></i></a></div>
-                <span>平台授信贷</span>
+                <div class="bk"><a href="https://ctq.unionpay.com/Wxindex.aspx?qd=02"><i class="iconfont icon-jiaoyi"></i></a></div>
+                <span>代理合作</span>
             </li>
         </ul>
     </section>
     <div ms-include-src="'./views/module/modal.html'" class="modal"></div>
-    <footer ms-include-src="'./views/module/footer.html'"></footer>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/center.js"></script>
