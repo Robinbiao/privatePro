@@ -15,6 +15,15 @@ var pHome = avalon.define({
         }
     }
     GetData.getAjax('/home/wealth/member',{},callback);
+    if(pHome.currentGrade ==3){
+      Modal.init({
+        domstr:'恭喜您已成为顶级会员，去发展更多的会员喔！',
+        callback:function(){
+          window.location.href = './center.html';
+        }
+      })
+    };
+    
     pHome.getMessage();
   },
   next:function () {

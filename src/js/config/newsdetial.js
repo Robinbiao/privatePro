@@ -8,6 +8,7 @@ var pArticledetial = avalon.define({
         'loancredit':'up_card_info',//信用卡提额接口
         'loantec':'guidance',//贷款中心技术专区
         'loanstrategy':'loaninfo'//贷款中心查看攻略
+
     },
     newsData:'',
     newMsg:{},
@@ -27,15 +28,20 @@ var pArticledetial = avalon.define({
         var params ={
             'id':id
         }
-        if(type=='loantec'){
+        if(type=='loantec' ||type =='copration'){
             params.type = id;
-            if(id == 12 || id ==13){//判断详情属于哪个大栏目
+            if(id == 12 || id ==13 ||id==14){//判断详情属于哪个大栏目
                 pArticledetial.currentPage ='center';
             }
         }else if(type =='news'){//判断详情属于哪个大栏目
             pArticledetial.currentPage ='news';
-        }
-        GetData.getAjax('/home/wealth/'+pArticledetial.apiMap[type],params,callback);
+        };
+        if(type == 'copration'){
+            GetData.getAjax('/home/wealth/guidance/type/14',params,callback);
+        }else{
+            GetData.getAjax('/home/wealth/'+pArticledetial.apiMap[type],params,callback);
+        };
+        
         pArticledetial.getMessage();
     },
     getMessage:function(num){

@@ -7,6 +7,10 @@ header{
     @include font-rem(30);
     font-weight: 600;
     letter-spacing: 5px;
+    .imgnon{
+        width:0;
+        height:0;
+    }
 }
 .content{
     .qrimg{

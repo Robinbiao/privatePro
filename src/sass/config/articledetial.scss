@@ -13,6 +13,7 @@ header{
     @include px-rem('height',173);
 }
 .content{
+
     @include px-d-rem('padding',10,30);
     @include font-rem(16);
     text-align: center;
@@ -31,6 +32,7 @@ header{
         @include px-d-rem('padding',30,10);
     }
     article{
+        user-select:none;   
         @include font-rem(16);
         p{
             @include font-rem(16);

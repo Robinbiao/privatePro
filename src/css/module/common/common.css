@@ -727,6 +727,11 @@ section.content {
   padding-right: 0.13333rem;
 }
 
+/* line 218, ../../../sass/module/common/_base.scss */
+input {
+  -webkit-user-select: auto;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189198");

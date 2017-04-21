@@ -122,7 +122,7 @@ header{
                 }
                 .btn{
                     float:right;
-                    @include px-d-rem('padding',6,8);
+                    @include px-d-rem('padding',12,12);
                     letter-spacing: normal;
                 }
                 .intro{
@@ -131,7 +131,7 @@ header{
                     @include px-rem('line-height',35);
                      width:70%;
                     p:first-child{
-                        min-width:3em;
+                        min-width:5em;
                     }
                     .detail{
                         overflow:hidden;

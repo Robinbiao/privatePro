@@ -6,6 +6,7 @@ var pLoan = avalon.define({
     pipeDataList:[],
     cardDataList:[],
     newDataList:[],
+    study:{},
     newMsg:{},
     lastMsgList:[],
     init:function(){
@@ -30,6 +31,12 @@ var pLoan = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/passageway',{},callbackNew);
+        var callbackStudy = function (data) {
+            if(data.code === 1000){
+                pLoan.study = data.data;
+            }
+        }
+        GetData.getAjax('/home/wealth/learn',{},callbackStudy);
         var callbackGrade = function (data) {
             if(data.code === 1000){
                 pLoan.currentGrade = data.data.grade;

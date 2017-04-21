@@ -727,6 +727,11 @@ section.content {
   padding-right: 0.13333rem;
 }
 
+/* line 218, ../../sass/module/common/_base.scss */
+input {
+  -webkit-user-select: auto;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189198");
@@ -1205,10 +1210,10 @@ header .channel .flex li.active {
 /* line 123, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .btn {
   float: right;
-  padding-top: 0.08rem;
-  padding-bottom: 0.08rem;
-  padding-left: 0.10667rem;
-  padding-right: 0.10667rem;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  padding-left: 0.16rem;
+  padding-right: 0.16rem;
   letter-spacing: normal;
 }
 /* line 128, ../../sass/config/loan.scss */
@@ -1220,7 +1225,7 @@ header .channel .flex li.active {
 }
 /* line 133, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .intro p:first-child {
-  min-width: 3em;
+  min-width: 5em;
 }
 /* line 136, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .intro .detail {

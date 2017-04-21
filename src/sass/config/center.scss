@@ -158,11 +158,33 @@ header{
 .modal{
     .monqrcode{
         .bd{
-            @include px-d-rem('padding',10,20);
             img{
                 width:80%;
                 margin:0 auto;
                 display:block;
+                @include px-rem('margin-top',10);
+            }
+            .tips{
+                @include px-rem('padding-bottom',15);
+                color:$main-color;
+            }
+            .form-group{
+                @include px-rem('padding-bottom',15);
+            }
+            .pholder{
+                float: left;
+            }
+            .colsm{
+                float: left;
+                width:50%;
+                @include px-rem('margin-left',15);
+                input{
+                    border:none;
+                    width:100%;
+                }
+            }
+            .warning{
+                color:#d9534f;
             }
         }
     }

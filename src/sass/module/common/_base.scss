@@ -215,3 +215,6 @@ section.content{
     @include px-d-rem('padding',20,10);
   }
 }
+input {      
+     -webkit-user-select:auto;
+}  

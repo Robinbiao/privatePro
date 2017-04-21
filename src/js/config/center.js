@@ -9,6 +9,7 @@ var pCenter = avalon.define({
     gradename:'VIP会员',
     currentPage:'center',
     newMsg:{},
+    modalB:false,
     lastMsgList:[],
     init:function(){
         var callback = function (data) {
@@ -28,18 +29,44 @@ var pCenter = avalon.define({
         pCenter.getMessage();
     },
     take:function(){
-        var domstr = '<img src="./images/moneyservice.jpg"/>';
-        Modal.init({
-            title:'联系客服',
-            callback:function(){
-                $('.modal').on('click','.sure',function(e){
-                    $('.modal').fadeOut();
-                })
-            },
-            domstr:domstr,
-            boxClass:'monqrcode',
-            chancel:false
-        });
+        pCenter.modalB = !pCenter.modalB;
+        var domstr = '<div class="form-group clearfix">'
+                     +'<p class="tips">可用余额：'+pCenter.money+'</p>'
+                     +'<label for="takemoney" class="pholder">请输入提款金额:</label>'
+                     +'<div class="colsm"><input  class="form-control" id="takemoney">'
+                     +'</div></div><p class="warning">提示：最小提额至少100元整</p>';
+        if(pCenter.modalB){
+            Modal.init({
+                title:'提取现金',
+                boxClass:'monqrcode',
+                callback:function(){
+                    var takemoney = $('#takemoney').val() - 0;
+                    $warning = $('.modal-box .bd .warning')
+                    if(takemoney>pCenter.money){
+                        $warning.text('提示：您输入的金额大于可提金额,请重新输入');
+                        return;
+                    }
+                    if(takemoney<100){
+                        $warning.text('提示：最小提额至少100元整');
+                        return;
+                    }
+                    var cashback = function(data){
+                        $warning.text(data.msg);
+                        $('.modal').on('click','.sure',function(e){
+                            $('.modal').fadeOut();
+                        })
+                        if(data.code == 1000){
+                            $('.monqrcode .bd').html("<img src ='www.examples.xin/"+data.data[0].path+"/>");
+                        }
+                    }
+                    GetData.getAjax('/home/wealth/drawcash',{'money':takemoney},cashback);
+                },
+                domstr:domstr
+            });
+        }else{
+            $('.modal').css('display','flex');
+        }
+        
     },
     getMessage:function(num){
         var newback = function (data) {

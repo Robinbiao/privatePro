@@ -3,7 +3,8 @@ var mapObj = {
     friend:'myfriends',
     moneyin:'income',
     moneyout:'cashlist',
-    myqrcode:'myqrcode'
+    myqrcode:'myqrcode',
+    service:'service'
 }
 var pMoneylist = avalon.define({
     $id:'pMoneylist',
@@ -14,8 +15,8 @@ var pMoneylist = avalon.define({
     newMsg:{},
     lastMsgList:[],
     init:function(){
-        var hash = window.location.hash.replace('#','');
-        pMoneylist.hash = hash.split('?')[0];
+        var hash = window.location.hash.replace('#','').split('?')[0];
+        pMoneylist.hash = hash;
         var mainTitle;
         if(hash === 'member'){
             mainTitle = '人脉圈';
@@ -27,18 +28,18 @@ var pMoneylist = avalon.define({
             mainTitle = '我的赚钱二维码';
         }else if(hash === 'service'){
             mainTitle = '客服中心';
-            $('.content').html('<img src="./images/qrservice.png" class="qrimg"/>');
+            
         }
         pMoneylist.mainTitle = mainTitle;
         $('title').text(mainTitle);
+        var imgurl
         var callback = function (data) {
             if(data.code === 1000){
                 if(hash === 'myqrcode'){
-                    var imgurl ='//www.examples.xin/'+data.data;
+                    imgurl ='//www.examples.xin/'+data.data;
                     var imgstr = '<img src="'+imgurl+'" class="qrimg"/>'
                     $('.content').html(imgstr);
-                }else{
-                    if(hash == 'member'){
+                }else if(hash == 'member'){
                         pMoneylist.listData = data.data;
                         pMoneylist.listData.forEach(function(item){
                             if(!item.is_friend){
@@ -51,15 +52,20 @@ var pMoneylist = avalon.define({
                                 item.friend = '好友'
                             }
                         })
-                    }else if(hash == 'friend'){
+                }else if(hash == 'friend'){
                         pMoneylist.listData = (data.data.be_added||[]).concat((data.data.friends||[]));
-                    }else{
+                }else if(hash == 'service'){
+                        var imgstr ='';
+                        var imgsev = '//www.examples.xin/';
+                        for(var i= 0,len=data.data.length;i<len;i++){
+                            imgstr +='<img src="'+ imgsev + data.data[i].path +'" class="qrimg"/>';
+                        }
+                        $('.content').html(imgstr);
+                }else{
                         pMoneylist.listData = data.data;
-                    }
-                    
-                }
-                
-            }
+                } 
+            };
+            
         }
         if(pMoneylist.hash != 'myqrcode'){
             GetData.getAjax('/home/wealth/'+ mapObj[hash],{},callback);
