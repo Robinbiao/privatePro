@@ -727,6 +727,11 @@ section.content {
   padding-right: 0.13333rem;
 }
 
+/* line 218, ../../sass/module/common/_base.scss */
+input {
+  -webkit-user-select: auto;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189198");
@@ -1027,12 +1032,14 @@ footer .m-message .box .ft {
 .modal .modal-box .hd .title1 {
   width: 90%;
 }
-/* line 36, ../../sass/module/common/_modal.scss */
+/* line 35, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
   font-weight: 600;
-  font-size: 0.4rem;
+  font-size: 0.66667rem;
+  width: 0.8rem;
+  text-align: center;
 }
-/* line 41, ../../sass/module/common/_modal.scss */
+/* line 42, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1040,83 +1047,96 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 45, ../../sass/module/common/_modal.scss */
+/* line 46, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 50, ../../sass/module/common/_modal.scss */
+/* line 51, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
 
-/* line 4, ../../sass/config/news.scss */
-header .banner {
-  height: 2.72rem;
+/* line 3, ../../sass/config/news.scss */
+header {
+  height: 3.89333rem;
+  overflow: hidden;
 }
 /* line 6, ../../sass/config/news.scss */
+header .banner {
+  width: 300%;
+  position: relative;
+  left: 0;
+}
+/* line 12, ../../sass/config/news.scss */
 header .banner img {
-  width: 100%;
-  height: 100%;
+  width: 10rem;
+  float: left;
+  display: block;
 }
 
-/* line 15, ../../sass/config/news.scss */
+/* line 21, ../../sass/config/news.scss */
 .content .m-newslist .item {
   padding: 0.48rem;
+  padding-left: 0.12rem;
   border-bottom: 1px solid #ccc;
 }
-/* line 18, ../../sass/config/news.scss */
+/* line 25, ../../sass/config/news.scss */
 .content .m-newslist .item .flex {
   font-size: 0.4rem;
 }
-/* line 21, ../../sass/config/news.scss */
+/* line 28, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .left {
   text-align: center;
   width: 25%;
   vertical-align: center;
   display: flex;
 }
-/* line 26, ../../sass/config/news.scss */
+/* line 33, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .left .cen {
   margin: auto;
 }
-/* line 29, ../../sass/config/news.scss */
+/* line 36, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .left img {
-  width: 2.13333rem;
-  height: 2.13333rem;
+  width: 1.66667rem;
+  height: 1.66667rem;
   display: block;
   margin: 0 auto;
 }
-/* line 35, ../../sass/config/news.scss */
+/* line 42, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .right {
-  margin-left: 5%;
-  width: 70%;
+  width: 75%;
 }
-/* line 38, ../../sass/config/news.scss */
+/* line 44, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .right .hot {
   width: 15%;
 }
-/* line 42, ../../sass/config/news.scss */
+/* line 48, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .right .intro {
   width: 85%;
   overflow: hidden;
-  color: #999;
+  color: #000;
   font-size: 0.26667rem;
   max-height: 1.44rem;
 }
-/* line 49, ../../sass/config/news.scss */
+/* line 55, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .right .hot, .content .m-newslist .item .flex .right .intro {
   float: left;
   line-height: 0.48rem;
 }
-/* line 53, ../../sass/config/news.scss */
+/* line 60, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .right small {
   color: #999;
   font-size: 0.26667rem;
 }
-/* line 56, ../../sass/config/news.scss */
+/* line 63, ../../sass/config/news.scss */
 .content .m-newslist .item .flex .right small.link {
-  color: #fb6000;
+  color: #fff;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0.16rem;
+  padding-right: 0.16rem;
+  letter-spacing: normal;
 }

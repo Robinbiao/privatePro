@@ -1032,12 +1032,14 @@ footer .m-message .box .ft {
 .modal .modal-box .hd .title1 {
   width: 90%;
 }
-/* line 36, ../../sass/module/common/_modal.scss */
+/* line 35, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
   font-weight: 600;
-  font-size: 0.4rem;
+  font-size: 0.66667rem;
+  width: 0.8rem;
+  text-align: center;
 }
-/* line 41, ../../sass/module/common/_modal.scss */
+/* line 42, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1045,22 +1047,21 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 45, ../../sass/module/common/_modal.scss */
+/* line 46, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 50, ../../sass/module/common/_modal.scss */
+/* line 51, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
 
 /* line 4, ../../sass/config/center.scss */
 header {
-  height: 5.33333rem;
-  background: url("../../images/centerbk.jpg") center center/100% 100%;
+  height: 3.46667rem;
 }
 /* line 7, ../../sass/config/center.scss */
 header .hd {
@@ -1074,7 +1075,7 @@ header .hd .set {
 }
 /* line 12, ../../sass/config/center.scss */
 header .hd .set .iconfont {
-  color: #fff;
+  color: #000;
   font-size: 0.53333rem;
 }
 /* line 18, ../../sass/config/center.scss */
@@ -1097,7 +1098,7 @@ header .hd .box .left img {
 /* line 30, ../../sass/config/center.scss */
 header .hd .box .right {
   width: 70%;
-  color: #fff;
+  color: #000;
   font-size: 0;
 }
 /* line 34, ../../sass/config/center.scss */
@@ -1118,178 +1119,232 @@ header .hd .box .right span {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/* line 50, ../../sass/config/center.scss */
-header .bd {
-  padding-top: 0.85333rem;
-}
-/* line 53, ../../sass/config/center.scss */
-header .bd .flex li {
-  flex: 1;
-  color: #fff;
-  font-size: 0.32rem;
-  text-align: center;
-}
-/* line 58, ../../sass/config/center.scss */
-header .bd .flex li:nth-child(1) {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-}
-/* line 62, ../../sass/config/center.scss */
-header .bd .flex li p {
-  margin: 4px auto;
-}
-/* line 65, ../../sass/config/center.scss */
-header .bd .flex li p.btn {
-  background: #07b777;
-}
-/* line 69, ../../sass/config/center.scss */
-header .bd .flex li:nth-child(2) {
-  display: flex;
-  align-items: center;
-}
-/* line 72, ../../sass/config/center.scss */
-header .bd .flex li:nth-child(2) .btn {
-  font-size: 0.4rem;
-  display: inline-block;
-}
 
-/* line 83, ../../sass/config/center.scss */
+/* line 52, ../../sass/config/center.scss */
 .content .m-line {
   background: #f8f8f8;
 }
-/* line 86, ../../sass/config/center.scss */
+/* line 55, ../../sass/config/center.scss */
 .content .flex {
   flex-wrap: wrap;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  padding-left: 0.33333rem;
-  padding-right: 0.33333rem;
 }
-/* line 89, ../../sass/config/center.scss */
+/* line 58, ../../sass/config/center.scss */
 .content .flex li {
-  width: 33%;
+  width: 50%;
+  box-sizing: border-box;
   text-align: center;
+  border: 1px solid #ccc;
+  color: #fff;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   padding-left: 0rem;
   padding-right: 0rem;
 }
-/* line 93, ../../sass/config/center.scss */
-.content .flex li .bk {
-  width: 1.6rem;
-  height: 1.6rem;
-  border-radius: 50%;
-  margin: 0 auto;
+/* line 59, ../../sass/config/center.scss */
+.content .flex li a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-/* line 97, ../../sass/config/center.scss */
-.content .flex li .bk a {
-  margin: 0 auto;
+/* line 69, ../../sass/config/center.scss */
+.content .flex li.bd {
+  color: #000;
+  font-size: 0.32rem;
+  text-align: center;
 }
-/* line 100, ../../sass/config/center.scss */
-.content .flex li .bk .iconfont {
-  color: #fff;
-  line-height: 1.6rem;
-  font-size: 0.93333rem;
+/* line 73, ../../sass/config/center.scss */
+.content .flex li.bd:nth-child(1) {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
-/* line 108, ../../sass/config/center.scss */
-.content .flex li:nth-child(1) .bk {
-  background: #fa4f47;
+/* line 77, ../../sass/config/center.scss */
+.content .flex li.bd p {
+  margin: 4px auto;
 }
-/* line 111, ../../sass/config/center.scss */
-.content .flex li:nth-child(2) .bk {
-  background: #66c75c;
-}
-/* line 114, ../../sass/config/center.scss */
-.content .flex li:nth-child(3) .bk {
-  background: #ff5b98;
-}
-/* line 117, ../../sass/config/center.scss */
-.content .flex li:nth-child(4) .bk {
-  background: #1171bb;
-}
-/* line 120, ../../sass/config/center.scss */
-.content .flex li:nth-child(5) .bk {
-  background: #fa4f47;
-}
-/* line 123, ../../sass/config/center.scss */
-.content .flex li:nth-child(6) .bk {
-  background: #b50e99;
-}
-/* line 126, ../../sass/config/center.scss */
-.content .flex li:nth-child(7) .bk {
-  background: #565db7;
-}
-/* line 129, ../../sass/config/center.scss */
-.content .flex li:nth-child(8) .bk {
-  background: #66c75c;
-}
-/* line 132, ../../sass/config/center.scss */
-.content .flex li:nth-child(9) .bk {
+/* line 80, ../../sass/config/center.scss */
+.content .flex li.bd p.btn {
   background: #07b777;
 }
-/* line 135, ../../sass/config/center.scss */
-.content .flex li:nth-child(10) .bk {
-  background: #1fa2d8;
+/* line 84, ../../sass/config/center.scss */
+.content .flex li.bd:nth-child(2) {
+  display: flex;
+  align-items: center;
 }
-/* line 138, ../../sass/config/center.scss */
-.content .flex li:nth-child(11) .bk {
-  background: #ff5b99;
+/* line 87, ../../sass/config/center.scss */
+.content .flex li.bd:nth-child(2) .btn {
+  font-size: 0.4rem;
+  display: inline-block;
 }
-/* line 141, ../../sass/config/center.scss */
-.content .flex li:nth-child(12) .bk {
-  background: #fa4f47;
+/* line 94, ../../sass/config/center.scss */
+.content .flex li:nth-child(2n+1) {
+  border-right: 1px solid #ccc;
 }
-/* line 144, ../../sass/config/center.scss */
-.content .flex li:nth-child(13) .bk {
-  background: #ff5b99;
+/* line 101, ../../sass/config/center.scss */
+.content .flex li .iconfont {
+  color: #fff;
+  font-size: 0.93333rem;
 }
-/* line 147, ../../sass/config/center.scss */
-.content .flex li:nth-child(14) .bk {
-  background: #fa4f47;
+/* line 106, ../../sass/config/center.scss */
+.content .flex li:nth-child(3) {
+  background: #e05750;
 }
-/* line 149, ../../sass/config/center.scss */
+/* line 109, ../../sass/config/center.scss */
+.content .flex li:nth-child(4) {
+  background: #66c75c;
+}
+/* line 112, ../../sass/config/center.scss */
+.content .flex li:nth-child(5) {
+  background: #ff5b98;
+}
+/* line 115, ../../sass/config/center.scss */
+.content .flex li:nth-child(6) {
+  background: #1171bb;
+}
+/* line 118, ../../sass/config/center.scss */
+.content .flex li:nth-child(7) {
+  background: #cab447;
+}
+/* line 121, ../../sass/config/center.scss */
+.content .flex li:nth-child(8) {
+  background: #43c2c3;
+}
+/* line 124, ../../sass/config/center.scss */
 .content .flex li span {
-  margin-top: 0.2rem;
   margin-bottom: 0.2rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
-  font-size: 0.26667rem;
-  color: #666;
+  font-size: 0.4rem;
+  color: #fff;
   display: block;
 }
 
-/* line 161, ../../sass/config/center.scss */
+/* line 136, ../../sass/config/center.scss */
 .modal .monqrcode .bd img {
   width: 80%;
   margin: 0 auto;
   display: block;
   margin-top: 0.13333rem;
 }
-/* line 167, ../../sass/config/center.scss */
+/* line 142, ../../sass/config/center.scss */
 .modal .monqrcode .bd .tips {
   padding-bottom: 0.2rem;
   color: #fb6000;
 }
-/* line 171, ../../sass/config/center.scss */
+/* line 146, ../../sass/config/center.scss */
 .modal .monqrcode .bd .form-group {
   padding-bottom: 0.2rem;
 }
-/* line 174, ../../sass/config/center.scss */
+/* line 149, ../../sass/config/center.scss */
 .modal .monqrcode .bd .pholder {
   float: left;
 }
-/* line 177, ../../sass/config/center.scss */
+/* line 152, ../../sass/config/center.scss */
 .modal .monqrcode .bd .colsm {
   float: left;
   width: 50%;
   margin-left: 0.2rem;
 }
-/* line 181, ../../sass/config/center.scss */
+/* line 156, ../../sass/config/center.scss */
 .modal .monqrcode .bd .colsm input {
   border: none;
   width: 100%;
 }
-/* line 186, ../../sass/config/center.scss */
+/* line 161, ../../sass/config/center.scss */
 .modal .monqrcode .bd .warning {
   color: #d9534f;
+}
+
+/* line 167, ../../sass/config/center.scss */
+.userinfo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+}
+/* line 181, ../../sass/config/center.scss */
+.userinfo .info-box {
+  background: #fff;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 185, ../../sass/config/center.scss */
+.userinfo .info-box .title {
+  background: #fb6000;
+  line-height: 1.17333rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.4rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+/* line 195, ../../sass/config/center.scss */
+.userinfo table {
+  font-size: 0.32rem;
+  width: 100%;
+}
+/* line 198, ../../sass/config/center.scss */
+.userinfo table tr {
+  line-height: 0.93333rem;
+  border-top: 1px solid #ccc;
+}
+/* line 201, ../../sass/config/center.scss */
+.userinfo table tr td.na {
+  color: #fb6000;
+  width: 5em;
+  text-align: center;
+}
+/* line 207, ../../sass/config/center.scss */
+.userinfo table tr td input {
+  height: 0.93333rem;
+  border: none;
+  width: 100%;
+}
+/* line 213, ../../sass/config/center.scss */
+.userinfo table tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
+/* line 218, ../../sass/config/center.scss */
+.userinfo select {
+  width: 30%;
+  text-indent: 5px;
+}
+/* line 222, ../../sass/config/center.scss */
+.userinfo .title {
+  margin-bottom: 0.26667rem;
+}
+/* line 225, ../../sass/config/center.scss */
+.userinfo .sure {
+  line-height: 0.53333rem;
+  padding: 0.4rem;
+  font-size: 0.21333rem;
+}
+/* line 229, ../../sass/config/center.scss */
+.userinfo .sure .tips {
+  color: #e82121;
+  display: none;
+}
+/* line 233, ../../sass/config/center.scss */
+.userinfo .sure .btn {
+  background: #fb6000;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.26667rem;
+  letter-spacing: 10px;
+  margin-right: 0.26667rem;
+  border-radius: 0.13333rem;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+}
+/* line 248, ../../sass/config/center.scss */
+.userinfo #jobclass .show {
+  display: block;
 }

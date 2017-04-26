@@ -1,23 +1,28 @@
 @import "../module/common/common";
-header{
-    background: $main-color;
-    @include px-rem('line-height',88);
-    color:#fff;
-    text-align: center;
-    @include font-rem(30);
-    font-weight: 600;
-    letter-spacing: 5px;
-    .imgnon{
-        width:0;
-        height:0;
+.imgnon{
+    width:0;
+    height:0;
+    overflow:hidden;
+    img{
+        @include px2rem(300,300);
     }
+}
+body{
+        font-size:0;
 }
 .content{
     .qrimg{
         width:100%;
     }
+
     .m-orderlist{
         @include px-d-rem('padding',12,10);
+        &.moneyin{
+            border-bottom:none;
+            .flex{
+                @include px-d-rem('padding',12,10);
+            }
+        }
         .item{
             text-align: center;
             overflow:hidden;

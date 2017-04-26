@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>贷款中心</title>
     <link rel="stylesheet" href="./css/config/loan.css">
+    <link rel="stylesheet" href="./css/module/common/dropload.css">
     <script src="./js/lib/avalon.mobile.js"></script>
     <script src="./js/share/m-base.js"></script>
 </head>
-<body ms-controller = "pLoan">
+<body ms-controller="pLoan">
     <header>
-        <div class="banner">
-            <img src="./images/loanbk.jpg" alt="" />
-        </div>
+    <div class="banner-box">
+        <div class="banner clearfix ban1">
+            <img src="./images/banner1.jpg" alt="">
+            <img src="./images/banner2.jpg" alt="">
+            <img src="./images/banner1.jpg" alt="">
+        </div>      
+    </div> 
         <div class="channel">
             <ul class="flex">
                 <li ms-class="{{ htmlsrc =='loanPipe'?'active':''}}" ms-click="channeltog('Pipe')">贷款通道</li>
@@ -25,11 +30,12 @@
     </header>
     <section class="content">
         <div class="m-line"></div>
-        <div class="box"　ms-include-src="'./views/module/'+htmlsrc+'.html'"></div>
+        <div class="box" ms-include-src="'./views/module/'+htmlsrc+'.html'" data-include-rendered="newmore"></div>
     </section>
     <div class="modal" ms-include-src="'./views/module/modal.html'"></div>
     <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/dropload.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/loan.js"></script>
 </body>

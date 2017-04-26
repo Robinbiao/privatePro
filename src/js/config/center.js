@@ -26,6 +26,24 @@ var pCenter = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/personalinfo',{},callback);
+        $("#city").citySelect({
+            prov:'湖南',
+            nodata:"none"
+        });
+        $("#jobclass").citySelect({
+            prov:'生活 | 服务业',
+            nodata:"none",
+            url:{"citylist":[
+                    {p:'生活 | 服务业'},{p:'人力 | 行政 | 管理'},{p:'销售 | 客服 | 采购 | 淘宝'},{p:'酒店 | 餐饮'},{p:'市场 | 媒介 | 广告 | 设计'},{p:'生产 | 物流 | 质控 | 汽车'},{p:'网络 | 通信 | 电子'},{p:'法律 | 教育 | 翻译 | 出版'},{p:'财会 | 金融 | 保险'},{p:'医疗 | 制药 | 环保'},{p:'建筑 | 物业'},{p:'其他'}
+                ]}
+        });
+        $("#source").citySelect({
+            prov:'微信',
+            nodata:"none",
+            url:{"citylist":[
+                    {p:'微信'},{p:'QQ'},{p:'微博'},{p:'线下推广'},{p:'朋友介绍'},{p:'今日头条'}
+                ]}
+        });
         pCenter.getMessage();
     },
     take:function(){
@@ -68,6 +86,40 @@ var pCenter = avalon.define({
         }
         
     },
+    getUserInfo:function(){
+        $('.sure .tips').css('display','block');
+        if(!$('[name = "name"]').val()){
+            $('.sure .tips span').text('请输入您的姓名');
+            return
+        }else if(!$('[name = "tel"]').val()){
+            $('.sure .tips span').text('请输入您的手机号码');
+            return
+        }
+        if(!(/^1[34578]\d{9}$/.test($('[name = "tel"]').val()))){
+            $('.sure .tips span').text('请输入正确的手机号码');
+            return
+        }
+        $('.sure .tips').css('display','none');
+        var inform = $('#infoform').serializeArray();
+        var params = {};
+        $.each(inform,function(){
+            params[this.name] = this.value;
+        });
+        var setback = function(data){
+            $('.userinfo').css('display','none');
+            var modalParams ={
+                domstr:data.msg,
+                chancel:false
+            }
+            if(data.code===1000){
+                modalParams.callback=function(){
+                    window.location.href = './center.html';
+                }  
+            };
+            Modal.init(modalParams);
+        }
+        GetData.getAjax('/home/wealth/changeinfo',params,setback,{type:'POST'});
+    },
     getMessage:function(num){
         var newback = function (data) {
             if(data.code === 1000){
@@ -75,6 +127,10 @@ var pCenter = avalon.define({
                 $('.m-message').css('display','flex');  
                 $('.m-message .new').css('display','block');
                 $('.m-message .last').css('display','none');
+            }else if(data.code ==1111){
+                if(!data.info){
+                    $('.userinfo').css('display','flex');
+                }
             }
         };
         

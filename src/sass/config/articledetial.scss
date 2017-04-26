@@ -1,13 +1,31 @@
 @import "../module/common/common";
 $color-green:#477c2b;
-header{
-    .banner{
-        @include px-rem('height',204);
-        img{
-            width:100%;
-            height:100%;
-        }
+.pic-body{
+  header{
+    display:none;
+  }
+  .content{
+    padding:0;
+    img{
+        width:100%;
     }
+  }
+}
+header{
+  @include px-rem('height',292);
+  overflow:hidden;
+  .banner{
+      width:300%;
+      position:relative;
+      transition:all 1s;
+      left:0;
+      //@include px-rem('left',-750);
+      img{
+          @include px-rem('width',750);
+          float:left;
+          display:block;
+      };
+  }
 }
 .pLoan .banner{
     @include px-rem('height',173);

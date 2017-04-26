@@ -32,55 +32,64 @@
         </div>
         <div class="bd">
             <ul class="flex clearfix">
-                <li><p class="f-text-ellipis">{{money}}</p><p>佣金余额</p></li>
-                <li ms-click="take"><p class="btn">我要提现</p></li>
+                
             </ul>
         </div>
     </header>
     <section class="content">
         <div class="m-line"></div>
         <ul class="flex">
+            <li class="bd"><p class="f-text-ellipis">{{money}}</p><p>佣金余额</p></li>
+            <li class ='bd' ms-click="take"><p class="btn">我要提现</p></li>
             <li>
-                <div class="bk"><a href="./moneylist.html#friend"><i class="iconfont icon-wodehaoyou"></i></a></div>
-                <span>我的好友</span>
+                <a ms-attr-href="{{'./moneylist.html#myqrcode?recommend='+recommend}}"><i class="iconfont icon-inmoney"></i><span>我要赚钱</span></a>
+                
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#member"><i class="iconfont icon-renmai"></i></a></div>
-                <span>人脉圈</span>
+                <a href="./newsdetial.html?id=14&type=copration"><i class="iconfont icon-jiaoyi"></i><span>代理合作</span></a>
+                
             </li>
             <li>
-                <div class="bk"><a ms-attr-href="{{'./moneylist.html#myqrcode?recommend='+recommend}}"><i class="iconfont icon-inmoney"></i></a></div>
-                <span>我要赚钱</span>
+                <a href="./newsdetial.html?id=12&type=copration"><i class="iconfont icon-ketixianjine"></i><span>提额神器</span></a>
+                
             </li>
             <li>
-                <div class="bk"><a href="./moneylist.html#moneyin"><i class="iconfont icon-details"></i></a></div>
-                <span>收入明细</span>
+                <a href="./moneylist.html#moneyin"><i class="iconfont icon-details"></i><span>收入明细</span></a>
+                
             </li>
             <li>
+                <a href="./moneylist.html#member"><i class="iconfont icon-renmai"></i><span>人脉圈</span></a>
+                
+            </li>
+            <li>
+                <a href="./moneylist.html#friend"><i class="iconfont icon-wodehaoyou"></i><span>我的好友</span></a>
+                
+            </li>
+            
+            
+            
+           <!--  <li>
                 <div class="bk"><a href="./moneylist.html#moneyout"><i class="iconfont icon-moneyout"></i></a></div>
                 <span>提现记录</span>
-            </li>
-            <li>
+            </li> -->
+           <!--  <li>
                 <div class="bk"><a href="./newsdetial.html?id=13&type=loantec"><i class="iconfont icon-xinshoujiaocheng"></i></a></div>
                 <span>新手帮助</span>
-            </li>
-            <li>
-                <div class="bk"><a href="./newsdetial.html?id=12&type=loantec"><i class="iconfont icon-ketixianjine"></i></a></div>
-                <span>提额神器</span>
-            </li>
-            <li>
+            </li> -->
+            
+            <!-- <li>
                 <div class="bk"><a href="https://ctq.unionpay.com/Wxindex.aspx?qd=02"><i class="iconfont icon-search"></i></a></div>
                 <span>交易查询</span>
-            </li>
-            <li>
-                <div class="bk"><a href="./newsdetial.html?id=14&type=copration"><i class="iconfont icon-jiaoyi"></i></a></div>
-                <span>代理合作</span>
-            </li>
+            </li> -->
+            
         </ul>
     </section>
     <div ms-include-src="'./views/module/modal.html'" class="modal"></div>
+    <div class="userinfo" ms-include-src ="'./views/module/collectinfo.html'"></div>
     <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/jquery.cityselect.js"></script>
+    
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/center.js"></script>
 </body>

@@ -1032,12 +1032,14 @@ footer .m-message .box .ft {
 .modal .modal-box .hd .title1 {
   width: 90%;
 }
-/* line 36, ../../sass/module/common/_modal.scss */
+/* line 35, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
   font-weight: 600;
-  font-size: 0.4rem;
+  font-size: 0.66667rem;
+  width: 0.8rem;
+  text-align: center;
 }
-/* line 41, ../../sass/module/common/_modal.scss */
+/* line 42, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1045,34 +1047,56 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 45, ../../sass/module/common/_modal.scss */
+/* line 46, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 50, ../../sass/module/common/_modal.scss */
+/* line 51, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
 
 /* line 4, ../../sass/config/articledetial.scss */
-header .banner {
-  height: 2.72rem;
+.pic-body header {
+  display: none;
 }
-/* line 6, ../../sass/config/articledetial.scss */
-header .banner img {
+/* line 7, ../../sass/config/articledetial.scss */
+.pic-body .content {
+  padding: 0;
+}
+/* line 9, ../../sass/config/articledetial.scss */
+.pic-body .content img {
   width: 100%;
-  height: 100%;
 }
 
-/* line 12, ../../sass/config/articledetial.scss */
+/* line 14, ../../sass/config/articledetial.scss */
+header {
+  height: 3.89333rem;
+  overflow: hidden;
+}
+/* line 17, ../../sass/config/articledetial.scss */
+header .banner {
+  width: 300%;
+  position: relative;
+  transition: all 1s;
+  left: 0;
+}
+/* line 23, ../../sass/config/articledetial.scss */
+header .banner img {
+  width: 10rem;
+  float: left;
+  display: block;
+}
+
+/* line 30, ../../sass/config/articledetial.scss */
 .pLoan .banner {
   height: 2.30667rem;
 }
 
-/* line 15, ../../sass/config/articledetial.scss */
+/* line 33, ../../sass/config/articledetial.scss */
 .content {
   padding-top: 0.13333rem;
   padding-bottom: 0.13333rem;
@@ -1081,20 +1105,20 @@ header .banner img {
   font-size: 0.21333rem;
   text-align: center;
 }
-/* line 20, ../../sass/config/articledetial.scss */
+/* line 38, ../../sass/config/articledetial.scss */
 .content h3 {
   font-size: 0.4rem;
 }
-/* line 23, ../../sass/config/articledetial.scss */
+/* line 41, ../../sass/config/articledetial.scss */
 .content .time {
   display: inline-block;
   padding-top: 0.13333rem;
 }
-/* line 26, ../../sass/config/articledetial.scss */
+/* line 44, ../../sass/config/articledetial.scss */
 .content .time span {
   margin-right: 1.33333rem;
 }
-/* line 30, ../../sass/config/articledetial.scss */
+/* line 48, ../../sass/config/articledetial.scss */
 .content .source {
   text-align: right;
   padding-top: 0.4rem;
@@ -1102,7 +1126,7 @@ header .banner img {
   padding-left: 0.13333rem;
   padding-right: 0.13333rem;
 }
-/* line 34, ../../sass/config/articledetial.scss */
+/* line 52, ../../sass/config/articledetial.scss */
 .content article {
   user-select: none;
   font-size: 0.21333rem;
@@ -1110,7 +1134,7 @@ header .banner img {
   padding-top: 0.4rem;
   line-height: 1.428;
 }
-/* line 37, ../../sass/config/articledetial.scss */
+/* line 55, ../../sass/config/articledetial.scss */
 .content article p {
   font-size: 0.21333rem;
 }

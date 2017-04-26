@@ -6,6 +6,7 @@ var pLoan = avalon.define({
     pipeDataList:[],
     cardDataList:[],
     newDataList:[],
+    page:0,
     study:{},
     newMsg:{},
     lastMsgList:[],
@@ -25,12 +26,6 @@ var pLoan = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/creditlist',{},callbackCard);
-        var callbackNew = function (data) {
-            if(data.code === 1000){
-                pLoan.newDataList = data.data;
-            }
-        }
-        GetData.getAjax('/home/wealth/passageway',{},callbackNew);
         var callbackStudy = function (data) {
             if(data.code === 1000){
                 pLoan.study = data.data;
@@ -43,7 +38,41 @@ var pLoan = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/member',{},callbackGrade);
-        pLoan.getMessage();
+        var imgwidth = $('.banner img').width();
+        var timer;
+        if(!timer){
+            timer=setInterval(function(){
+                    if($('.banner').hasClass('ban1')){
+                        $('.banner').css('left',0);
+                        $('.banner').animate({'left':'-' + imgwidth + 'px'},600);
+                        $('.banner').removeClass('ban1');
+                    }else{
+                        $('.banner').addClass('ban1');
+                        $('.banner').animate({'left':'-' + imgwidth*2 + 'px'},600);
+                    };
+                }, 4000);
+        }
+        
+       pLoan.getMessage();
+    },
+    newmore:function(){
+        if(pLoan.htmlsrc =='loanNew'){
+            $('.morebox').dropload({
+                scrollArea : window,
+                loadDownFn : function(me){
+                    pLoan.page ++
+                    var callbackNew = function (data) {
+                        if(data.code === 1000){
+                            pLoan.newDataList =pLoan.newDataList.concat(data.data.list) ;
+                        };
+                        setTimeout(function(){
+                            me.resetload();
+                        },1000);
+                    }
+                    GetData.getAjax('/home/wealth/passageway',{page:pLoan.page},callbackNew);
+                }
+            });
+        }
     },
     channeltog:function(src){
         pLoan.htmlsrc = 'loan' + src;
@@ -72,6 +101,8 @@ var pLoan = avalon.define({
                 $('.m-message').css('display','flex');  
                 $('.m-message .new').css('display','block');
                 $('.m-message .last').css('display','none');
+            }else if(data.code==1111){
+                window.location.href = './center.html';
             }
         };
         

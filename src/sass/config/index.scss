@@ -1,11 +1,18 @@
 @import "../module/common/common";
 @import "../module/common/modal";
 header{
-  @include px-rem('height',295);
-  width:100%;
-  img{
-    height:100%;
-    width:100%;
+  @include px-rem('height',292);
+  overflow:hidden;
+  .banner{
+      width:300%;
+      position:relative;
+      //transition:all 0.6s;
+      left:0;
+      img{
+          @include px-rem('width',750);
+          float:left;
+          display:block;
+      };
   }
 }
 section.content{
@@ -49,6 +56,41 @@ section.content{
     }
   }
 }
+.modal{
+  .modal-box{
+    &.introbox{
+      padding-left:0;
+      width:80%;
+      top:0;
+      .hd{
+          display:none;
+      }
+      .bd{
+        padding:0;
+        font-size:0;
+        position:relative;
+        .close{
+          position:absolute;
+          top:0;
+          right:0;
+          color:red;
+          background:#fff;
+          text-align:center;
+          @include px-rem('width',40);
+          @include font-rem(40);
+        }
+        img{
+          width:100%;
+        }
+      }
+      .ft{
+        display:none;
+      }  
+    }
+  }
+  
+}
+
 footer{
   position: fixed;
   bottom:0;

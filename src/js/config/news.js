@@ -6,18 +6,40 @@ var pNews = avalon.define({
     currentGrade:'',
     lastMsgList:[],
     init:function(){
-        var callback = function (data) {
-            if(data.code === 1000){
-                pNews.newsData = data.data.list;
-            }
-        }
-        GetData.getAjax('/home/wealth/news',{},callback);
+        
         var callbackGrade = function (data) {
             if(data.code === 1000){
                 pNews.currentGrade = data.data.grade;
             }
         }
         GetData.getAjax('/home/wealth/member',{},callbackGrade);
+        var imgwidth = $('.banner img').width();
+        setInterval(function(){
+            if($('.banner').hasClass('ban1')){
+                $('.banner').css('left',0);
+                $('.banner').animate({'left':'-' + imgwidth + 'px'},600);
+                $('.banner').removeClass('ban1');
+            }else{
+                $('.banner').addClass('ban1');
+                $('.banner').animate({'left':'-' + imgwidth*2 + 'px'},600);
+            };
+        }, 4000);
+        var page = 0;
+        $('.more').dropload({
+            scrollArea : window,
+            loadDownFn : function(me){
+                page ++
+                var callback = function (data) {
+                    if(data.code === 1000){
+                        pNews.newsData = pNews.newsData.concat(data.data.list);
+                        setTimeout(function(){
+                            me.resetload();
+                        },1000);
+                    }
+                }
+                GetData.getAjax('/home/wealth/news',{page:page},callback);
+            }
+        });
         pNews.getMessage();
     },
     toDetail:function(id,rules,gradename){
@@ -42,6 +64,8 @@ var pNews = avalon.define({
                 $('.m-message').css('display','flex');  
                 $('.m-message .new').css('display','block');
                 $('.m-message .last').css('display','none');
+            }else if(data.code==1111){
+                window.location.href = './center.html';
             }
         };
         

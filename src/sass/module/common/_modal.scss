@@ -30,12 +30,13 @@
       @include font-rem(30);
       border-bottom: 1px solid #e5e5e5;
       .title1{
-        width:90%;
-        
+        width:90%; 
       }
       .close{
         font-weight:600;
-        @include font-rem(30);
+        @include font-rem(50);
+        @include px-rem('width',60);
+        text-align:center;
       }
     }
     .bd{

@@ -1032,12 +1032,14 @@ footer .m-message .box .ft {
 .modal .modal-box .hd .title1 {
   width: 90%;
 }
-/* line 36, ../../sass/module/common/_modal.scss */
+/* line 35, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
   font-weight: 600;
-  font-size: 0.4rem;
+  font-size: 0.66667rem;
+  width: 0.8rem;
+  text-align: center;
 }
-/* line 41, ../../sass/module/common/_modal.scss */
+/* line 42, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1045,28 +1047,36 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 45, ../../sass/module/common/_modal.scss */
+/* line 46, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 50, ../../sass/module/common/_modal.scss */
+/* line 51, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
 
 /* line 4, ../../sass/config/loan.scss */
-header .banner {
-  height: 2.30667rem;
+header .banner-box {
+  height: 3.89333rem;
+  overflow: hidden;
 }
-/* line 6, ../../sass/config/loan.scss */
-header .banner img {
-  width: 100%;
-  height: 100%;
+/* line 7, ../../sass/config/loan.scss */
+header .banner-box .banner {
+  width: 300%;
+  position: relative;
+  left: 0;
 }
-/* line 12, ../../sass/config/loan.scss */
+/* line 13, ../../sass/config/loan.scss */
+header .banner-box .banner img {
+  width: 10rem;
+  float: left;
+  display: block;
+}
+/* line 21, ../../sass/config/loan.scss */
 header .channel .flex {
   width: 90%;
   margin: 0 auto;
@@ -1078,7 +1088,7 @@ header .channel .flex {
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
-/* line 22, ../../sass/config/loan.scss */
+/* line 31, ../../sass/config/loan.scss */
 header .channel .flex li {
   flex: 1;
   text-align: center;
@@ -1086,24 +1096,24 @@ header .channel .flex li {
   background: #fb6000;
   color: #fff;
 }
-/* line 28, ../../sass/config/loan.scss */
+/* line 37, ../../sass/config/loan.scss */
 header .channel .flex li:last-child {
   border-right: none;
 }
-/* line 31, ../../sass/config/loan.scss */
+/* line 40, ../../sass/config/loan.scss */
 header .channel .flex li.active {
   background: #fff;
   color: #333;
 }
 
-/* line 40, ../../sass/config/loan.scss */
+/* line 49, ../../sass/config/loan.scss */
 .content .title {
   font-size: 0.32rem;
   line-height: 0.66667rem;
   margin-top: 0.4rem;
   border-bottom: 1px solid #ccc;
 }
-/* line 45, ../../sass/config/loan.scss */
+/* line 55, ../../sass/config/loan.scss */
 .content .title .iconfont {
   color: #477c2b;
   margin-top: 0rem;
@@ -1111,7 +1121,7 @@ header .channel .flex li.active {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
 }
-/* line 49, ../../sass/config/loan.scss */
+/* line 59, ../../sass/config/loan.scss */
 .content .title .num {
   display: inline-block;
   width: 0.48rem;
@@ -1127,19 +1137,19 @@ header .channel .flex li.active {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
 }
-/* line 62, ../../sass/config/loan.scss */
+/* line 72, ../../sass/config/loan.scss */
 .content .m-tec {
   color: #666;
 }
-/* line 64, ../../sass/config/loan.scss */
+/* line 74, ../../sass/config/loan.scss */
 .content .m-tec .iconfont {
   font-size: 0.53333rem;
 }
-/* line 67, ../../sass/config/loan.scss */
+/* line 77, ../../sass/config/loan.scss */
 .content .m-tec .flex {
   text-align: center;
 }
-/* line 69, ../../sass/config/loan.scss */
+/* line 79, ../../sass/config/loan.scss */
 .content .m-tec .flex li {
   flex: 1;
   margin-top: 0.4rem;
@@ -1147,54 +1157,61 @@ header .channel .flex li.active {
   margin-left: 0rem;
   margin-right: 0rem;
 }
-/* line 72, ../../sass/config/loan.scss */
+/* line 82, ../../sass/config/loan.scss */
 .content .m-tec .flex li span {
   display: block;
   font-size: 0.26667rem;
 }
-/* line 77, ../../sass/config/loan.scss */
+/* line 87, ../../sass/config/loan.scss */
 .content .m-tec .flex li:nth-child(1) .iconfont {
   color: #fa4f47;
 }
-/* line 80, ../../sass/config/loan.scss */
+/* line 90, ../../sass/config/loan.scss */
 .content .m-tec .flex li:nth-child(2) .iconfont {
   color: #66c75c;
 }
-/* line 83, ../../sass/config/loan.scss */
+/* line 93, ../../sass/config/loan.scss */
 .content .m-tec .flex li:nth-child(3) .iconfont {
   color: #ff5b98;
 }
-/* line 86, ../../sass/config/loan.scss */
+/* line 96, ../../sass/config/loan.scss */
 .content .m-tec .flex li:nth-child(4) .iconfont {
   color: #1171bb;
 }
-/* line 89, ../../sass/config/loan.scss */
+/* line 99, ../../sass/config/loan.scss */
 .content .m-tec .flex li:nth-child(5) .iconfont {
   color: #565db7;
 }
-/* line 95, ../../sass/config/loan.scss */
+/* line 105, ../../sass/config/loan.scss */
+.content .m-loanlist .title {
+  text-align: center;
+  background: #efefef;
+  font-size: 0.32rem;
+}
+/* line 110, ../../sass/config/loan.scss */
 .content .m-loanlist .flex {
   padding: 0.4rem;
   border-bottom: 1px solid #ccc;
 }
-/* line 98, ../../sass/config/loan.scss */
+/* line 113, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .left {
   width: 1.6rem;
   height: 0.93333rem;
 }
-/* line 100, ../../sass/config/loan.scss */
+/* line 115, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .left img {
   width: 100%;
   height: 100%;
 }
-/* line 105, ../../sass/config/loan.scss */
+/* line 120, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right {
   font-size: 0.26667rem;
   flex: 1;
   margin-left: 0.53333rem;
   color: #666;
+  position: relative;
 }
-/* line 110, ../../sass/config/loan.scss */
+/* line 126, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right h3 {
   font-size: 0.32rem;
   line-height: 0.4rem;
@@ -1202,12 +1219,12 @@ header .channel .flex li.active {
   overflow: hidden;
   margin-bottom: 0.13333rem;
 }
-/* line 116, ../../sass/config/loan.scss */
+/* line 132, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right h3 span {
   line-height: 0.32rem;
   display: inline-block;
 }
-/* line 123, ../../sass/config/loan.scss */
+/* line 139, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .btn {
   float: right;
   padding-top: 0.16rem;
@@ -1216,96 +1233,114 @@ header .channel .flex li.active {
   padding-right: 0.16rem;
   letter-spacing: normal;
 }
-/* line 128, ../../sass/config/loan.scss */
+/* line 143, ../../sass/config/loan.scss */
+.content .m-loanlist .flex .right .btn.circle {
+  width: 0.66667rem;
+  height: 0.66667rem;
+  display: block;
+  border-radius: 50%;
+  white-space: normal;
+  top: 0;
+  position: absolute;
+  right: 0;
+}
+/* line 153, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .intro {
   display: flex;
   float: left;
   line-height: 0.46667rem;
   width: 70%;
 }
-/* line 133, ../../sass/config/loan.scss */
+/* line 158, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .intro p:first-child {
   min-width: 5em;
+  color: red;
 }
-/* line 136, ../../sass/config/loan.scss */
+/* line 162, ../../sass/config/loan.scss */
 .content .m-loanlist .flex .right .intro .detail {
   overflow: hidden;
   max-height: 0.93333rem;
 }
-/* line 148, ../../sass/config/loan.scss */
+/* line 174, ../../sass/config/loan.scss */
 .content .pipe .m-loanlist .left {
   width: 0.93333rem;
   height: 0.93333rem;
 }
-/* line 152, ../../sass/config/loan.scss */
+/* line 178, ../../sass/config/loan.scss */
 .content .new .title {
   color: #fb6000;
   font-weight: 600;
   border-bottom: 2px solid #fb6000;
 }
-/* line 156, ../../sass/config/loan.scss */
+/* line 182, ../../sass/config/loan.scss */
 .content .new .title .iconfont {
   font-size: 0.4rem;
   color: red;
 }
-/* line 162, ../../sass/config/loan.scss */
+/* line 188, ../../sass/config/loan.scss */
 .content .new .study img {
   width: 100%;
 }
-/* line 167, ../../sass/config/loan.scss */
+/* line 193, ../../sass/config/loan.scss */
 .content .new .m-banklist .item {
   padding: 0.48rem;
+  padding-left: 0.12rem;
   border-bottom: 1px solid #ccc;
 }
-/* line 170, ../../sass/config/loan.scss */
+/* line 197, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex {
   font-size: 0.4rem;
 }
-/* line 173, ../../sass/config/loan.scss */
+/* line 200, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .left {
   text-align: center;
   width: 25%;
   vertical-align: center;
   display: flex;
 }
-/* line 178, ../../sass/config/loan.scss */
+/* line 205, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .left .cen {
   margin: auto;
 }
-/* line 181, ../../sass/config/loan.scss */
+/* line 208, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .left img {
-  width: 1.06667rem;
-  height: 1.06667rem;
+  width: 1.66667rem;
+  height: 1.66667rem;
   display: block;
   margin: 0 auto;
 }
-/* line 187, ../../sass/config/loan.scss */
+/* line 214, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .right {
   width: 75%;
 }
-/* line 189, ../../sass/config/loan.scss */
+/* line 216, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .right .hot {
   width: 15%;
 }
-/* line 193, ../../sass/config/loan.scss */
+/* line 220, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .right .intro {
   width: 85%;
   overflow: hidden;
-  color: #999;
+  color: #000;
   font-size: 0.26667rem;
   max-height: 1.44rem;
 }
-/* line 200, ../../sass/config/loan.scss */
+/* line 227, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .right .hot, .content .new .m-banklist .item .flex .right .intro {
   float: left;
   line-height: 0.48rem;
 }
-/* line 204, ../../sass/config/loan.scss */
+/* line 232, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .right small {
   color: #999;
   font-size: 0.26667rem;
 }
-/* line 207, ../../sass/config/loan.scss */
+/* line 235, ../../sass/config/loan.scss */
 .content .new .m-banklist .item .flex .right small.link {
-  color: #fb6000;
+  color: #fff;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0.16rem;
+  padding-right: 0.16rem;
+  letter-spacing: normal;
 }

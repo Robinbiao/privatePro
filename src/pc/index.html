@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乾坤财富</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/avalon.js"></script>
+</head>
+<body ms-controller="pHome">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="./images/logo.png"  alt="logo" />
+            </div>
+            <ul class="channel clearfix">
+                <li class="active"><a href="#">首&nbsp;&nbsp;页</a></li>
+                <li><a href="#company">公司介绍</a></li>
+                <li><a href="#business">业务介绍</a></li>
+                <li><a href="#corporation">代理合作</a></li>
+                <li><a href="#platform">金融平台</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <ul class="box clearfix">
+            <li ms-repeat = "websiteInfo.banner">
+                <img ms-attr-src="{{'//www.examples.xin/'+el}}" alt="" />
+            </li>
+            <!-- <li>
+                <img src="./images/banner2.jpg" alt="" />
+            </li> -->
+        </ul>
+    </div>
+    <!-- <div class="ui-channel">
+        <div class="container">
+            <ul class="clearfix">
+                <li><a href="#company">
+                <i class="iconfont icon-gongsi"></i><p>公司介绍</p></a></li>
+                <li><a href="#business"><i class="iconfont icon-yewu"></i><p>业务介绍</p></a></li>
+                <li><a href="#corporation"><i class="iconfont icon-hezuo-copy"></i><p>代理合作</p></a></li>
+                <li><a href="#platform"><i class="iconfont icon-jinrong"></i><p>金融平台</p></a></li>
+                <li><a href="#contact"><i class="iconfont icon-lianxiwomen"></i><p>联系我们</p></a></li>
+            </ul>
+        </div>    
+    </div> -->
+    <div class="ui-company">
+        <a name='company'></a>
+        <div class="container">
+            <h4>公司介绍</h4>
+            <p class="en">Company introduction</p>
+            <div class="art-bk">
+                <div class="content f-word-break">
+                    {{websiteInfo.introduction.content |html}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-img-intro">
+        <a name='business'></a>
+        <div class="container clearfix">
+        <table class="clearfix">
+            <tr>
+            <td class="pic">
+                <div>
+                    <img ms-attr-src="{{'//www.examples.xin/'+websiteInfo.business.img_path}}" alt="" />
+                </div>
+            </td>
+            <td class="intro">
+                <div >
+                    <p class="tit">业务介绍</p>
+                    <div class="content f-word-break">
+                        {{websiteInfo.business.content |html}}
+                    </div>
+                </div>
+            </td>
+            
+             </tr>
+        </table>  
+        </div>
+    </div>
+    <div class="ui-img-intro">
+        <a name='corporation'></a>
+        <div class="container clearfix">
+        <table class="clearfix">
+            <tr>
+            <td class="intro">
+                <div >
+                    <p class="tit">合作共赢</p>
+                    <div class="content f-word-break">
+                        {{websiteInfo.agent.content |html}}
+                    </div>
+                </div>
+            </td>
+             <td class="pic">
+                <div>
+                    <img ms-attr-src="{{'//www.examples.xin/'+websiteInfo.agent.img_path}}" alt="" />
+                </div>
+            </td>
+             </tr>
+        </table>  
+        </div>
+    </div>
+    <div class="ui-img-intro">
+        <a name='platform'></a>
+        <div class="container clearfix">
+        <table class="clearfix">
+            <tr>
+            <td class="pic">
+                <div>
+                    <img ms-attr-src="{{'//www.examples.xin/'+websiteInfo.platform.img_path}}" alt="" />
+                </div>
+            </td>
+            <td class="intro">
+                <div >
+                    <p class="tit">金融平台</p>
+                    <div class="content f-word-break">
+                        {{websiteInfo.platform.content |html}}
+                    </div>
+                </div>
+            </td>
+            
+             </tr>
+        </table>  
+        </div>
+    </div>
+    <div class="ui-contact">
+        <a name='contact'></a>
+        <div class="container clearfix">
+            <div class="bank f-fl clearfix">
+                <p class="tit f-fl">热点银行</p>
+                <div class="bank-list f-fl clearfix">
+                    <div class="box" ms-repeat = "websiteInfo.banks">
+                        <img ms-attr-src="{{'//www.examples.xin/'+el.img}}" alt="" />
+                        <p>{{el.name}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="contact f-fl">
+                <p class="tit f-fl">联系我们</p>
+                <div class="con-right">
+                    <div class="detail">
+                        <p><i class="iconfont icon-weixin"></i>{{websiteInfo.contact.wechat}}</p>
+                        <p><i class="iconfont icon-icon-"></i>{{websiteInfo.contact.tencent}}</p>
+                        <p><i class="iconfont icon-ordinarycontact"></i>{{websiteInfo.contact.tel}}</p>
+                    </div>
+                    <div class="qr">
+                        <img ms-attr-src="{{'//www.examples.xin/'+websiteInfo.contact.qrimg}}" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-footer">
+        <div class="container">
+            <div class="content">
+                <p>{{websiteInfo.foot.company}}</p>
+                <p>{{websiteInfo.foot.address}}</p>
+                <p>{{websiteInfo.foot.tel}}</p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

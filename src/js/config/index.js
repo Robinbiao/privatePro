@@ -10,10 +10,29 @@ var pHome = avalon.define({
     var callback = function (data) {
         if(data.code === 1000){
             pHome.currentGrade = data.data.grade;
-            pHome.gradename = data.data.member[pHome.currentGrade-1].name;
-            $('.flex .item').eq(pHome.currentGrade-1).addClass('active');
+            if(data.data.grade!=0){
+              pHome.gradename = data.data.member[pHome.currentGrade-1].name;
+              $('.flex .item').eq(pHome.currentGrade-1).addClass('active');
+            }else{
+              Modal.init({
+                title:'提醒',
+                boxClass:'introbox',
+                domstr:'<img src="./images/intromem.jpg" alt=""/><p class="close">X</p>'
+              });
+            }
         }
     }
+    var imgwidth = $('.banner img').width();
+        setInterval(function(){
+            if($('.banner').hasClass('ban1')){
+                $('.banner').css('left',0);
+                $('.banner').animate({'left':'-' + imgwidth + 'px'},600);
+                $('.banner').removeClass('ban1');
+            }else{
+                $('.banner').addClass('ban1');
+                $('.banner').animate({'left':'-' + imgwidth*2 + 'px'},600);
+            };
+        }, 4000);
     GetData.getAjax('/home/wealth/member',{},callback);
     if(pHome.currentGrade ==3){
       Modal.init({
@@ -23,7 +42,6 @@ var pHome = avalon.define({
         }
       })
     };
-    
     pHome.getMessage();
   },
   next:function () {
@@ -38,7 +56,7 @@ var pHome = avalon.define({
         Modal.init({
           title:'提醒',
           domstr:'恭喜您已成为顶级会员，去发展更多的会员喔！'
-        })
+        });
       }else{
         window.location.href = './buydetail.html?grade='+pHome.buyGrade;
       }
@@ -54,7 +72,6 @@ var pHome = avalon.define({
     //addActive('.flex .item',grade);
   },
   getMessage:function(num){
-    
     var newback = function (data) {
         if(data.code === 1000){
             pHome.newMsg = data.data; 
@@ -63,7 +80,6 @@ var pHome = avalon.define({
             $('.m-message .last').css('display','none');
         }
     };
-    
     var lastback = function (data) {
       if(data.code === 1000){
           pHome.lastMsgList = data.data;

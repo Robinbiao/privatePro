@@ -1,11 +1,20 @@
 @import "../module/common/common";
 $color-green:#477c2b;
 header{
-    .banner{
-        @include px-rem('height',173);
-        img{
-            width:100%;
-            height:100%;
+    .banner-box{
+        @include px-rem('height',292);
+        overflow:hidden;
+        .banner{
+            width:300%;
+            position:relative;
+            //transition:all 0.8s;
+            left:0;
+            //@include px-rem('left',-750);
+            img{
+                @include px-rem('width',750);
+                float:left;
+                display:block;
+            };
         }
     }
     .channel{
@@ -42,6 +51,7 @@ header{
         @include px-rem('line-height',50); 
         @include px-rem('margin-top',30);
         border-bottom:1px solid $border-color;
+
         .iconfont{
             color:$color-green;
             @include px-d-rem('margin',0,15);
@@ -92,6 +102,11 @@ header{
         }
     }
     .m-loanlist{
+        .title{
+            text-align:center;
+            background:#efefef;
+            @include font-rem(24);
+        }
         .flex{
             @include px-rem('padding',30);
             border-bottom:1px solid $border-color;
@@ -107,6 +122,7 @@ header{
                 flex:1;
                 @include px-rem('margin-left',40);
                 color:#666;
+                position:relative;
                 h3{
                     @include font-rem(24);
                     @include px-rem('line-height',30);
@@ -124,6 +140,15 @@ header{
                     float:right;
                     @include px-d-rem('padding',12,12);
                     letter-spacing: normal;
+                    &.circle{
+                        @include px2rem(50,50);
+                        display:block;
+                        border-radius:50%;
+                        white-space:normal;
+                        top: 0;
+                        position: absolute;
+                        right: 0;
+                    }
                 }
                 .intro{
                     display:flex;
@@ -132,6 +157,7 @@ header{
                      width:70%;
                     p:first-child{
                         min-width:5em;
+                        color:rgb(255,0,0);
                     }
                     .detail{
                         overflow:hidden;
@@ -166,6 +192,7 @@ header{
         .m-banklist{
             .item{
                 @include px-rem('padding',36);
+                @include px-rem('padding-left',9);
                 border-bottom:1px solid $border-color;
                .flex{
                     @include font-rem(30);
@@ -179,7 +206,7 @@ header{
                            margin:auto;
                         }
                         img{
-                            @include px2rem(80,80);
+                            @include px2rem(125,125);
                             display:block;
                             margin:0 auto;
                         }
@@ -193,7 +220,7 @@ header{
                         .intro{
                             width:85%;
                             overflow:hidden;
-                            color:#999;
+                            color:#000;
                             @include font-rem(20);
                             @include px-rem('max-height',108);
                         }
@@ -201,11 +228,14 @@ header{
                             float: left;
                             @include px-rem('line-height',36);
                         }
+                       
                         small{
                             color:#999;
                             @include font-rem(20);
                             &.link{
-                                color:$main-color;
+                                color:#fff;
+                                @include px-d-rem('padding',10,12);
+                                letter-spacing: normal;
                             }
                         }
                         

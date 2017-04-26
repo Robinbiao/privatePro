@@ -1,0 +1,243 @@
+/* 
+* @Author: Marte
+* @Date:   2017-04-23 19:58:05
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-04-25 19:02:10
+*/
+@import url('./iconfont.css');
+*{
+    padding: 0;
+    margin:0;
+    color: #333;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.f-word-break {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.f-fl{
+    float:left;
+
+}
+.content{
+    max-height: 400px;
+    overflow:hidden;
+}
+.container{
+    width:1320px;
+    margin: 0 auto;
+    height:100%;
+    overflow:hidden;
+}
+.header{
+    height: 138px; 
+}
+.logo{
+    display:inline-block;
+    vertical-align: middle;
+    height:100%;
+}
+.logo img{
+    height:72px;
+    display: block;
+    margin-top: 33px;
+}
+.channel{
+    float:right; 
+    height:108px;
+    margin-top: 30px; 
+}
+.channel li{
+    float:left;
+    padding: 30px;
+}
+.channel li:hover a{
+    border-color:red;
+    color:red;
+}
+.channel .active a{
+    border-color:red;
+    color:red;
+}
+.channel li a{
+    display:block;
+    padding:10px 20px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    font-size: 20px;
+}
+.banner{
+    max-width: 1920px;
+    overflow: hidden;
+}
+.banner .box{
+    width:1000%;
+    
+    position: relative;
+}
+.banner .box li{
+    float:left;
+}
+.banner .box img{
+    width:100%;
+}
+.ui-channel{
+    border-bottom:1px solid #ccc;
+}
+.ui-channel li{
+    float:left;
+    width:20%;
+    text-align: center;
+    padding:70px 0 40px;
+}
+.ui-channel li a{
+    display:inline-block;
+}
+.ui-channel li .iconfont{
+    font-size: 70px;
+}
+.ui-channel li:nth-child(1) .iconfont{
+    color:#ee4737;
+}
+.ui-channel li:nth-child(2) .iconfont{
+    color:#2fc99f;
+}
+.ui-channel li:nth-child(3) .iconfont{
+    color:#5d8bc8;
+}
+.ui-channel li:nth-child(4) .iconfont{
+    color:#7ed53d;
+}
+.ui-channel li:nth-child(5) .iconfont{
+    color:#ee7a13;
+}
+.ui-company{
+    min-height: 1000px;
+    text-align: center;
+    padding-top: 430px;
+    background: url('../images/company-bk.png') no-repeat center 0;
+}
+.ui-company h4{
+    font-size: 48px;
+    margin-top: 100px;
+    color:#6ac5d0;
+}
+.ui-company .en{
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+.ui-company .art-bk{
+    width:1240px;
+    margin: 0 auto;
+    padding: 20px 13px;
+    background:#1b9dff;
+}
+.ui-company .art-bk .content{
+    background:url('../images/com-cont-bk.png') repeat-y center;
+    padding: 10px 6px;
+    border:1px solid #fff;
+    
+    border-radius: 10px;
+}
+.ui-img-intro .intro{
+    padding:20px 10px;
+    width:50%;
+}
+.ui-img-intro .intro .tit{
+    font-size: 24px;
+    text-align: center;
+}
+.ui-img-intro .content{
+    padding:10px;
+}
+.ui-img-intro .pic{
+    width:50%;
+    padding:20px;
+    overflow:hidden;
+}
+.ui-img-intro .pic img{
+    width:100%;
+}
+.ui-contact{
+    padding:30px 0;
+}
+.ui-contact .bank{
+    width:50%;
+}
+.ui-contact .contact{
+    width:50%;
+}
+.ui-contact .tit{
+    width:1em;
+    font-size: 24px;
+    margin:40px 30px;
+}
+.bank-list{
+    width:80%;
+}
+.bank-list .box{
+    float:left;
+    width:25%;
+    text-align: center;
+    margin:10px 0;
+}
+.bank-list .box img{
+    width:50px;
+    height:50px;
+}
+.contact .detail{
+    width:200px;
+    float:left;
+}
+.contact  .qr{
+    width:210px;
+    float:left;
+    margin-left: 50px;
+}
+.contact  .qr img{
+    width:100%;
+}
+.contact .detail p{
+    padding:24px 5px;
+    font-size: 18px;
+}
+.contact .detail .iconfont{
+    font-size: 18px;
+    margin:0 10px;
+}
+.contact .detail p:nth-child(1) .iconfont{
+    color:#7ed53d;
+}
+.contact .detail p:nth-child(2) .iconfont{
+    color:#ff3704;
+}
+.contact .detail p:nth-child(3) .iconfont{
+    color:#ff1212;
+}
+.ui-footer{
+    height:120px;
+    background:#efefef;
+ 
+}
+.ui-footer .content{
+    display: inline-block;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 1.8;;
+}

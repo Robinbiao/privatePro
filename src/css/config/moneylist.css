@@ -1032,12 +1032,14 @@ footer .m-message .box .ft {
 .modal .modal-box .hd .title1 {
   width: 90%;
 }
-/* line 36, ../../sass/module/common/_modal.scss */
+/* line 35, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
   font-weight: 600;
-  font-size: 0.4rem;
+  font-size: 0.66667rem;
+  width: 0.8rem;
+  text-align: center;
 }
-/* line 41, ../../sass/module/common/_modal.scss */
+/* line 42, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1045,46 +1047,58 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 45, ../../sass/module/common/_modal.scss */
+/* line 46, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 50, ../../sass/module/common/_modal.scss */
+/* line 51, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
 
 /* line 2, ../../sass/config/moneylist.scss */
-header {
-  background: #fb6000;
-  line-height: 1.17333rem;
-  color: #fff;
-  text-align: center;
-  font-size: 0.4rem;
-  font-weight: 600;
-  letter-spacing: 5px;
-}
-/* line 10, ../../sass/config/moneylist.scss */
-header .imgnon {
+.imgnon {
   width: 0;
   height: 0;
+  overflow: hidden;
+}
+/* line 6, ../../sass/config/moneylist.scss */
+.imgnon img {
+  width: 4rem;
+  height: 4rem;
 }
 
-/* line 16, ../../sass/config/moneylist.scss */
+/* line 10, ../../sass/config/moneylist.scss */
+body {
+  font-size: 0;
+}
+
+/* line 14, ../../sass/config/moneylist.scss */
 .content .qrimg {
   width: 100%;
 }
-/* line 19, ../../sass/config/moneylist.scss */
+/* line 18, ../../sass/config/moneylist.scss */
 .content .m-orderlist {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
   padding-left: 0.13333rem;
   padding-right: 0.13333rem;
 }
-/* line 21, ../../sass/config/moneylist.scss */
+/* line 20, ../../sass/config/moneylist.scss */
+.content .m-orderlist.moneyin {
+  border-bottom: none;
+}
+/* line 22, ../../sass/config/moneylist.scss */
+.content .m-orderlist.moneyin .flex {
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  padding-left: 0.13333rem;
+  padding-right: 0.13333rem;
+}
+/* line 26, ../../sass/config/moneylist.scss */
 .content .m-orderlist .item {
   text-align: center;
   overflow: hidden;
@@ -1094,19 +1108,19 @@ header .imgnon {
   font-size: 0.26667rem;
   height: 1.17333rem;
 }
-/* line 32, ../../sass/config/moneylist.scss */
+/* line 37, ../../sass/config/moneylist.scss */
 .content .m-orderlist .item.pic img {
   width: 1.17333rem;
   height: 1.17333rem;
   border-radius: 50%;
 }
-/* line 37, ../../sass/config/moneylist.scss */
+/* line 42, ../../sass/config/moneylist.scss */
 .content .m-orderlist .item .na {
   font-size: 0.32rem;
   color: #666;
   margin-top: 0.13333rem;
 }
-/* line 42, ../../sass/config/moneylist.scss */
+/* line 47, ../../sass/config/moneylist.scss */
 .content .m-orderlist .item .time, .content .m-orderlist .item .meb {
   position: absolute;
   bottom: 0;
@@ -1114,13 +1128,13 @@ header .imgnon {
   right: 0;
   margin: auto;
 }
-/* line 49, ../../sass/config/moneylist.scss */
+/* line 54, ../../sass/config/moneylist.scss */
 .content .m-orderlist .item .money, .content .m-orderlist .item .member {
   font-size: 0.4rem;
   vertical-align: middle;
   line-height: 1.17333rem;
 }
-/* line 53, ../../sass/config/moneylist.scss */
+/* line 58, ../../sass/config/moneylist.scss */
 .content .m-orderlist .item .money.add, .content .m-orderlist .item .member.add {
   display: inline-block;
   padding-top: 0.08rem;

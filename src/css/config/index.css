@@ -727,6 +727,11 @@ section.content {
   padding-right: 0.13333rem;
 }
 
+/* line 218, ../../sass/module/common/_base.scss */
+input {
+  -webkit-user-select: auto;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../module/font/iconfont.eot?t=1490604189198");
@@ -1027,12 +1032,14 @@ footer .m-message .box .ft {
 .modal .modal-box .hd .title1 {
   width: 90%;
 }
-/* line 36, ../../sass/module/common/_modal.scss */
+/* line 35, ../../sass/module/common/_modal.scss */
 .modal .modal-box .hd .close {
   font-weight: 600;
-  font-size: 0.4rem;
+  font-size: 0.66667rem;
+  width: 0.8rem;
+  text-align: center;
 }
-/* line 41, ../../sass/module/common/_modal.scss */
+/* line 42, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1040,55 +1047,62 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 45, ../../sass/module/common/_modal.scss */
+/* line 46, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 50, ../../sass/module/common/_modal.scss */
+/* line 51, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
 
 /* line 3, ../../sass/config/index.scss */
 header {
-  height: 3.93333rem;
-  width: 100%;
+  height: 3.89333rem;
+  overflow: hidden;
 }
 /* line 6, ../../sass/config/index.scss */
-header img {
-  height: 100%;
-  width: 100%;
+header .banner {
+  width: 300%;
+  position: relative;
+  left: 0;
+}
+/* line 11, ../../sass/config/index.scss */
+header .banner img {
+  width: 10rem;
+  float: left;
+  display: block;
 }
 
-/* line 11, ../../sass/config/index.scss */
+/* line 18, ../../sass/config/index.scss */
 section.content {
   padding-bottom: 1.33333rem;
 }
-/* line 13, ../../sass/config/index.scss */
+/* line 20, ../../sass/config/index.scss */
 section.content .title {
   padding-top: 0.53333rem;
   border-bottom: 1px solid #ccc;
 }
-/* line 16, ../../sass/config/index.scss */
+/* line 23, ../../sass/config/index.scss */
 section.content .title p {
   margin-bottom: 0.13333rem;
   text-indent: 1em;
   font-size: 0.37333rem;
 }
-/* line 20, ../../sass/config/index.scss */
+/* line 27, ../../sass/config/index.scss */
 section.content .title p span {
   font-size: 0.24rem;
 }
-/* line 25, ../../sass/config/index.scss */
+/* line 32, ../../sass/config/index.scss */
 section.content .flex {
   flex-direction: column;
   text-align: center;
   margin-top: 0.66667rem;
 }
-/* line 29, ../../sass/config/index.scss */
+/* line 36, ../../sass/config/index.scss */
 section.content .flex .item {
   width: 5.33333rem;
   height: 1.06667rem;
@@ -1100,12 +1114,12 @@ section.content .flex .item {
   margin-bottom: 0.66667rem;
   border-radius: 0.13333rem;
 }
-/* line 38, ../../sass/config/index.scss */
+/* line 45, ../../sass/config/index.scss */
 section.content .flex .item.active {
   background: #fb6000;
   color: #fff;
 }
-/* line 42, ../../sass/config/index.scss */
+/* line 49, ../../sass/config/index.scss */
 section.content .flex .item.next {
   width: 7.33333rem;
   height: 0.8rem;
@@ -1115,24 +1129,60 @@ section.content .flex .item.next {
   line-height: 0.8rem;
 }
 
-/* line 52, ../../sass/config/index.scss */
+/* line 61, ../../sass/config/index.scss */
+.modal .modal-box.introbox {
+  padding-left: 0;
+  width: 80%;
+  top: 0;
+}
+/* line 65, ../../sass/config/index.scss */
+.modal .modal-box.introbox .hd {
+  display: none;
+}
+/* line 68, ../../sass/config/index.scss */
+.modal .modal-box.introbox .bd {
+  padding: 0;
+  font-size: 0;
+  position: relative;
+}
+/* line 72, ../../sass/config/index.scss */
+.modal .modal-box.introbox .bd .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  background: #fff;
+  text-align: center;
+  width: 0.53333rem;
+  font-size: 0.53333rem;
+}
+/* line 82, ../../sass/config/index.scss */
+.modal .modal-box.introbox .bd img {
+  width: 100%;
+}
+/* line 86, ../../sass/config/index.scss */
+.modal .modal-box.introbox .ft {
+  display: none;
+}
+
+/* line 94, ../../sass/config/index.scss */
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-/* line 56, ../../sass/config/index.scss */
+/* line 98, ../../sass/config/index.scss */
 footer .flex {
   height: 1.33333rem;
   flex-direction: row;
   background: #ebebeb;
 }
-/* line 60, ../../sass/config/index.scss */
+/* line 102, ../../sass/config/index.scss */
 footer .flex .item {
   flex: 1;
   font-size: 0.26667rem;
 }
-/* line 63, ../../sass/config/index.scss */
+/* line 105, ../../sass/config/index.scss */
 footer .flex .item a {
   display: flex;
   width: 100%;
@@ -1141,15 +1191,15 @@ footer .flex .item a {
   text-align: center;
   color: #999;
 }
-/* line 70, ../../sass/config/index.scss */
+/* line 112, ../../sass/config/index.scss */
 footer .flex .item a .iconfont {
   font-size: 0.61333rem;
 }
-/* line 73, ../../sass/config/index.scss */
+/* line 115, ../../sass/config/index.scss */
 footer .flex .item a span {
   margin-top: -0.06667rem;
 }
-/* line 78, ../../sass/config/index.scss */
+/* line 120, ../../sass/config/index.scss */
 footer .flex .item.active a {
   color: #fb6000;
 }

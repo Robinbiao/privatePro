@@ -1,6 +1,6 @@
 <section class="pipe">
     <div class="m-tec">
-        <p class="title"><i class="iconfont icon-moneyout"></i>技术指导</p>
+        <p class="title"><i class="iconfont icon-moneyout"></i>技术指南</p>
         <ul class="flex">
             <li><a href="./newsdetial.html?id=2&type=loantec"><i class="iconfont icon-loantips"></i><span>贷款须知</span></a></li>
             <li><a href="./newsdetial.html?id=3&type=loantec"><i class="iconfont icon-sure"></i><span>适合贷款</span></a></li>
@@ -9,12 +9,12 @@
             <li><a href="./newsdetial.html?id=6&type=loantec"><i class="iconfont icon-save"></i><span>包装技巧</span></a></li>
         </ul>
     </div>
-    <div class="m-line"></div>
+  
     <div class="m-loanlist" ms-repeat = "pipeDataList">
-        <p class="title"><span class="num">{{el.id}}</span>{{el.name}}</p>
+        <p class="title">{{el.name}}</p>
         <ul class="flex" ms-repeat ="el.loan">
             <li class="left">
-                <a ms-attr-href="{{el.url}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" /></a>
+               <img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="" />
             </li>
             <li class="right clearfix">
                 <h3>{{el.name}}<a ms-attr-href="{{el.url}}"><span class='source btn'>立即申请</span></a></h3>

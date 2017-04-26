@@ -17,28 +17,16 @@ var pBuydetail = avalon.define({
                 pBuydetail.recommend = data.data.recommend;
                 pBuydetail.spec = gradelist[pBuydetail.gradeTo-1].spec;
                 pBuydetail.name = gradelist[pBuydetail.gradeTo-1].name;
-                pBuydetail.price = gradelist[pBuydetail.gradeTo-1].price-gradelist[currentGrade-1].price; 
+                if(currentGrade==0){
+                    pBuydetail.price = gradelist[pBuydetail.gradeTo-1].price
+                }else{
+                    pBuydetail.price = gradelist[pBuydetail.gradeTo-1].price-gradelist[currentGrade-1].price; 
+                }
+                
             }
         }
         GetData.getAjax('/home/wealth/member',{},callback);
-        $("#city").citySelect({
-            prov:'湖南',
-            nodata:"none"
-        });
-        $("#jobclass").citySelect({
-            prov:'IT',
-            nodata:"none",
-            url:{"citylist":[
-                    {p:'IT'},{p:'公务员'}
-                ]}
-        });
-        $("#source").citySelect({
-            prov:'微信',
-            nodata:"none",
-            url:{"citylist":[
-                    {p:'微信'},{p:'QQ'},{p:'微博'},{p:'线下推广'},{p:'朋友介绍'},{p:'今日头条'}
-                ]}
-        });
+        
         pBuydetail.getMessage();
     },
     readProtocol:function(){
@@ -66,60 +54,18 @@ var pBuydetail = avalon.define({
         };
 
         var payback = function(data){
-            // var modalParams ={
-            //     domstr:data.msg
-            // }
-            // if(data.code===1000){
-            //     modalParams.callback=function(){
-            //         window.location.href = './center.html';
-            //     }  
-            // };
-            // Modal.init(modalParams);
             if(data.code==1000){
                 var prepay_id = data.data;
                 MUSTPAY .init ({ 
                      'apps_id': 'd349daadc9b14f44aab22eb4fa486f7f', //MustPay系统分配的应用ID号 2
                      'prepay_id': prepay_id, //商户通过统一下单接口获取的预支付ID 3
-                     'pay_type': 'union_pay_pub' //支付通道简称 4
+                     'pay_type': 'ali_pay_pub' //支付通道简称 4
                 });
             }
         }
         GetData.getAjax('/home/mustpay/grade_up',params,payback,{type:'POST'});
     },
-    getUserInfo:function(){
-        $('.sure .tips').css('display','block');
-        if(!$('[name = "name"]').val()){
-            $('.sure .tips span').text('请输入您的姓名');
-            return
-        }else if(!$('[name = "tel"]').val()){
-            $('.sure .tips span').text('请输入您的手机号码');
-            return
-        }
-        if(!(/^1[34578]\d{9}$/.test($('[name = "tel"]').val()))){
-            $('.sure .tips span').text('请输入正确的手机号码');
-            return
-        }
-        $('.sure .tips').css('display','none');
-        var inform = $('#infoform').serializeArray();
-        var params = {};
-        $.each(inform,function(){
-            params[this.name] = this.value;
-        });
-        var setback = function(data){
-            $('.userinfo').css('display','none');
-            var modalParams ={
-                domstr:data.msg,
-                chancel:false
-            }
-            if(data.code===1000){
-                modalParams.callback=function(){
-                    window.location.href = './center.html';
-                }  
-            };
-            Modal.init(modalParams);
-        }
-        GetData.getAjax('/home/wealth/changeinfo',params,setback,{type:'POST'});
-    },
+    
     getMessage:function(num){
     
         var newback = function (data) {
@@ -149,3 +95,4 @@ var pBuydetail = avalon.define({
         });
       }
 });
+pBuydetail.init();

@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>会员升级</title>
     <link rel="stylesheet" href="./css/config/buydetail.css">
     <script src="./js/lib/avalon.mobile.js"></script>
     <script src="./js/share/m-base.js"></script>
 </head>
-<body ms-controller = "pBuydetail">
+<body ms-controller="pBuydetail">
     <header>{{name}}</header>
     <section class="content">
         <p class="title">{{name}}介绍</p>
@@ -20,21 +20,19 @@
             <div class="agree">
                 <label for="agree">
                     <div class="clearfix">
-                        <input type="checkbox" name="agree"  class="f-fl" checked="checked" />
+                        <input type="checkbox" name="agree" class="f-fl" checked="checked">
                         <p class="f-fl">我已经阅读并同意我司相关协议</p>
                     </div>
-                    <p class="intro" ms-click='readProtocol'>《在线使用服务协议》</p>
+                    <p class="intro" ms-click="readProtocol">《在线使用服务协议》</p>
                 </label>
             </div>
         </div>
     </section>
-    <section class='buy clearfix'>
-        <p class="price f-fl">{{name}}(￥{{price}})</p><p class="order f-fl" ms-click ="buy">购买</p></p>
+    <section class="buy clearfix">
+        <p class="price f-fl">{{name}}(￥{{price}})</p><p class="order f-fl" ms-click="buy">购买</p><p></p>
     </section>
-    <div class="modal"  ms-include-src="'./views/module/modal.html'"></div>
-    <div class="userinfo" ms-include-src ="'./views/module/collectinfo.html'" data-include-rendered="init"></div>
+    <div class="modal" ms-include-src="'./views/module/modal.html'"></div>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>
-    <script src="./js/lib/jquery.cityselect.js"></script>
     <script src="./js/lib/mustpay.min.js"></script>
     <script src="./js/share/ajax.js"></script>
     <script src="./js/config/buydetail.js"></script>

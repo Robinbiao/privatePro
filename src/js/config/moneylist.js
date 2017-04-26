@@ -1,7 +1,7 @@
 var mapObj = {
     member:'mypartner',
     friend:'myfriends',
-    moneyin:'income',
+    moneyin:'income_expenditure',
     moneyout:'cashlist',
     myqrcode:'myqrcode',
     service:'service'
@@ -25,7 +25,7 @@ var pMoneylist = avalon.define({
         }else if(hash === 'moneyin' || hash === 'moneyout'){
             hash === 'moneyin' ? mainTitle = '收入明细' : mainTitle = '提现记录';
         }else if(hash === 'myqrcode'){
-            mainTitle = '我的赚钱二维码';
+            mainTitle = '乾坤财富互联网金融资源整合平台，教你如何快速实现财富自由！';
         }else if(hash === 'service'){
             mainTitle = '客服中心';
             
@@ -75,6 +75,7 @@ var pMoneylist = avalon.define({
         }
         
         pMoneylist.getMessage();
+        wxshareinit();
     },
     addFriend:function(id){
         var callback1 = function(data){
@@ -97,12 +98,14 @@ var pMoneylist = avalon.define({
         var callback1 = function(data){
             if(data.code == 1000){
                 Modal.init({
-                    domstr:data.message,
+                    domstr:data.msg,
                     chancel:false,
                     callback:function(){
+                        window.location.href = './moneylist.html#friend';
                         $('.modal').on('click','.sure',function(e){
                             $('.modal').fadeOut();
                         });
+                        
                     }
                 });
 
@@ -139,3 +142,15 @@ var pMoneylist = avalon.define({
     }
 });
 pMoneylist.init();
+function wxshareinit(){
+      wx.onMenuShareTimeline({
+        title: '乾坤财富互联网金融平台',
+        desc: '乾坤财富互联网金融资源整合平台，教你如何快速实现财富自由！',
+        imgUrl: 'http://www.examples.xin/html/images/scalepic.jpg',
+      });
+      wx.onMenuShareAppMessage({
+        title: '乾坤财富互联网金融平台',
+        desc: '乾坤财富互联网金融资源整合平台，教你如何快速实现财富自由！',
+        imgUrl: 'http://www.examples.xin/html/images/scalepic.jpg',
+      });
+};
