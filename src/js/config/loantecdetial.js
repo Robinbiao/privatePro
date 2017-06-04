@@ -1,0 +1,1 @@
+var pArticledetial=avalon.define({$id:"pArticledetial",currentPage:"loan",pageId:"",newsData:"",init:function(){var t=window.location.search.toString().split("=")[1],e=function(t){1e3===t.code&&(pArticledetial.newsData=t.data)};GetData.getAjax("/home/wealth/guidance/type/"+t,{},e,{type:"POST"})}});pArticledetial.init();

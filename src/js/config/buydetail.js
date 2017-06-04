@@ -3,10 +3,11 @@ var pBuydetail = avalon.define({
     gradeTo:3,
     name:'VIP会员',
     spec:'',
-    price:98,
+    price:99,
     newMsg:{},
     lastMsgList:[],
     recommend:'',
+    wxshow:true,
     init:function(){
         var gradeTo = getUrlParam('grade');
         pBuydetail.gradeTo = gradeTo;
@@ -65,7 +66,12 @@ var pBuydetail = avalon.define({
         }
         GetData.getAjax('/home/mustpay/grade_up',params,payback,{type:'POST'});
     },
-    
+    contectSer:function(){
+        window.location.href = 'http://www.examples.xin/html/moneylist.html#service';
+    },
+    weixinbuy:function(){
+        pBuydetail.wxshow= !pBuydetail.wxshow;
+    },
     getMessage:function(num){
     
         var newback = function (data) {

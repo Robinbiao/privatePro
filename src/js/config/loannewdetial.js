@@ -1,0 +1,1 @@
+var pArticledetial=avalon.define({$id:"pArticledetial",currentPage:"loan",pageId:"",newsData:"",init:function(){var a=window.location.search.toString().split("=")[1],t=function(a){1e3===a.code&&(pArticledetial.newsData=a.data)};GetData.getAjax("/home/wealth/passagewayinfo",{id:a},t)}});pArticledetial.init();

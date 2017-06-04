@@ -1113,7 +1113,21 @@ section.content .info .agree .intro {
   color: #fb6000;
 }
 
-/* line 41, ../../sass/config/buydetail.scss */
+/* line 40, ../../sass/config/buydetail.scss */
+.wxer {
+  text-align: center;
+}
+/* line 42, ../../sass/config/buydetail.scss */
+.wxer img {
+  width: 100%;
+  margin-bottom: 5%;
+}
+/* line 46, ../../sass/config/buydetail.scss */
+.wxer .btn {
+  letter-spacing: normal;
+}
+
+/* line 50, ../../sass/config/buydetail.scss */
 .buy {
   position: fixed;
   bottom: 0;
@@ -1123,14 +1137,19 @@ section.content .info .agree .intro {
   text-align: center;
   font-size: 0.4rem;
 }
-/* line 49, ../../sass/config/buydetail.scss */
+/* line 58, ../../sass/config/buydetail.scss */
 .buy .price {
   background: #ebebeb;
-  width: 70%;
+  width: 32%;
 }
-/* line 53, ../../sass/config/buydetail.scss */
+/* line 62, ../../sass/config/buydetail.scss */
 .buy .order {
   background: #fb6000;
   width: 30%;
   color: #fff;
+}
+/* line 66, ../../sass/config/buydetail.scss */
+.buy .order:first-child {
+  padding: 0 2%;
+  margin-right: 5%;
 }

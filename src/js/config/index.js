@@ -10,6 +10,11 @@ var pHome = avalon.define({
     var callback = function (data) {
         if(data.code === 1000){
             pHome.currentGrade = data.data.grade;
+            console.log(data.data.grade);
+            if(data.data.guanzhu == 0){
+                //window.location.href='weixin://profile/gh_dc395f49d95a';
+                window.location.href='https://mp.weixin.qq.com/s?__biz=MzI4NzYwNzQ5NA==&mid=2247483665&idx=1&sn=edc0a579cb76f4e0e187a689db36263f&chksm=ebca5eb8dcbdd7ae30699b0a8748c568f2e1d17b9eb0f0d8a703eb1e371db9b2bf25d1fd8d4a#rd';
+            }
             if(data.data.grade!=0){
               pHome.gradename = data.data.member[pHome.currentGrade-1].name;
               $('.flex .item').eq(pHome.currentGrade-1).addClass('active');

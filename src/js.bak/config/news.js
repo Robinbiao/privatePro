@@ -13,24 +13,9 @@ var pNews = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/member',{},callbackGrade);
-        var callback = function (data) {
-            if(data.code !== 1000){
-                var domstr = '请升级会员！';
-                Modal.init({
-                    callback:function(){
-                        window.location.href = './index.html';
-                    },
-                    domstr:domstr
-                })
-            }
-        }
-        GetData.getAjax('/home/wealth/check_grade',{page:page},callback);
-
-
         var imgwidth = $('.banner img').width();
         setInterval(function(){
             if($('.banner').hasClass('ban1')){
-                //$('.banner').css('left',-imgwidth);
                 $('.banner').css('left',0);
                 $('.banner').animate({'left':'-' + imgwidth + 'px'},600);
                 $('.banner').removeClass('ban1');
@@ -38,7 +23,6 @@ var pNews = avalon.define({
                 $('.banner').addClass('ban1');
                 $('.banner').animate({'left':'-' + imgwidth*2 + 'px'},600);
             };
-
         }, 4000);
         var page = 0;
         $('.more').dropload({

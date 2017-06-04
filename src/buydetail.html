@@ -11,7 +11,7 @@
 </head>
 <body ms-controller="pBuydetail">
     <header>{{name}}</header>
-    <section class="content">
+    <section class="content" ms-if = "wxshow">
         <p class="title">{{name}}介绍</p>
         <div class="spec f-word-break">
             {{spec|html}}
@@ -28,8 +28,12 @@
             </div>
         </div>
     </section>
-    <section class="buy clearfix">
-        <p class="price f-fl">{{name}}(￥{{price}})</p><p class="order f-fl" ms-click="buy">购买</p><p></p>
+    <section class='wxer' ms-if = "!wxshow">
+        <img src="./images/moneyservice.jpg"  alt="" />
+        <button class="btn" ms-click ='contectSer'>长按识别二维码付款<br>完成付款后，请点击联系客服</button>
+    </section>
+    <section class="buy clearfix" ms-if = "wxshow">
+        <p class="price f-fl" style="width: 46%;">{{name}}(￥{{price}})</p><p class="order f-fl" style="margin-right:4%;line-height:0.66666rem;width: 25%;"ms-click="buy">支付宝<br>在线支付<p class="order f-fl" ms-click="weixinbuy" style="line-height:0.66666rem;width: 25%;">微信<br>扫码支付</p>
     </section>
     <div class="modal" ms-include-src="'./views/module/modal.html'"></div>
     <script src="./js/lib/jquery-3.1.1.min.js"></script>

@@ -17,42 +17,18 @@ var pLoan = avalon.define({
         var callbackPipe = function (data) {
             if(data.code === 1000){
                 pLoan.pipeDataList = data.data;
-            }else{
-                var domstr = '请升级会员！';
-                Modal.init({
-                    callback:function(){
-                        window.location.href = './index.html';
-                    },
-                    domstr:domstr
-                })
             }
         }
         GetData.getAjax('/home/wealth/loanlist',{},callbackPipe);
         var callbackCard = function (data) {
             if(data.code === 1000){
                 pLoan.cardDataList = data.data;
-            }else{
-                var domstr = '请升级会员！';
-                Modal.init({
-                    callback:function(){
-                        window.location.href = './index.html';
-                    },
-                    domstr:domstr
-                })
             }
         }
         GetData.getAjax('/home/wealth/creditlist',{},callbackCard);
         var callbackStudy = function (data) {
             if(data.code === 1000){
                 pLoan.study = data.data;
-            }else{
-                var domstr = '请升级会员！';
-                Modal.init({
-                    callback:function(){
-                        window.location.href = './index.html';
-                    },
-                    domstr:domstr
-                })
             }
         }
         GetData.getAjax('/home/wealth/learn',{},callbackStudy);
@@ -88,17 +64,7 @@ var pLoan = avalon.define({
                     var callbackNew = function (data) {
                         if(data.code === 1000){
                             pLoan.newDataList =pLoan.newDataList.concat(data.data.list) ;
-                        }else if(data.code === 2000){
-                            var domstr = '请升级会员！';
-                            Modal.init({
-                                callback:function(){
-                                    window.location.href = './index.html';
-                                },
-                                domstr:domstr
-                            })
-                        }else if(data.code === 1001) {
-                            alert('没有更多数据了！');
-                        }
+                        };
                         setTimeout(function(){
                             me.resetload();
                         },1000);

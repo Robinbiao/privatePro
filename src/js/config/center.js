@@ -26,6 +26,20 @@ var pCenter = avalon.define({
             }
         }
         GetData.getAjax('/home/wealth/personalinfo',{},callback);
+
+        var callback = function (data) {
+            if(data.code !== 1000){
+                var domstr = '请升级会员！';
+                Modal.init({
+                    callback:function(){
+                        window.location.href = './index.html';
+                    },
+                    domstr:domstr
+                })
+            }
+        }
+        GetData.getAjax('/home/wealth/check_grade',{},callback);
+
         $("#city").citySelect({
             prov:'湖南',
             nodata:"none"
