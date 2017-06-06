@@ -90,7 +90,209 @@ section.content{
   }
   
 }
-
+.collection{
+  position:absolute;
+  display:none;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#fff;
+  align-items: center;
+  color:#fff;
+  .box{
+    width:80%;
+    margin:10% auto;
+    @include font-rem(30);
+    background:#00b0f0;
+    @include px-rem('border-radius',10);
+    .title{
+      @include font-rem(36);
+      @include px-rem('padding',20);
+      border-bottom:2px solid #fff;
+    }
+    .circle{
+      display:inline-block;
+      background:#fff;
+      @include px-rem('width',25);
+      @include px-rem('height',25);
+      @include px-rem('margin-right',10);
+      border-radius: 50%;
+    }
+    .line-step{
+      border-bottom:2px solid #fff;
+      @include px-d-rem('padding',20, 20);
+    }
+    .step1Choice{
+      @include px-rem('text-indent',25);
+      .step2Choice{
+        .list-item{
+          text-indent:0;
+          @include px-d-rem('padding',20, 0);
+          @include px-rem('padding-left',45);
+          border-bottom:2px solid #fff;
+        }
+        .next{
+          text-align:center;
+          @include font-rem(36);
+          text-indent:0;
+          @include px-d-rem('padding',10, 0);
+          border-bottom:2px solid #fff;
+          background: #1f81a5;
+        }
+      }
+      
+    }
+  }
+  .info{
+    table{
+        @include font-rem(24);
+        width:100%;
+        tr{
+            @include px-rem('line-height',70);
+            border-top:1px solid #ccc;
+            td.na{
+                color:#fff;
+                width:5em;
+                text-align:center;
+            }
+            td{
+                input{
+                    @include px-rem('height',70);
+                    border:none;
+                    width:100%;
+                    background: #00b0f0;
+                }
+            }
+            &:last-child{
+                border-bottom:1px solid #ccc;
+            }
+        }
+    }
+    select{
+        width:30%;
+        text-indent:5px;
+        background: #00b0f0;
+    }
+    .sure{
+        @include px-rem('line-height',40);
+        @include px-rem('padding',10);
+        @include font-rem(30);
+        text-align:center;
+        .tips{
+            color:#031929;
+            display:none;
+        }
+    }
+  }
+}
+.init-info{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#18a0ac;
+  color:#fff;
+  .logo{
+    text-align:center;
+    @include px-d-rem('padding',20, 0);
+    img{
+      width:40%;
+    }
+  }
+  .title{
+    text-align:center;
+    color:#333;
+    @include font-rem(40);
+    @include px-rem('margin-bottom',40);
+  }
+  .bk-c{
+    background:#fff;
+    color:red;
+  }
+  .part{
+    @include px-d-rem('padding',20, 0);
+    text-align:center;
+    @include font-rem(30);
+    border-bottom:1px solid #fff;
+    ul{
+      align-items:center;
+    }
+    .tit{
+      @include px-rem('margin-bottom',20);
+    }
+    .item{
+      flex:1;
+      &:nth-child(2){
+        flex:2;
+      }
+      .list{
+        @include font-rem(24);
+        width:50%;
+        box-sizing: border-box;
+        float:left;
+        
+        border:1px solid #18a0ac;
+        @include px-d-rem('padding',10,0);
+      }
+    }
+    .static{
+      .list{
+        &:nth-child(1){
+          @include px-rem('height',90);
+          @include px-rem('padding-top',20);
+        }
+        &:nth-child(2){
+          @include px-rem('height',90);
+        }
+        &:nth-child(3){
+          @include px-rem('height',130);
+          @include px-rem('padding-top',20);
+        }
+        &:nth-child(4){
+          @include px-rem('height',130);
+        }
+      }
+    }
+  }
+  .fd{
+    text-align:center;
+     @include font-rem(24);
+    .box{
+      display:inline-block;
+      background:#fff;
+      color:red;
+      position:relative;
+      @include px-d-rem('padding',30, 20);
+      @include px-rem('width',200);
+      @include px-d-rem('margin',80, 30);
+      .learn{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:#fff;
+        display:none;
+        a{
+          float:left;
+          width:50%;
+          box-sizing: border-box;
+          @include px-d-rem('padding',0, 14);
+          @include font-rem(20);
+        }
+      }
+    }
+    .enter{
+      display:inline-block;
+      @include px-d-rem('padding',10, 20);
+      a{
+        color:red;
+      }
+    }
+  }
+}
 footer{
   position: fixed;
   bottom:0;

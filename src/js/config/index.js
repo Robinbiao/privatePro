@@ -5,12 +5,51 @@ var pHome = avalon.define({
   currentPage:'index',
   gradename:'VIP会员',
   newMsg:{},
+  step1:{
+    show:false,
+    step2:{
+      show1:false,
+      show2:false
+    }
+  },
+  step2:{
+    show:false,
+    step2:{
+      show1:false,
+      show2:false
+    }
+  },
+  step3:{
+    show:false,
+    step2:{
+      show1:false,
+      show2:false
+    }
+  },
+  step4:{
+    show:false,
+    step2:{
+      show1:false,
+      show2:false
+    }
+  },
+  toggleCollect:true,
   lastMsgList:[],
+  memberIntro:[],
+  learnList:{
+    weixin:'',
+    qianliao:''
+  },
+  stepName1:'',
+  stepName2:'',
   init:function () {
     var callback = function (data) {
         if(data.code === 1000){
             pHome.currentGrade = data.data.grade;
-            console.log(data.data.grade);
+            pHome.memberIntro = data.data.member;
+            if(data.data.collection==0){
+              $('.collection').css('display','flex');
+            }
             if(data.data.guanzhu == 0){
                 //window.location.href='weixin://profile/gh_dc395f49d95a';
                 window.location.href='https://mp.weixin.qq.com/s?__biz=MzI4NzYwNzQ5NA==&mid=2247483665&idx=1&sn=edc0a579cb76f4e0e187a689db36263f&chksm=ebca5eb8dcbdd7ae30699b0a8748c568f2e1d17b9eb0f0d8a703eb1e371db9b2bf25d1fd8d4a#rd';
@@ -27,6 +66,12 @@ var pHome = avalon.define({
             }
         }
     }
+    var initInfo = getCookie('initInfo');
+    if(!initInfo){
+      document.cookie = 'initInfo=true; Expires=1000';
+    }else{
+      $('.init-info').css('display','none');
+    };
     var imgwidth = $('.banner img').width();
         setInterval(function(){
             if($('.banner').hasClass('ban1')){
@@ -47,6 +92,13 @@ var pHome = avalon.define({
         }
       })
     };
+    var callbackLearn = function(data){
+        if(data.code === 1000){
+          pHome.learnList.weixin = data.wechat_learn.url;
+          pHome.learnList.qianliao = data.data.url;
+        }
+    };
+    GetData.getAjax('/home/wealth/learn',{},callbackLearn);
     pHome.getMessage();
   },
   next:function () {
@@ -66,8 +118,6 @@ var pHome = avalon.define({
         window.location.href = './buydetail.html?grade='+pHome.buyGrade;
       }
     }
-    
-    
   },
   choiceGrade:function (grade) {
     if(grade<pHome.currentGrade) return;
@@ -101,8 +151,90 @@ var pHome = avalon.define({
     $('.m-message').on('click','.ft .sure',function(){
         $('.m-message').fadeOut();
     });
+  },
+  step1Tog:function(index){
+    var step = 'step'+index;
+    pHome.stepName1 = $(this).text();
+    pHome[step].show = !pHome[step].show;
+    if(pHome[step].show){
+      for(var i = 1; i < 5; i++){
+        var closeStep = 'step' + i;
+        if(i != index){
+          pHome[closeStep].show = false;
+          pHome[closeStep].step2.show1 = false;
+          pHome[closeStep].step2.show2 = false;
+        }
+      }
+    }
+  },
+  step2Tog:function(par,index){
+    pHome.stepName2 = $(this).text();
+    var step = 'step' + par;
+    var show = 'show' + index;
+    if(index == 2){
+      pHome[step].step2.show1 = false;
+    }else if(index == 1){
+      pHome[step].step2.show2 = false;
+    };
+    pHome[step].step2[show] = !pHome[step].step2[show];
+  },
+  nextInfo:function(){
+    pHome.toggleCollect = false;
+    $("#city").citySelect({
+        prov:'湖南',
+        nodata:"none"
+    });
+  },
+  getUserInfo:function(){
+      $('.sure .tips').css('display','block');
+      if(!$('[name = "name"]').val()){
+          $('.sure .tips span').text('请输入您的姓名');
+          return
+      }else if(!$('[name = "telphone"]').val()){
+          $('.sure .tips span').text('请输入您的手机号码');
+          return
+      }
+      if(!(/^1[34578]\d{9}$/.test($('[name = "telphone"]').val()))){
+          $('.sure .tips span').text('请输入正确的手机号码');
+          return
+      }
+      $('.sure .tips').css('display','none');
+      var inform = $('#infoform').serializeArray();
+      var params = {};
+      $.each(inform,function(){
+          params[this.name] = this.value;
+      });
+
+      params.step1 = pHome.stepName1;
+      params.step2 = pHome.stepName2;
+      var setback = function(data){
+          if(data.code===1000){
+  
+              $('.collection').css('display','none'); 
+          };
+
+      }
+      GetData.getAjax('/home/wealth/data_collection',params,setback,{type:'POST'});
+  },
+  learnShow:function(){
+    $(this).find('.learn').css('display','block');
+  },
+  buyMember:function(index){
+    if(pHome.currentGrade==1){
+
+    }
+    if(index >= pHome.currentGrade){
+      window.location.href = './buydetail.html?grade='+ (index+1);
+    }
   }
 });
+function getCookie(name){
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr=document.cookie.match(reg))
+    return unescape(arr[2]);
+    else
+    return null;
+}
 
 
 

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员升级</title>
+    <link rel="stylesheet" href="./css/config/buydetail.css">
+    <script src="./js/lib/avalon.mobile.js"></script>
+    <script src="./js/share/m-base.js"></script>
+</head>
+<body ms-controller="pBuydetail">
+    <header>{{name}}</header>
+    <section class="content" ms-if="wxshow">
+        <p class="title">{{name}}介绍</p>
+        <div class="spec f-word-break">
+            {{spec|html}}
+        </div>
+        <div class="info">
+            <div class="agree">
+                <label for="agree">
+                    <div class="clearfix">
+                        <input type="checkbox" name="agree" class="f-fl" checked="checked">
+                        <p class="f-fl">我已经阅读并同意我司相关协议</p>
+                    </div>
+                    <p class="intro" ms-click="readProtocol">《在线使用服务协议》</p>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class="wxer" ms-if="!wxshow">
+        <img src="./images/moneyservice.jpg" alt="">
+        <button class="btn" ms-click="contectSer">长按识别二维码付款<br>完成付款后，请点击联系客服</button>
+    </section>
+    <section class="buy clearfix" ms-if="wxshow">
+        <p class="price f-fl" style="width: 46%">{{name}}(￥{{price}})</p><p class="order f-fl" style="margin-right:4%;line-height:0.66666rem;width: 25%" ms-click="buy">支付宝<br>在线支付</p><p class="order f-fl" ms-click="weixinbuy" style="line-height:0.66666rem;width: 25%">微信<br>扫码支付</p>
+    </section>
+    <div class="modal" ms-include-src="'./views/module/modal.html'"></div>
+    <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/mustpay.min.js"></script>
+    <script src="./js/share/ajax.js"></script>
+    <script src="./js/config/buydetail.js"></script>
+</body>
+</html>

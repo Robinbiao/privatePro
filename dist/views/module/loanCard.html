@@ -1,0 +1,44 @@
+<section class="pipe">
+    <div class="m-tec">
+        <p class="title"><i class="iconfont icon-moneyout"></i>技术指南</p>
+        <ul class="flex">
+            <li><a href="./newsdetial.html?id=7&type=loantec"><i class="iconfont icon-loantips"></i><span>办卡技巧</span></a></li>
+            <li><a href="./newsdetial.html?id=8&type=loantec"><i class="iconfont icon-sure"></i><span>办卡技术</span></a></li>
+            <li><a href="./newsdetial.html?id=9&type=loantec"><i class="iconfont icon-read"></i><span>白户办卡</span></a></li>
+            <li><a href="./newsdetial.html?id=10&type=loantec"><i class="iconfont icon-yunkey"></i><span>三无办卡</span></a></li>
+            <li><a href="./newsdetial.html?id=11&type=loantec"><i class="iconfont icon-save"></i><span>包装技巧</span></a></li>
+        </ul>
+    </div>
+    <div class="m-loanlist">
+        <p class="title">信用卡快卡办理</p>
+        <ul class="flex" ms-repeat="cardDataList.apply_card">
+            <li class="left">
+                <img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt="">
+            </li>
+            <li class="right">
+                <h3>{{el.name}}-{{el.spec}}</h3>
+                <div class="intro">
+                    <p>办卡优势 :</p>
+                    <p class="detail f-word-break">{{el.title}}</p>
+                </div>
+                <a ms-attr-href="{{el.url}}"><span class="btn circle">快速办卡</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="m-loanlist">
+        <p class="title">信用卡提额</p>
+        <ul class="flex" ms-repeat="cardDataList.up_card">
+            <li class="left">
+                <a ms-attr-href="{{'./newsdetial.html?id='+el.id+'&type=loancredit'}}"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_img}}" alt=""></a>
+            </li>
+            <li class="right">
+                <h3>{{el.name}}</h3>
+                <div class="intro">
+                    <p>提额攻略 :</p>
+                    <p class="detail f-word-break">{{el.title}}</p>
+                </div>
+                <a ms-attr-href="{{'./newsdetial.html?id='+el.id+'&type=loancredit'}}"><span class="btn circle">快速提额</span></a>
+            </li>
+        </ul>
+    </div>
+</section>

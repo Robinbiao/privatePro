@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="乾坤财富互联网金融资源整合平台，教你如何快速实现财富自由！">
+    <title>收入明细</title>
+    <link rel="stylesheet" href="./css/config/moneylist.css">
+    <link rel="stylesheet" href="./css/module/common/dropload.css">
+    <script src="./js/lib/jweixin-1.0.0.js"></script>
+    <script src="./js/lib/avalon.mobile.js"></script>
+    <script src="./js/share/m-base.js"></script>
+    
+</head>
+<body ms-controller="pMoneylist">
+    <img src="http://www.examples.xin/html/images/scalepic.jpg" width="0" height="0" alt="logo">
+    <section class="content">
+        <div class="m-orderlist f-border-b moneyin" ms-repeat="listData">
+            <ul class="flex" ms-if="hash == 'member'">
+                <li class="item pic"><img ms-attr-src="{{el.img_url}}" alt=""></li>
+                <li class="item"><p class="member">{{el.name}}</p></li>
+                <li class="item"><p class="member">{{el.job || '职位：空'}}</p></li>
+                <li class="item">
+                    <p ms-if="!el.is_friend" class="member add" ms-click="addFriend(el.id)">{{el.friend}}</p>
+                    <p ms-if="el.is_friend" class="member">{{el.friend}}</p>
+                </li>
+            </ul>
+            <ul class="flex" ms-if="hash == 'friend'">
+                <li class="item pic"><img ms-attr-src="{{el.info.img_url}}" alt=""></li>
+                <!-- //侍审核好友 -->
+                <li class="item" ms-if="el.friend_status==1"><p class="member">{{el.info.name ||'暂无'}}</p></li>
+                <li class="item" ms-if="el.friend_status==1"><p class="member">{{el.info.job || '机械设计制造及其自动化'}}</p></li>
+                <li class="item" ms-if="el.friend_status==1">
+                    <p class="member add" ms-click="agreeFriend(el.vip_id,1)">同意</p>
+                    <p class="member add" ms-click="agreeFriend(el.vip_id,0)">拒绝</p>
+                </li>
+                <!-- //侍审核好友结束 -->
+                <li class="item" ms-if="el.friend_status==3"><p class="na order">{{el.info.name ||'暂无'}}</p><p class="meb order">
+                {{el.info.tel||'138878787787'}}</p></li>
+                <li class="item" ms-if="el.friend_status==3"><p class="na order">{{el.info.prov||'湖南'}}</p><p class="meb order">
+                {{el.info.city||'长沙'}}</p></li>
+                <li class="item" ms-if="el.friend_status==3"><p class="member">{{el.info.job||'机械设计制造及其自动化'}}</p></li>
+                
+            </ul>
+            <ul class="flex f-border-b" ms-if="hash == 'moneyin'&&el.type==1">
+                <li class="item pic"><img ms-attr-src="{{el.img_url}}" alt=""></li>
+                <li class="item"><p class="na order">{{el.username}}</p><p class="meb order">
+                购买{{el.gradename}}</p></li>
+                <li class="item"><p class="na order">收入</p><p class="meb order">
+                {{'+ '+el.money || 0.00}}</p></li>
+                <li class="item"><p class="member">{{el.date}}</p></li>
+                
+            </ul>
+            <ul class="flex f-border-b" ms-if="hash == 'moneyin'&&el.type==0">
+                <li class="item"><p class="na order">提交时间</p><p class="meb order">
+                {{el.apply_date}}</p></li>
+                <li class="item"><p class="na order">审核时间</p><p class="meb order">
+                {{el.rebate_date}}</p></li>
+                <li class="item"><p class="na order">提现</p><p class="meb order">
+                {{'- '+el.money}}</p></li>
+                <li class="item"><p class="money order">{{el.status_name}}</p></li>
+            </ul>
+        </div>     
+    </section>
+    <div ms-include-src="'./views/module/modal.html'" class="modal"></div>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-redenred="init"></footer>
+    <script src="./js/lib/jquery-3.1.1.min.js"></script> 
+    <script src="./js/lib/dropload.min.js"></script>
+    <script src="./js/share/ajax.js"></script>
+    <script type="text/javascript">
+        var callback = function(data){
+            var config = {
+                'debug':false,
+                'appId':data.data.appId,
+                'timestamp':data.data.timestamp,
+                'nonceStr':data.data.nonceStr,
+                'signature':data.data.signature,
+                'jsApiList':['onMenuShareTimeline','onMenuShareAppMessage']
+            };
+          wx.config(config);
+        }
+        GetData.getAjax('/home/wealth/getSignPackage',{},callback);
+    </script>
+    
+    <script src="./js/config/moneylist.js"></script>
+</body>
+</html>

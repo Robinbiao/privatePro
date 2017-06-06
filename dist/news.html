@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>技术指导</title>
+    <link rel="stylesheet" href="./css/config/news.css">
+    <link rel="stylesheet" href="./css/module/common/dropload.css">
+    <script src="./js/lib/avalon.mobile.js"></script>
+    <script src="./js/share/m-base.js"></script>
+</head>
+<body ms-controller="pNews">
+    <header>
+        <div class="banner clearfix ban1">
+            <img src="./images/banner1.jpg" alt="">
+            <img src="./images/banner2.jpg" alt="">
+            <img src="./images/banner1.jpg" alt="">
+        </div>    
+    </header>
+    <section class="content more">
+        <div class="m-newslist" ms-repeat="newsData">
+            <div class="item">
+                <ul class="flex">
+                    <li class="left">
+                        <div class="cen"><img ms-attr-src="{{'http://www.examples.xin/'+el.icon_url}}" alt=""></div>
+                    </li>
+                    <li class="right">
+                        <p class="hot">简介:</p><p class="intro f-word-break">{{el.title}}</p>
+                        <p class="mark">更新时间：<small style="color:#000">{{el.updatetime}}</small></p>
+                        <p class="mark">所需等级：<small style="color:#f00">{{el.gradename}}</small></p>
+                        <p class="mark">技术解析：<small class="link btn" ms-click="toDetail(el.id,el.rules,el.gradename)">点击查看</small></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div ms-include-src="'./views/module/modal.html'" class="modal"></div>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
+    <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/dropload.min.js"></script>
+    <script src="./js/share/ajax.js"></script>
+    <script src="./js/config/news.js"></script>
+</body>
+</html>

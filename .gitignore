@@ -17,7 +17,7 @@
 .env
 .sass-cache
 .sass
-dist/*
+
 node_modules
 src/node_modules
 npm-debug.log

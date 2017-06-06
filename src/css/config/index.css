@@ -1038,8 +1038,9 @@ footer .m-message .box .ft {
   font-size: 0.66667rem;
   width: 0.8rem;
   text-align: center;
+  display: none;
 }
-/* line 42, ../../sass/module/common/_modal.scss */
+/* line 43, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1047,14 +1048,14 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 46, ../../sass/module/common/_modal.scss */
+/* line 47, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 51, ../../sass/module/common/_modal.scss */
+/* line 52, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }
@@ -1165,24 +1166,284 @@ section.content .flex .item.next {
   display: none;
 }
 
-/* line 94, ../../sass/config/index.scss */
+/* line 93, ../../sass/config/index.scss */
+.collection {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  align-items: center;
+  color: #fff;
+}
+/* line 103, ../../sass/config/index.scss */
+.collection .box {
+  width: 80%;
+  margin: 10% auto;
+  font-size: 0.4rem;
+  background: #00b0f0;
+  border-radius: 0.13333rem;
+}
+/* line 109, ../../sass/config/index.scss */
+.collection .box .title {
+  font-size: 0.48rem;
+  padding: 0.26667rem;
+  border-bottom: 2px solid #fff;
+}
+/* line 114, ../../sass/config/index.scss */
+.collection .box .circle {
+  display: inline-block;
+  background: #fff;
+  width: 0.33333rem;
+  height: 0.33333rem;
+  margin-right: 0.13333rem;
+  border-radius: 50%;
+}
+/* line 122, ../../sass/config/index.scss */
+.collection .box .line-step {
+  border-bottom: 2px solid #fff;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+}
+/* line 126, ../../sass/config/index.scss */
+.collection .box .step1Choice {
+  text-indent: 0.33333rem;
+}
+/* line 129, ../../sass/config/index.scss */
+.collection .box .step1Choice .step2Choice .list-item {
+  text-indent: 0;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-left: 0.6rem;
+  border-bottom: 2px solid #fff;
+}
+/* line 135, ../../sass/config/index.scss */
+.collection .box .step1Choice .step2Choice .next {
+  text-align: center;
+  font-size: 0.48rem;
+  text-indent: 0;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  border-bottom: 2px solid #fff;
+  background: #1f81a5;
+}
+/* line 148, ../../sass/config/index.scss */
+.collection .info table {
+  font-size: 0.32rem;
+  width: 100%;
+}
+/* line 151, ../../sass/config/index.scss */
+.collection .info table tr {
+  line-height: 0.93333rem;
+  border-top: 1px solid #ccc;
+}
+/* line 154, ../../sass/config/index.scss */
+.collection .info table tr td.na {
+  color: #fff;
+  width: 5em;
+  text-align: center;
+}
+/* line 160, ../../sass/config/index.scss */
+.collection .info table tr td input {
+  height: 0.93333rem;
+  border: none;
+  width: 100%;
+  background: #00b0f0;
+}
+/* line 167, ../../sass/config/index.scss */
+.collection .info table tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
+/* line 172, ../../sass/config/index.scss */
+.collection .info select {
+  width: 30%;
+  text-indent: 5px;
+  background: #00b0f0;
+}
+/* line 177, ../../sass/config/index.scss */
+.collection .info .sure {
+  line-height: 0.53333rem;
+  padding: 0.13333rem;
+  font-size: 0.4rem;
+  text-align: center;
+}
+/* line 182, ../../sass/config/index.scss */
+.collection .info .sure .tips {
+  color: #031929;
+  display: none;
+}
+
+/* line 189, ../../sass/config/index.scss */
+.init-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #18a0ac;
+  color: #fff;
+}
+/* line 197, ../../sass/config/index.scss */
+.init-info .logo {
+  text-align: center;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+/* line 200, ../../sass/config/index.scss */
+.init-info .logo img {
+  width: 40%;
+}
+/* line 204, ../../sass/config/index.scss */
+.init-info .title {
+  text-align: center;
+  color: #333;
+  font-size: 0.53333rem;
+  margin-bottom: 0.53333rem;
+}
+/* line 210, ../../sass/config/index.scss */
+.init-info .bk-c {
+  background: #fff;
+  color: red;
+}
+/* line 214, ../../sass/config/index.scss */
+.init-info .part {
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  text-align: center;
+  font-size: 0.4rem;
+  border-bottom: 1px solid #fff;
+}
+/* line 219, ../../sass/config/index.scss */
+.init-info .part ul {
+  align-items: center;
+}
+/* line 222, ../../sass/config/index.scss */
+.init-info .part .tit {
+  margin-bottom: 0.26667rem;
+}
+/* line 225, ../../sass/config/index.scss */
+.init-info .part .item {
+  flex: 1;
+}
+/* line 227, ../../sass/config/index.scss */
+.init-info .part .item:nth-child(2) {
+  flex: 2;
+}
+/* line 230, ../../sass/config/index.scss */
+.init-info .part .item .list {
+  font-size: 0.32rem;
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  border: 1px solid #18a0ac;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+/* line 242, ../../sass/config/index.scss */
+.init-info .part .static .list:nth-child(1) {
+  height: 1.2rem;
+  padding-top: 0.26667rem;
+}
+/* line 246, ../../sass/config/index.scss */
+.init-info .part .static .list:nth-child(2) {
+  height: 1.2rem;
+}
+/* line 249, ../../sass/config/index.scss */
+.init-info .part .static .list:nth-child(3) {
+  height: 1.73333rem;
+  padding-top: 0.26667rem;
+}
+/* line 253, ../../sass/config/index.scss */
+.init-info .part .static .list:nth-child(4) {
+  height: 1.73333rem;
+}
+/* line 259, ../../sass/config/index.scss */
+.init-info .fd {
+  text-align: center;
+  font-size: 0.32rem;
+}
+/* line 262, ../../sass/config/index.scss */
+.init-info .fd .box {
+  display: inline-block;
+  background: #fff;
+  color: red;
+  position: relative;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+  width: 2.66667rem;
+  margin-top: 1.06667rem;
+  margin-bottom: 1.06667rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+/* line 270, ../../sass/config/index.scss */
+.init-info .fd .box .learn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: none;
+}
+/* line 278, ../../sass/config/index.scss */
+.init-info .fd .box .learn a {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0.18667rem;
+  padding-right: 0.18667rem;
+  font-size: 0.26667rem;
+}
+/* line 287, ../../sass/config/index.scss */
+.init-info .fd .enter {
+  display: inline-block;
+  padding-top: 0.13333rem;
+  padding-bottom: 0.13333rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+}
+/* line 290, ../../sass/config/index.scss */
+.init-info .fd .enter a {
+  color: red;
+}
+
+/* line 296, ../../sass/config/index.scss */
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-/* line 98, ../../sass/config/index.scss */
+/* line 300, ../../sass/config/index.scss */
 footer .flex {
   height: 1.33333rem;
   flex-direction: row;
   background: #ebebeb;
 }
-/* line 102, ../../sass/config/index.scss */
+/* line 304, ../../sass/config/index.scss */
 footer .flex .item {
   flex: 1;
   font-size: 0.26667rem;
 }
-/* line 105, ../../sass/config/index.scss */
+/* line 307, ../../sass/config/index.scss */
 footer .flex .item a {
   display: flex;
   width: 100%;
@@ -1191,15 +1452,15 @@ footer .flex .item a {
   text-align: center;
   color: #999;
 }
-/* line 112, ../../sass/config/index.scss */
+/* line 314, ../../sass/config/index.scss */
 footer .flex .item a .iconfont {
   font-size: 0.61333rem;
 }
-/* line 115, ../../sass/config/index.scss */
+/* line 317, ../../sass/config/index.scss */
 footer .flex .item a span {
   margin-top: -0.06667rem;
 }
-/* line 120, ../../sass/config/index.scss */
+/* line 322, ../../sass/config/index.scss */
 footer .flex .item.active a {
   color: #fb6000;
 }

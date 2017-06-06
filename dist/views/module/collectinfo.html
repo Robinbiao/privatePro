@@ -1,0 +1,46 @@
+<div class="info-box">
+    <div class="title">请完善个人信息</div>
+    <form id="infoform">
+        <table>
+            <tr>
+                <td class="na">姓名:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td class="na">手机:</td>
+                <td><input type="text" name="tel"></td>
+            </tr>
+            <tr>
+                <td class="na">地址:</td>
+                <td>
+                    <div id="city">
+                        <select class="prov" name="prov"></select> 
+                        <select class="city" name="city"></select>
+                        <select class="dist" name="dist"></select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="na">行业:</td>
+                <td>
+                    <div id="jobclass">
+                        <select class="prov" name="job"></select> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="na">渠道:</td>
+                <td>
+                    <div id="source">
+                        <select class="prov" name="source"></select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="sure clearfix">
+            <p class="f-fl tips">温馨提示:<span>请输入您的姓名</span></p>
+            <p class="btn f-fr" ms-click="getUserInfo">确认</p>
+        </div>
+    </form>
+    
+</div>

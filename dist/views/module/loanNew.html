@@ -1,0 +1,16 @@
+<section class="new morebox">
+    <!-- <p class="title"><i class="iconfont icon-moneyout"></i>最新贷款通道</p> -->
+    <div class="m-banklist" ms-repeat="newDataList">
+        <div class="item">
+            <ul class="flex">
+                <li class="left"><div class="cen"><img ms-attr-src="{{'http://www.examples.xin/'+el.img}}" alt="">{{el.title}}</div></li>
+                <li class="right">
+                    <p class="hot">热点:</p><p class="intro f-word-break">{{el.ads}}</p>
+                    <p class="mark">更新时间：<small style="color:#000">{{el.update_time}}</small></p>
+                    <p class="mark">所需等级：<small style="color:#f00">{{el.gradename}}</small></p>
+                    <p class="mark">通道详情：<small class="link btn" ms-click="toDetail(el.id,el.rules,el.gradename)">点击查看</small></p>
+                </li>
+            </ul>
+        </div>  
+    </div>
+</section>

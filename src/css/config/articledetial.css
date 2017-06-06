@@ -1038,8 +1038,9 @@ footer .m-message .box .ft {
   font-size: 0.66667rem;
   width: 0.8rem;
   text-align: center;
+  display: none;
 }
-/* line 42, ../../sass/module/common/_modal.scss */
+/* line 43, ../../sass/module/common/_modal.scss */
 .modal .modal-box .bd {
   padding-top: 0.66667rem;
   padding-bottom: 0.66667rem;
@@ -1047,14 +1048,14 @@ footer .m-message .box .ft {
   padding-right: 0.26667rem;
   font-size: 0.32rem;
 }
-/* line 46, ../../sass/module/common/_modal.scss */
+/* line 47, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft {
   padding: 0.26667rem;
   font-size: 0.4rem;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
-/* line 51, ../../sass/module/common/_modal.scss */
+/* line 52, ../../sass/module/common/_modal.scss */
 .modal .modal-box .ft p {
   display: inline-block;
 }

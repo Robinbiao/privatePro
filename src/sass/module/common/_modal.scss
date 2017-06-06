@@ -37,6 +37,7 @@
         @include font-rem(50);
         @include px-rem('width',60);
         text-align:center;
+        display:none;
       }
     }
     .bd{

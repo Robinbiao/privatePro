@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乾坤财富</title>
+    <script src="./js/share/m-base.js"></script>
+    <link rel="stylesheet" href="./css/config/index.css">
+    <script src="./js/lib/avalon.mobile.js"></script>
+</head>
+<body ms-controller="pHome">
+    
+    <header>
+        <div class="banner clearfix ban1">
+            <img src="./images/banner1.jpg" alt="">
+            <img src="./images/banner2.jpg" alt="">
+            <img src="./images/banner1.jpg" alt="">
+        </div>   
+    </header>
+    <section class="content">
+        <div class="title">
+            <p>会员权限选择</p>
+        </div>
+        <div class="flex">
+            <p class="item" ms-click="choiceGrade(1)">VIP会员</p>
+            <p class="item" ms-click="choiceGrade(2)">黄金会员</p>
+            <p class="item" ms-click="choiceGrade(3)">钻石会员</p>
+            <p class="item next" ms-click="next()">下一步</p>
+        </div>
+    </section>
+    <div class="modal" ms-include-src="'./views/module/modal.html'"></div>
+    <footer ms-include-src="'./views/module/footer.html'" data-include-rendered="init"></footer>
+    
+    <div class="init-info">
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="title">
+            缺钱、融资就找乾坤财富
+        </div>
+        <div class="part">
+            <p class="tit">我要成为会员</p>
+            <ul class="flex">
+                <li class="item">
+                    <p>金融培训</p>
+                    <p>融资指导</p>
+                    <p>行业综合服务</p>
+                </li>
+                <li class="item bk-c">
+                    <div class="list" ms-repeat="memberIntro" ms-click="buyMember($index)">
+                        <p>{{el.name}}</p>
+                        <p>￥ {{el.price}}</p>
+                    </div>
+                    <div class="list">
+                        <br>
+                        <p>亲传弟子班</p>
+                    </div>
+                </li>
+                <li class="item">
+                    <p>成为会员的好处</p>
+                </li>
+            </ul>
+        </div>
+        <div class="part">
+            <p class="tit">会员专享</p>
+            <ul class="flex">
+                <li class="item">
+                   
+                </li>
+                <li class="item static bk-c">
+                    <div class="list">
+                        <p>P2P网络贷款</p>
+                    </div>
+                    <div class="list">
+                        <p>大额融资</p>
+                        <p>贷款渠道和方法</p>
+                    </div>
+                    <div class="list">
+                        <p>信用卡申请</p>
+                        <p>提额、养卡秘籍</p>
+                    </div>
+                    <div class="list">
+                        <p>征信解析</p>
+                        <p>信用修复</p>
+                        <p>逾期消除</p>
+                    </div>
+                </li>
+                <li class="item">
+                </li>
+            </ul>
+        </div>
+        <div class="fd">
+            <div class="box bk-c">
+                金融体验自查
+            </div>
+            <div class="box bk-c" ms-click="learnShow">
+                金融知识培训讲解
+                <div class="learn">
+                    <p>金融知识培训讲解</p>
+                    <a ms-href="learnList.qianliao">千聊在线学习</a>
+                    <a ms-href="learnList.weixin">微信在线学习</a>
+                </div>
+            </div>
+            <div class="enter bk-c">
+               <p ms-if="currentGrade == 0"><a href="./loan.html">浏览全部平台内容</a>浏览全部平台内容</p>
+               <p ms-if="currentGrade != 0"><a href="./center.html">进入平台</a></p>  
+            </div>
+        </div>
+    </div>
+    <div class="collection">
+        <div class="box intro" ms-if="toggleCollect">
+            <p class="title">欢迎来到乾坤财富财商知识平台！</p>
+            <div class="choice1">
+                <p ms-click="step1Tog(1)" class="line-step"><i class="circle"></i>我想了解如何办卡、提额。</p>
+                <div class="step1Choice" ms-if="step1.show">
+                    <div class="step2">
+                        <p ms-click="step2Tog(1,1)" class="line-step"><i class="circle"></i>我想办理一张新信用卡。</p>
+                        <div class="step2Choice" ms-if="step1.step2.show1">
+                            <div class="list-item">
+                                <p>1-您是否是纯白户或者白户您自己清楚吗？</p>
+                                <p>2-是否有过信用逾期呢？</p>
+                                <p>3-是否有多次贷款或者信用卡申请查询记录？</p>
+                                <p>4-是否拥有其他银行的信用卡？</p>
+                            </div> 
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                    <div class="step2">
+                        <p ms-click="step2Tog(1,2)" class="line-step"><i class="circle"></i>我想提升现有信用卡额度。</p>
+                        <div class="step2Choice" ms-if="step1.step2.show2">
+                            <div class="list-item">
+                                <p>1-用卡是否超过3-6个月及以上？</p>
+                                <p>2-是否曾经提额失败？</p>
+                                <p>3-你通过了哪些方法提升额度？</p>
+                            </div>
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choice2">
+                <p ms-click="step1Tog(2)" class="line-step"> <i class="circle"></i>我想了解如何贷款。</p>
+                <div class="step1Choice" ms-if="step2.show">
+                    <div class="step2">
+                        <p ms-click="step2Tog(2,1)" class="line-step"><i class="circle"></i>我想快速贷款！1000元-30000元</p>
+                        <div class="step2Choice" ms-if="step2.step2.show1">
+                            <div class="list-item">
+                                <p>1-您是否申请过小额分期贷款，线下贷款、网贷？</p>
+                                <p>2-是否有过信用逾期呢？</p>
+                                <p>3-是否有多次贷款或者信用卡申请查询记录？</p>
+                                <p>4-是否拥有信用卡？</p>
+                            </div>
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                    <div class="step2">
+                        <p ms-click="step2Tog(2,2)" class="line-step"><i class="circle"></i>我想快速贷款！30000元-300000元</p>
+                        <div class="step2Choice" ms-if="step2.step2.show2">
+                            <div class="list-item">
+                                <p>1-是否有车、房或者其他资产？</p>
+                                <p>2-您的学历是否是大专或者以上？</p>
+                                <p>3-您通过哪些机构或者个人申请过大额贷款？是否被拒绝或者通过?</p>
+                             </div>
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choice3">
+                <p ms-click="step1Tog(3)" class="line-step"> <i class="circle"></i>我想了解大额融资。</p>
+                <div class="step1Choice" ms-if="step3.show">
+                    <div class="step2">
+                        <p ms-click="step2Tog(3,1)" class="line-step"><i class="circle"></i>我想大额融资！30W-100W</p>
+                        <div class="step2Choice" ms-if="step3.step2.show1">
+                            <div class="list-item">
+                                <p>1-您是否拥1张或者多张信用卡？</p>
+                                <p>2-是否有过信用逾期呢？</p>
+                                <p>3-是否有车贷、房贷或者其他可查资产。</p>
+                                <p>4-是否结婚以及拥有本科以上学历？</p>
+                            </div>
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                    <div class="step2">
+                        <p ms-click="step2Tog(3,2)" class="line-step"><i class="circle"></i>我想大额融资！100W-1000W</p>
+                        <div class="step2Choice" ms-if="step3.step2.show2">
+                            <div class="list-item">
+                                <p>1-您是否拥1张或者多张信用卡？</p>
+                                <p>2-是否有过信用逾期呢？</p>
+                                <p>3-是否有车贷、房贷或者其他可查资产。</p>
+                                <p>4-是否结婚以及拥有本科以上学历？</p>
+                                <p>5-是否拥有实体店面以及个体或者公司执照？</p>
+                             </div>
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choice4">
+                <p ms-click="step1Tog(4)" class="line-step"> <i class="circle"></i>
+                 我想解决信用逾期消除、信用修复</p>
+                <div class="step1Choice" ms-if="step2.show">
+                    <div class="step2">
+                        <p ms-click="step2Tog(4,1)" class="line-step"><i class="circle"></i>消除逾期记录、修复信用。</p>
+                        <div class="step2Choice" ms-if="step4.step2.show1">
+                            <div class="list-item">
+                                <p>1-逾期时间及种类、信用卡逾期、贷款逾期？</p>
+                                <p>2-是当前逾期还是以往逾期？</p>
+                                <p>3-是否还清款项？</p>
+                            </div>
+                            <p class="next" ms-click="nextInfo">下一步</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box info" ms-if="!toggleCollect">
+            <p class="title">填写信息获取最新贷款技术</p>
+            <form id="infoform">
+                <table>
+                    <tr>
+                        <td class="na">姓名:</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="na">手机:</td>
+                        <td><input type="text" name="telphone"></td>
+                    </tr>
+                    <tr>
+                        <td class="na">地址:</td>
+                        <td>
+                            <div id="city">
+                                <select class="prov" name="province"></select> 
+                                <select class="city" name="city"></select>
+                                <select class="dist" name="district"></select>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="sure clearfix">
+                    <p class="tips">温馨提示:<span>请输入您的姓名</span></p>
+                    <p ms-click="getUserInfo">点击获取最新技术</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/lib/jquery-3.1.1.min.js"></script>
+    <script src="./js/lib/jquery.cityselect.js"></script>
+    <script src="./js/share/ajax.js"></script>
+    <script src="./js/config/index.js"></script>
+</body>
+</html>
